@@ -1,0 +1,48 @@
+body {
+    margin: 0; /* Supprime les marges par défaut du corps */
+    padding: 0; /* Supprime les paddings par défaut du corps */
+    background-image: url('../../assets/Allgenv2.png'); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+    background-size: 100% 100%; /* Ajuste la taille de l'image pour couvrir complètement le corps */
+    background-position: center; /* Centre l'image dans le corps */
+    height: 100vh; /* Ajuste la hauteur du corps à 100% de la hauteur de la vue (viewport) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* Couleur du texte, ajustez selon votre choix */
+}
+
+.classic-container {
+    background-image: url('../../assets/RawPokedex.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1300px; /* Largeur fixe de la div */
+    height: 800px; /* Hauteur fixe de la div */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    top: 10%;
+}
+
+.div-container {
+    z-index: 1;
+    width: 930px; /* Largeur fixe de la div */
+    height: 500px;
+    margin-top: 10px; /* Espacement entre les divs */
+    position: absolute; /* Utilise une position absolue par rapport à classic-container */
+    top: 180px; /* Ajustez la position verticale selon vos besoins */
+    left: 25px; /* Ajustez la position horizontale selon vos besoins */
+    overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la hauteur de la div */
+}
+
+.dynamic-div {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 5px;
+}
