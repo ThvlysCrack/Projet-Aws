@@ -5,17 +5,14 @@ import email_icon from '../assets/email.png'
 import password_icon from '../assets/password.png'
 import inscription_icon from '../assets/INSCRIPTION.png'
 import connexion_icon from '../assets/CONNEXION.png'
+import logo from '../assets/PokeZapv2.png'
 
 const LoginSignup = () => {
     const[action,setAction] = useState("CONNEXION");
   return (
 
     <div className="container">
-        <div className="header">
-            {action === "INSCRIPTION" ? 
-                <img src={inscription_icon} alt='Inscription'/> :
-                <img src={connexion_icon} alt='Connexion'/>            }
-        </div>
+        <img src={logo} alt="" className="logo" />
         <div className="inputs">
             <div className="input">
                 <img src={user_icon} alt=''/>

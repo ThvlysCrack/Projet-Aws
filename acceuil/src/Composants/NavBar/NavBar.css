@@ -1,5 +1,5 @@
 /* FILEPATH: /c:/Users/Administrator/Projet-Aws/acceuil/src/Composants/NavBar/NavBar.css */
-.navbar {
+/*.navbar {
   background-color: #f8f9fa;
   padding: 10px;
   display: flex;
@@ -29,4 +29,30 @@
 
 .navbar-link a:hover {
   color: #007bff;
+}
+*/
+.navbar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(50, 50, 50, 0.3);
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 25px; /* Cela crée des coins arrondis */
+  overflow: hidden; /* Cache les coins qui débordent */
+}
+
+.navbar img {
+  width: 50px; /* Ajustez la taille selon vos besoins */
+  height: 50px; /* Ajustez la taille selon vos besoins */
+  transition: transform 0.3s; /* Transition pour l'agrandissement */
+}
+
+/* CSS pour les logos de la navbar lorsqu'ils sont survolés */
+.navbar img:hover {
+  transform: scale(1.2); /* Agrandissement du logo */
 }
