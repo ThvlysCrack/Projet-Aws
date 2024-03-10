@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c6454036.css",
+    "main.js": "/static/js/main.0abb6bed.js",
+    "static/media/Allgenv2.png": "/static/media/Allgenv2.b32ef6ce64e6e409b0d1.png",
+    "static/media/Background3.jpg": "/static/media/Background3.72a24df4d6df04bd31d1.jpg",
+    "static/media/NOUV.png": "/static/media/NOUV.da6a27676cebd24f20fa.png",
+    "static/media/pokeball.png": "/static/media/pokeball.2fe70a7034f25067f981.png",
+    "static/media/RawPokedex.svg": "/static/media/RawPokedex.c4960ff9d10722e03ccc.svg",
+    "static/media/CONNEXION.png": "/static/media/CONNEXION.59e33e4f0a540b657c96.png",
+    "static/media/lettrek.png": "/static/media/lettrek.eacd63f363ff0a643a87.png",
+    "static/media/INSCRIPTION.png": "/static/media/INSCRIPTION.756a24ff189dd55ea516.png",
+    "static/media/lettree.png": "/static/media/lettree.c61059175ffdf285ba89.png",
+    "static/media/P.png": "/static/media/P.7a88ef7e3550da4157a7.png",
+    "static/media/D_.png": "/static/media/D_.98f372a0dd145004dcb0.png",
+    "static/media/L.png": "/static/media/L.0dac0d8fe5c549ce07c1.png",
+    "static/media/starting-sound.mp3": "/static/media/starting-sound.f160242a81d5903aa07b.mp3",
+    "index.html": "/index.html",
+    "main.c6454036.css.map": "/static/css/main.c6454036.css.map",
+    "main.0abb6bed.js.map": "/static/js/main.0abb6bed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6454036.css",
+    "static/js/main.0abb6bed.js"
+  ]
+}
