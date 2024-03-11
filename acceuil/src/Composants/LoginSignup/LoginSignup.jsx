@@ -3,8 +3,6 @@ import './LoginSignup.css'
 import user_icon from '../assets/person.png'
 import email_icon from '../assets/email.png'
 import password_icon from '../assets/password.png'
-import inscription_icon from '../assets/INSCRIPTION.png'
-import connexion_icon from '../assets/CONNEXION.png'
 import logo from '../assets/PokeZapv2.png'
 
 const LoginSignup = () => {

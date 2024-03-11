@@ -2,12 +2,6 @@ import React from 'react'
 import './styles.css'; // Importez le fichier CSS
 import sound from '../assets/starting-sound.mp3'
 import logo from '../assets/PokeZapv2.png'
-import pokeball from '../assets/pokeball.png'
-import P from '../assets/P.png'
-import K from '../assets/lettrek.png'
-import D from '../assets/D_.png'
-import L from '../assets/L.png'
-import E from '../assets/lettree.png'
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar';
 /*function play (){

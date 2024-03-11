@@ -31,13 +31,18 @@
   color: #007bff;
 }
 */
+@font-face {
+  font-family: 'Pokémon';
+  src: url('../assets/fonts/PKMN-RBYGSC.woff') format('woff');
+}
+
 .navbar {
   position: fixed;
   top: 10px;
   right: 10px;
   background-color: rgba(50, 50, 50, 0.3);
   width: 100px;
-  height: 50px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,4 +60,51 @@
 /* CSS pour les logos de la navbar lorsqu'ils sont survolés */
 .navbar img:hover {
   transform: scale(1.2); /* Agrandissement du logo */
+}
+
+.image-above-list {
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+
+.image-above-list:hover{
+  transform: scale(1.2);
+}
+
+.navbar-list-container {
+  background-color: rgba(50, 50, 50, 0.3); /* Couleur de fond */
+  width: 200px;
+  border-radius: 25px; /* Bords arrondis */
+  padding: 10px; /* Espacement interne */
+  position: absolute; /* Positionnement absolu */
+  top: 10px; /* Position par rapport au haut */
+  right: 10px; /* Position par rapport à droite */
+  z-index: 1000; /* Pour empiler au-dessus des autres éléments */
+}
+
+
+.navbar-list {
+  list-style-type: none; /* Supprimer les puces */
+  padding: 0; /* Supprimer les marges */
+}
+
+.navbar-list-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Pour centrer les éléments horizontalement */
+}
+
+.navbar-list-item {
+  font-family: 'Pokémon';
+  color: #FFCC01 !important;
+  text-shadow: 
+  -1px -1px 0 black,
+  1px -1px 0 black,
+  -1px 1px 0 black,
+  1px 1px 0 black;
+  font-size: 11px;
+  margin-bottom: 10px;
 }
