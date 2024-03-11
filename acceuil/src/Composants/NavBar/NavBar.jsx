@@ -39,6 +39,14 @@ import './NavBar.css';
 import { Link } from 'react-router-dom';
 import lines from '../assets/3lines.png';
 import imageAboveList from '../assets/ZapBall.png';
+import accueilImage from '../assets/Accueil.png'; // Importez les images nécessaires pour chaque lien
+import defiImage from '../assets/Défi Quotidien.png';
+import jeuImage from '../assets/Jeu Libre.png';
+import profilImage from '../assets/Profil.png';
+import classementImage from '../assets/Classement.png';
+import parametresImage from '../assets/Parametres.png';
+import connexionImage from '../assets/Inscription.png';
+import aProposImage from '../assets/A propos.png';
 
 function Navbar() {
   const [showList, setShowList] = useState(false); // État pour contrôler l'affichage de la liste
@@ -71,29 +79,29 @@ function Navbar() {
           <div className="navbar-list-container">
             <img src={imageAboveList} alt="ZapBall" className="image-above-list" onClick={backToNavbar}/>
             <div className="navbar-list-items">
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon', color: '#FFCC01'}}>
-                <Link to="/">Accueil</Link>
+              <div className="navbar-list-item">
+                <a href="/"><img src={accueilImage} alt="Accueil" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon', color: '#FFCC01'}}>
-                <Link to="/Defis-quotidiens">Defi Quotidien</Link>
+              <div className="navbar-list-item">
+                <a href="/Defis-quotidiens"><img src={defiImage} alt="Défi Quotidien" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon', color: '#FFCC01'}}>
-                <Link to="/Jeu_Libre">Jeu Libre</Link>
+              <div className="navbar-list-item">
+                <a href="/Jeu_Libre"><img src={jeuImage} alt="Jeu Libre" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon', color: '#FFCC01'}}>
-                <Link to="/Profil">Profil</Link>
+              <div className="navbar-list-item">
+                <a href="/Profil"><img src={profilImage} alt="Profil" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon', color: '#FFCC01'}}>
-                <Link to="/Classement">Classement</Link>
+              <div className="navbar-list-item">
+                <a href="/Classement"><img src={classementImage} alt="Classement" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon' }}>
-                <Link to="/Parametres">Paramètres</Link>
+              <div className="navbar-list-item">
+                <a href="/Parametres"><img src={parametresImage} alt="Paramètres" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon' }}>
-                <Link to="/Connexion">Connexion/Inscription</Link>
+              <div className="navbar-list-item">
+                <a href="/Connexion"><img src={connexionImage} alt="Connexion/Inscription" style={{ width: 'auto', height: '50px' }}/></a>
               </div>
-              <div className="navbar-list-item" style={{ fontFamily: 'Pokémon' }}>
-                <Link to="/APropos">À propos</Link>
+              <div className="navbar-list-item">
+                <a href="/APropos"><img src={aProposImage} alt="À propos" style={{ width: 'auto', height: '22px' }}/></a>
               </div>
             </div>
           </div>

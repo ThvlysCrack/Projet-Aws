@@ -63,11 +63,12 @@
 }
 
 .image-above-list {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   display: block;
   margin: 0 auto;
   transition: transform 0.3s;
+  margin-bottom: 20px;
 }
 
 .image-above-list:hover{
@@ -75,8 +76,8 @@
 }
 
 .navbar-list-container {
-  background-color: rgba(50, 50, 50, 0.3); /* Couleur de fond */
-  width: 200px;
+  background-color: rgba(0, 0, 0, 0.4); /* Couleur de fond */
+  width: 250px;
   border-radius: 25px; /* Bords arrondis */
   padding: 10px; /* Espacement interne */
   position: absolute; /* Positionnement absolu */
@@ -99,12 +100,18 @@
 
 .navbar-list-item {
   font-family: 'Pokémon';
-  color: #FFCC01 !important;
+  color: rgb(255, 204, 1) !important;
   text-shadow: 
   -1px -1px 0 black,
   1px -1px 0 black,
   -1px 1px 0 black,
   1px 1px 0 black;
   font-size: 11px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
 }
+
+.navbar-list-item:hover{
+  transform: scale(1.2);
+}
+
