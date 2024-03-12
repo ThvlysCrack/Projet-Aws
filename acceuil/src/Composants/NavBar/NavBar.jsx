@@ -45,7 +45,7 @@ import jeuImage from '../assets/Jeu Libre.png';
 import profilImage from '../assets/Profil.png';
 import classementImage from '../assets/Classement.png';
 import parametresImage from '../assets/Parametres.png';
-import connexionImage from '../assets/Inscription.png';
+import connexionImage from '../assets/INSCRIPTION.png';
 import aProposImage from '../assets/A propos.png';
 
 function Navbar() {
