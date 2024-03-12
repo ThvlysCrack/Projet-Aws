@@ -1,5 +1,5 @@
-body {
-    background-image: url('../assets/Giratina.png'); 
+.LoginSignup {
+   background-image: url('../assets/Giratina.png'); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 

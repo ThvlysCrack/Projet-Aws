@@ -8,7 +8,7 @@ import logo from '../assets/PokeZapv2.png'
 const LoginSignup = () => {
     const[action,setAction] = useState("CONNEXION");
   return (
-
+    <div className='LoginSignup'>
     <div className="container">
         <img src={logo} alt="" className="logo" />
         <div className="inputs">
@@ -31,6 +31,7 @@ const LoginSignup = () => {
             <div className={action==="CONNEXION"?"submit gray":"submit"} onClick={()=>{setAction("INSCRIPTION")}}>INSCRIPTION</div>
             <div className={action==="INSCRIPTION"?"submit gray":"submit"} onClick={()=>{setAction("CONNEXION")}}>CONNEXION</div>
         </div>
+    </div>
     </div>
   )
 }

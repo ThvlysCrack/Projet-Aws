@@ -13,36 +13,117 @@ body {
 }
 
 .classic-container {
-    background-image: url('../../assets/RawPokedex.svg');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 1300px; /* Largeur fixe de la div */
-    height: 800px; /* Hauteur fixe de la div */
+    width: 100vw; /* Largeur à 100% de la largeur de l'écran */
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
     position: relative;
-    z-index: 2;
-    top: 10%;
+}
+
+.classic-container img {
+    width: 75%; /* Largeur à 100% de la largeur de l'écran */
+    max-width: 100%;
+    height: auto; /* Hauteur à 100% de la hauteur de la vue (viewport) */
+    object-fit: contain; /* Ajuste la taille de l'image pour s'adapter entièrement dans le conteneur */
+    object-position: center; /* Centre l'image dans le conteneur */
+    display: block; /* Supprime le décalage bas de l'image */
+    z-index: 0;
 }
 
 .div-container {
-    z-index: 1;
-    width: 930px; /* Largeur fixe de la div */
-    height: 500px;
-    margin-top: 10px; /* Espacement entre les divs */
-    position: absolute; /* Utilise une position absolue par rapport à classic-container */
-    top: 180px; /* Ajustez la position verticale selon vos besoins */
-    left: 25px; /* Ajustez la position horizontale selon vos besoins */
-    overflow: auto; /* Ajoute une barre de défilement si le contenu dépasse la hauteur de la div */
+  width: 80%;
+  max-width: 53.6%;
+  height: 80%;
+  max-height: 58.5vh;
+  top: 21%; /* Utilisez 'auto' pour désactiver la position depuis le haut */
+  height: calc(70% - 2%); /* 70% du classic-container moins une marge de 2% */
+  left: 14%;
+  position: absolute;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.dropDownListPokemon {
+  position: absolute;
+  width: 12.4%;
+  max-width: 53.6%;
+  height: 22.5%;
+  max-height: 58.5vh;
+  overflow-y: auto;
+  right :15.7%;
+  bottom: 12.1%;
+}
+
+.dropDownListPokemon p {
+  background-color: #FFCC01; /* Fond blanc */
+  border: 2px solid #000000; /* Bordure noire */
+  color: #000000; /* Couleur du texte */
+  text-align: center;
+  border-radius: 10px;
+  height: auto;
+  width: auto;
+}
+
+.pokemonItem {
+  display: flex; /* Utiliser la disposition flexbox pour aligner l'image et le nom */
+  align-items: center; /* Aligner les éléments verticalement */
+  background-color: yellow; /* Fond jaune */
+  padding: 5px; /* Espacement intérieur */
+  margin-bottom: 5px; /* Espacement entre les éléments */
+}
+
+.pokemonSprite {
+  width: 50px; /* Largeur de l'image */
+  height: 50px; /* Hauteur de l'image */
+  margin-right: 10px; /* Espacement entre l'image et le nom */
 }
 
 .dynamic-div {
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 10px;
-    margin-bottom: 5px;
+  background-color: #FFCC01;
+  border-radius: 20px; /* Ajoutez cette ligne pour arrondir les angles */
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row; /* Aligner les éléments horizontalement */
+  justify-content: space-evenly; /* Espacez les éléments également sur l'axe principal */
+}
+
+.dynamic-div p {
+  background-color: #ffffff; /* Fond blanc */
+  border: 2px solid #000000; /* Bordure noire */
+  min-height: 50px;
+  height: 50px; /* Hauteur fixe */
+  min-width: 50px;
+  width: 50px;
+  border-radius: 10px; /* Coins arrondis */
+  padding: 10px;
+  color: #000000; /* Couleur du texte */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px; /* Espacement entre les éléments */
+}
+
+.dynamic-div p + p {
+  margin-left: 10px;
+} 
+
+.inputPokemonContainer {
+  width: 53.6%;
+  left: 14%;
+  position: absolute;
+  top: 90%; /* Ajustez la distance par rapport au haut du classic-container */
+  z-index: 2;
+  text-align: center;
+}
+
+.inputPokemon {
+  width:30%;
+  font-size: 110%;
+  height: 3vw; 
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box; /* La largeur inclura le padding et la bordure sans déborder */
 }
