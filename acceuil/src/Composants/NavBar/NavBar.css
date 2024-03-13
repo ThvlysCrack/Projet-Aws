@@ -40,7 +40,7 @@
   position: fixed;
   top: 10px;
   right: 10px;
-  background-color: rgba(50, 50, 50, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100px;
   height: 40px;
   display: flex;
