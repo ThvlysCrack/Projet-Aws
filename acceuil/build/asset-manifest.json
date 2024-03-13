@@ -1,26 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6454036.css",
-    "main.js": "/static/js/main.0abb6bed.js",
+    "main.css": "/static/css/main.72f64674.css",
+    "main.js": "/static/js/main.a9f4beb5.js",
     "static/media/Allgenv2.png": "/static/media/Allgenv2.b32ef6ce64e6e409b0d1.png",
-    "static/media/Background3.jpg": "/static/media/Background3.72a24df4d6df04bd31d1.jpg",
-    "static/media/NOUV.png": "/static/media/NOUV.da6a27676cebd24f20fa.png",
-    "static/media/pokeball.png": "/static/media/pokeball.2fe70a7034f25067f981.png",
-    "static/media/RawPokedex.svg": "/static/media/RawPokedex.c4960ff9d10722e03ccc.svg",
-    "static/media/CONNEXION.png": "/static/media/CONNEXION.59e33e4f0a540b657c96.png",
-    "static/media/lettrek.png": "/static/media/lettrek.eacd63f363ff0a643a87.png",
-    "static/media/INSCRIPTION.png": "/static/media/INSCRIPTION.756a24ff189dd55ea516.png",
-    "static/media/lettree.png": "/static/media/lettree.c61059175ffdf285ba89.png",
-    "static/media/P.png": "/static/media/P.7a88ef7e3550da4157a7.png",
-    "static/media/D_.png": "/static/media/D_.98f372a0dd145004dcb0.png",
-    "static/media/L.png": "/static/media/L.0dac0d8fe5c549ce07c1.png",
-    "static/media/starting-sound.mp3": "/static/media/starting-sound.f160242a81d5903aa07b.mp3",
+    "static/media/Giratina.png": "/static/media/Giratina.bf8dd8684c3eba4b86a0.png",
+    "static/media/PokeZapv2.png": "/static/media/PokeZapv2.5602d0ead24aac8a07e0.png",
+    "static/media/ZapBall.png": "/static/media/ZapBall.138d3a9931ef7e3e0944.png",
+    "static/media/RawPokedex.svg": "/static/media/RawPokedex.c4960ff9d10722e03ccc9573f516ffe9.svg",
+    "static/media/3lines.png": "/static/media/3lines.d796029ff36687ebcb1c.png",
+    "static/media/PKMN-RBYGSC.woff": "/static/media/PKMN-RBYGSC.d38a558b91a789e7162a.woff",
     "index.html": "/index.html",
-    "main.c6454036.css.map": "/static/css/main.c6454036.css.map",
-    "main.0abb6bed.js.map": "/static/js/main.0abb6bed.js.map"
+    "main.72f64674.css.map": "/static/css/main.72f64674.css.map",
+    "main.a9f4beb5.js.map": "/static/js/main.a9f4beb5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6454036.css",
-    "static/js/main.0abb6bed.js"
+    "static/css/main.72f64674.css",
+    "static/js/main.a9f4beb5.js"
   ]
 }

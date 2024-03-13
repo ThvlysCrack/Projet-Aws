@@ -9,7 +9,7 @@ import NavBar from '../NavBar/NavBar';
 const LoginSignup = () => {
     const[action,setAction] = useState("CONNEXION");
   return (
-
+    <div className='LoginSignup'>
     <div className="container">
         <img src={logo} alt="" className="logo" />
         <NavBar />
@@ -33,6 +33,7 @@ const LoginSignup = () => {
             <div className={action==="CONNEXION"?"submit gray":"submit"} onClick={()=>{setAction("INSCRIPTION")}}>INSCRIPTION</div>
             <div className={action==="INSCRIPTION"?"submit gray":"submit"} onClick={()=>{setAction("CONNEXION")}}>CONNEXION</div>
         </div>
+    </div>
     </div>
   )
 }
