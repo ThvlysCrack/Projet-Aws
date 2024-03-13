@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css'; // Importez le fichier CSS
 import logo from '../assets/PokeZapv2.png'
 import { Link } from 'react-router-dom';
-import NavBar from '../NavBar/NavBar';
 
 
 export const Accueil = () => {

@@ -4,7 +4,6 @@ import user_icon from '../assets/person.png'
 import email_icon from '../assets/email.png'
 import password_icon from '../assets/password.png'
 import logo from '../assets/PokeZapv2.png'
-import NavBar from '../NavBar/NavBar';
 
 const LoginSignup = () => {
     const[action,setAction] = useState("CONNEXION");
@@ -12,7 +11,6 @@ const LoginSignup = () => {
     <div className='LoginSignup'>
     <div className="container">
         <img src={logo} alt="" className="logo" />
-        <NavBar />
         <div className="inputs">
             <div className="input">
                 <img src={user_icon} alt=''/>
