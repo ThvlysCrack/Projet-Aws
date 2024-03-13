@@ -49,6 +49,7 @@
   padding: 5px;
   border-radius: 25px; /* Cela crée des coins arrondis */
   overflow: hidden; /* Cache les coins qui débordent */
+  z-index: 1000; /* Pour empiler au-dessus des autres éléments */
 }
 
 .navbar img {

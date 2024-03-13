@@ -4,7 +4,6 @@ import Accueil from './Composants/Acceuil/acceuil';
 import LoginSignup from './Composants/LoginSignup/LoginSignup';
 import NavBar from './Composants/NavBar/NavBar';
 import Test from './Composants/Dailys/Classic/test';
-//import NavBar from './Composants/NavBar/NavBar';
 
 const BrowsingRoutes = () => {
   return (
