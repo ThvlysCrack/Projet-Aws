@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.72f64674.css",
-    "main.js": "/static/js/main.a9f4beb5.js",
+    "main.css": "/static/css/main.3656b65b.css",
+    "main.js": "/static/js/main.dc2ab5fe.js",
     "static/media/Allgenv2.png": "/static/media/Allgenv2.b32ef6ce64e6e409b0d1.png",
     "static/media/Giratina.png": "/static/media/Giratina.bf8dd8684c3eba4b86a0.png",
     "static/media/PokeZapv2.png": "/static/media/PokeZapv2.5602d0ead24aac8a07e0.png",
@@ -10,11 +10,11 @@
     "static/media/3lines.png": "/static/media/3lines.d796029ff36687ebcb1c.png",
     "static/media/PKMN-RBYGSC.woff": "/static/media/PKMN-RBYGSC.d38a558b91a789e7162a.woff",
     "index.html": "/index.html",
-    "main.72f64674.css.map": "/static/css/main.72f64674.css.map",
-    "main.a9f4beb5.js.map": "/static/js/main.a9f4beb5.js.map"
+    "main.3656b65b.css.map": "/static/css/main.3656b65b.css.map",
+    "main.dc2ab5fe.js.map": "/static/js/main.dc2ab5fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.72f64674.css",
-    "static/js/main.a9f4beb5.js"
+    "static/css/main.3656b65b.css",
+    "static/js/main.dc2ab5fe.js"
   ]
 }
