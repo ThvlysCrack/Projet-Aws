@@ -3,6 +3,8 @@ import axios from 'axios';
 import './classic.css';
 import pokemonNames from '../../assets/datas/FR_EN_PokeDict.json';
 import pokedexraw from '../../assets/RawPokedex.svg';
+import backgroundImage from '../../assets/Allgenv2.png';
+import Backgroundtest from '../../Backgroundtest';
 
 function Test() {
   const [pokemonName, setPokemonName] = useState('');
@@ -253,6 +255,7 @@ function Test() {
   };
 
   return (
+    <Backgroundtest image={backgroundImage}>
     <div className="classic-container">
       <div className='div-container'>
         {pokemonDataList.map((pokemonData, index) => (
@@ -312,6 +315,7 @@ function Test() {
           ))}
       </div>
     </div>
+    </Backgroundtest>
   );
 }
 export default Test;

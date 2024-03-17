@@ -4,10 +4,13 @@ import user_icon from '../assets/person.png'
 import email_icon from '../assets/email.png'
 import password_icon from '../assets/password.png'
 import logo from '../assets/PokeZapv2.png'
+import backgroundImage from '../assets/Giratina.png';
+import Backgroundtest from '../Backgroundtest';
 
 const LoginSignup = () => {
     const[action,setAction] = useState("CONNEXION");
   return (
+    <Backgroundtest image={backgroundImage}>
     <div className="container">
         <img src={logo} alt="" className="logo" />
         <div className="inputs">
@@ -31,6 +34,7 @@ const LoginSignup = () => {
             <div className={action==="INSCRIPTION"?"submit gray":"submit"} onClick={()=>{setAction("CONNEXION")}}>CONNEXION</div>
         </div>
     </div>
+    </Backgroundtest>
   )
 }
 export default LoginSignup;
