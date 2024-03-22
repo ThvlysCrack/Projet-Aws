@@ -3,7 +3,7 @@ import axios from 'axios';
 import './classic.css';
 import pokemonNames from '../../assets/datas/FR_EN_PokeDict.json';
 import pokedexraw from '../../assets/RawPokedex.svg';
-import backgroundImage from '../../assets/Allgenv2.png';
+import backgroundImage from '../../assets//Allgenv2.png';
 import Backgroundtest from '../../Backgroundtest';
 
 function Test() {
@@ -261,7 +261,7 @@ function Test() {
         {pokemonDataList.map((pokemonData, index) => (
           <div key={index} className="dynamic-div">
             <p><img src={pokemonData.pokemonSprite} alt={pokemonData.name}
-              style={{ width: '300px', height: '300px' }} /></p>
+              style={{ width: '200px', height: '200px' }} /></p>
             <p style={{ backgroundColor: pokemonData.pokemonTypes[0] === dailyPokemon.pokemonTypes[0] ? '#29E43C' : '#EB0F0F' }}>
               {pokemonData.pokemonTypes[0]}
             </p>
@@ -318,4 +318,5 @@ function Test() {
     </Backgroundtest>
   );
 }
-export default Test;
+
+export default Test; 
