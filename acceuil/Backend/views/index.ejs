@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('../../src/Composants/assets/Giratina.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; 
+            overflow-y: hidden;
+            font-family: Arial, sans-serif; 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 300px; 
+            padding: 20px;
+            background-color: #fff; 
+            border-radius: 8px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .password-input, .confirm-password-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body class="body-container">
+    <div class="container">
+        <h1><%= email%></h1>
+        <form action="" method="post" class="form-container">
+            <input type="password" name="password" id="password" placeholder="password" class="password-input">
+            <br>
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm-password" class="confirm-password-input">
+            <br>
+            <input type="submit" value="submit" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>
