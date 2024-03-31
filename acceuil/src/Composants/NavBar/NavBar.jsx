@@ -37,16 +37,16 @@ export default Navbar;
 import React, { useState } from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
-import lines from '../assets/3lines.png';
-import imageAboveList from '../assets/ZapBall.png';
-import accueilImage from '../assets/Accueil.png'; // Importez les images nécessaires pour chaque lien
-import defiImage from '../assets/Défi Quotidien.png';
-import jeuImage from '../assets/Jeu Libre.png';
-import profilImage from '../assets/Profil.png';
-import classementImage from '../assets/Classement.png';
-import parametresImage from '../assets/Parametres.png';
-import connexionImage from '../assets/INSCRIPTION.png';
-import aProposImage from '../assets/A propos.png';
+import lines from '../assets/images/3lines.png';
+import imageAboveList from '../assets/images/ZapBall.png';
+import accueilImage from '../assets/titles/Accueil.png'; // Importez les images nécessaires pour chaque lien
+import defiImage from '../assets/titles/Défi Quotidien.png';
+import jeuImage from '../assets/titles/Jeu Libre.png';
+import profilImage from '../assets/titles/Profil.png';
+import classementImage from '../assets/titles/Classement.png';
+import parametresImage from '../assets/titles/Parametres.png';
+import connexionImage from '../assets/titles/INSCRIPTION.png';
+import aProposImage from '../assets/titles/A propos.png';
 
 function Navbar() {
   const [showList, setShowList] = useState(false); // État pour contrôler l'affichage de la liste

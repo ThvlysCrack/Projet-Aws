@@ -1,8 +1,8 @@
 import React from 'react'
 import './styles.css'; // Importez le fichier CSS
-import logo from '../assets/PokeZapv2.png'
+import logo from '../assets/images/PokeZapv2.png'
 //import Backgroundtest from acceuil/src/Composants/Backgroundtest.jsx
-import backgroundImage from '../assets/Giratina.png';
+import backgroundImage from '../assets/images/Giratina.png';
 import Backgroundtest from '../Backgroundtest';
 import { Link } from 'react-router-dom';
 
