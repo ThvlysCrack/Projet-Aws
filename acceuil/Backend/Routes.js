@@ -9,39 +9,6 @@ var nodemailer = require('nodemailer');
 var path = require('path');
 const User = require('./Schema');
 
-// Initialisation de app
-const app = express(); // Initialisation de l'application Express
-
-// Configuration du moteur de vue (ejs)
-app.set("view engine", "ejs");
-
-// Middleware pour parser les requêtes JSON
-app.use(bodyParser.json());
-
-// Middleware pour autoriser les requêtes cross-origin (CORS)
-app.use(cors());
-
-// Middleware pour parser les données urlencoded
-app.use(express.urlencoded({ extended: false }));
-
-app.use(express.static(path.join(__dirname, 'public')));
-
-//const JWT_SECRET = "jdhjjsssshjnqkjgftzksbvhjqn{}]\ndbdk,l";
-//const mongoUrl = "mongodb+srv://asma:SCI123@cluster0.nuo1d42.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-mongoose.connect(process.env.DB_URI, {
-    useNewUrlParser: true,
-})
-.then(() => {
-    console.log("Connected to database");
-})
-.catch((e) => console.error("Database connection error:", e)); // Log database connection error
-
-/*const userSchema = new mongoose.Schema({
-    pseudo: { type: String, unique: true },
-    email: { type: String, unique: true },
-    password: String
-});
-const User = mongoose.model("User", userSchema);*/
 
 app.post("/register", async (req, res) => {
     const { pseudo, email, password } = req.body;
@@ -107,7 +74,7 @@ app.post("/login", async (req, res) => {
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-          user: "aws.web2024@gmail.com",
+          user: "aws.web2024@gmail.com", //oldUser.email
           pass: "tswvbvmlbrxwklpj",
         },
       });
@@ -176,9 +143,3 @@ app.post("/login", async (req, res) => {
       res.json({ status: "Something Went Wrong" });
     }
   });
-  
-
-const PORT = 5000;
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-});
