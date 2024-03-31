@@ -1,0 +1,92 @@
+#profilPng {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    height: auto;
+}
+
+#profilOps img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 18%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#info img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#stat img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 19%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#palmares img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 14%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#perso img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 27%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#info img:hover,
+#stat img:hover,
+#palmares img:hover,
+#perso img:hover{
+    transform: scale(1.1);
+}
+
+.leaderboard {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.name {
+    flex-grow: 1;
+}
+
+.score {
+    margin-left: 20px;
+}
