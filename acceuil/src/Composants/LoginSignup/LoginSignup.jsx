@@ -31,7 +31,7 @@ const LoginSignup = () => {
     const handleRegister = async () => {
         try {
             const response = await axios.post('http://localhost:5000/register', { pseudo, email, password });
-            if (response.data.status === 'ok') {
+            if (response.data.status === 'Ok') {
                 // Registration was successful
                 console.log('User registered successfully');
             } else {

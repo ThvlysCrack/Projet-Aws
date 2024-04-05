@@ -13,12 +13,12 @@ const User = require('./Schema');
 
 router.post("/register", async (req, res) => {
   const { pseudo, email, password } = req.body;
-  const encryptedPassword = await bcrypt.hash(password, 10);
+  
   try {
     if (!pseudo || !email || !password) {
       throw new Error("Missing required fields");
     }
-
+    const encryptedPassword = await bcrypt.hash(password, 10);
     const oldUser = await User.findOne({ email });
     if (oldUser) {
       console.log("User already exists");
@@ -30,7 +30,7 @@ router.post("/register", async (req, res) => {
       email,
       password: encryptedPassword,
     });
-
+    console.log("user creasted successfully");
     res.status(201).json({ status: "Ok" });
   } catch (error) {
     console.error("Error registering user:", error.message);
