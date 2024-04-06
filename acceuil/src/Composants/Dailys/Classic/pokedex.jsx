@@ -292,7 +292,7 @@ function Pokedex() {
         }
     };
     return (
-        <body style={{backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', display : 'flex', justifyContent : 'center', alignItems : 'center',height : '100vh'}}>
+        <body style={{backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', display : 'flex', justifyContent : 'center', alignItems : 'center',height : '100vh'}}>
             <div className='pokedexBg'>
                 <div className='pokedexTop'>
                     <div className='returnButton'>
