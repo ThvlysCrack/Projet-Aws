@@ -11,6 +11,10 @@ var path = require('path');
 const User = require('./Schema');
 const { appendFile } = require("fs");
 
+router.get('/', (req, res) => {
+  res.send('Server is running');
+});
+
 router.post("/register", async (req, res) => {
   const { pseudo, email, password } = req.body;
   
