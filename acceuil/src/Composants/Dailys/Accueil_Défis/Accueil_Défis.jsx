@@ -21,7 +21,7 @@ function Accueil_Défis() {
         <br />
         <div className="background-image-container"></div>
         <div id="pokemyst">
-          <a href="/lien_pokemyst">
+          <a href="/pokedex">
             <img src={pokemyst} alt="Pokémon Mystère" />
           </a>
         </div>

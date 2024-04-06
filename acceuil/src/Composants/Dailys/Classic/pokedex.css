@@ -1,22 +1,9 @@
 @font-face {
     font-family: 'PKMN RBYGSC';
-    src: url('../../assets/fonts/PKMN\ RBYGSC.ttf') format('truetype');
+    /* src: url('../../assets/fonts/PKMN\ RBYGSC.woff') format('truetype'); */
+    src : url('../../assets/fonts/PKMN-RBYGSC.woff') format('truetype');
 }
 
-body {
-    display: flex;
-    /* Permet d'ordonner les éléments*/
-    justify-content: center;
-    /* Centrer horizontalement */
-    align-items: center;
-    /* Centrer verticalement */
-    height: 100vh;
-    /* Remplir toute la hauteur de la fenêtre */
-    margin: 0;
-    /* Supprimer les marges par défaut */
-    background-image: url('../../assets/images/Allgenv2.png');
-    background-size: 100% 100%;
-}
 
 p {
     font-family: 'PKMN RBYGSC';
@@ -45,15 +32,53 @@ p {
     flex-direction: column;
     z-index: 9999; /* Assurez-vous que le pop-up apparaît au-dessus de tous les autres éléments */
 }
-
-.popupTop {
-    background-color: #0DADEF;
-    display: flex;
-    padding: 20px;
-    border-radius: 50px;
-    border: #ffffff 20px solid;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombre pour le pop-up */
+.detailCloseButton {
+    background: none;
+    border: none;
+    font-family: 'PKMN RBYGSC';
+    font-size: 20px;
+    color: #ffffff; 
+    text-shadow: 0 0 5px black;
 }
+
+.popupContent {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    background-color: #0DADEF;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: #FFCC01 solid 20px;
+    border-radius: 50px;
+}
+
+.popupContent p {
+    text-align: center;
+}
+
+.popupPlacement {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'PKMN RBYGSC';
+    color: #ffffff; 
+    text-shadow: 0 0 5px black;
+    flex-wrap: wrap;
+}
+
+.anwser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.anwser img {
+    width: 50px;
+    height: 50px;
+}
+
 .pokedexTop {
     position: relative;
     display: flex;
@@ -124,6 +149,7 @@ p {
     position: relative;
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
     height: 10%;
     /* Augmentation de la hauteur pour inclure l'ombre */
@@ -133,17 +159,25 @@ p {
     z-index: 1;
 }
 .headerText {
-    width: 95%;
-    display: flex;
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(9,11.1%);
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-    gap: 0%;
 }
-.pokemonTabHeader p{
-    width: 11.1%;
+
+.colNames {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    place-self: center;
+}
+
+.colNames p {
+    font-size: 0.8em;
+    flex-grow: 1;
     text-align: center;
-    font-size: 13px;
 }
 
 .pokemonTabHeader::after {
@@ -164,6 +198,7 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 480px;
     background-color: #0DADEF;
     border-left: solid white 3px;
@@ -173,34 +208,50 @@ p {
 
 .dynamic-div {
     background-color: #FFCC01;
-    height: 20%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
+    border-radius: 10px;
+    width: 97%;
+    display: grid;
+    grid-template-columns: repeat(9,11.1%);
     align-items: center;
-    justify-content: space-evenly;
-    margin: 2%;
+    justify-content: center;
+    margin-top: 2%;
+    border: #000000 4px solid;
 }
 
-.dynamic-div p {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    height: 70%;
-    width: 9.1%;
-    border-radius: 10px;
-    margin: 1%;
-    color: #000000;
+.bgAnswserCard {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.answerCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    width: 80%;
+    height: 80%;
+    animation: flipIn 0.7s ; /* Applique l'animation de rotation lors de l'apparition */
+}
+
+
+/* Ajout de cette classe pour retourner la carte au départ */
+.answerCard.reverse {
+    transform: rotateY(0deg);
+}
+
+.answerCard span {
     font-size: 0.8em;
-    /* Taille de police relative */
-    /* Espacement entre les éléments */
+    font-family: 'PKMN RBYGSC';
 }
 
 .sprite {
     width: 105%;
-    height: 105%;
+    height: 105%; 
 }
 
 .pokemonTabFooter {
@@ -274,6 +325,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 70%;
     height: 55%;
     background-color: #0DADEF;
@@ -304,9 +356,12 @@ p {
     border: none;
 }
 
+#habitatHintId {
+    filter: brightness(0);
+}
 .hints button:hover img {
     transform: scale(1.2); /* Agrandir l'image de 20% lorsqu'elle est survolée */
-  }
+}
 
 .hintText {
     display: flex;
@@ -348,6 +403,11 @@ p {
 @media screen and (max-width : 1470px) {
     .pokedexBg {
         width: 1024px;
+    }
+    .colNames p {
+        font-size: 0.6em;
+        flex-grow: 1;
+        text-align: center;
     }
 }
 
@@ -404,5 +464,14 @@ p {
         width: 40%;
         height: 80%;
         margin-bottom: 0%;
+    }
+}
+
+@keyframes flipIn {
+    from {
+        transform: rotateY(-90deg); /* Tourne la carte de -90 degrés au départ */
+    }
+    to {
+        transform: rotateY(0deg); /* Tourne la carte à 0 degrés à la fin de l'animation */
     }
 }

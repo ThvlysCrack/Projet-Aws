@@ -3,26 +3,23 @@ import axios from 'axios';
 import pokemonNames from '../../assets/datas/FR_EN_PokeDict.json';
 import './pokedex.css';
 import talentHint from '../../assets/images/talentPill.svg';
-import genHint from '../../assets/images/genHint.svg';
+import habitatHint from '../../assets/images/habitatHint.png';
 import detailButton from '../../assets/images/pokedexButton.png'
+import redPoint from '../../assets/images/redPoint.svg';
+import greenPoint from '../../assets/images/greenPoint.svg';
+import bgImage from '../../assets/images/Allgenv2.png';
+import Backgroundtest from '../../Backgroundtest';
 
 function Pokedex() {
     const [pokemonName, setPokemonName] = useState('');
     const [pokemonDataList, setPokemonDataList] = useState([]);
     const [dailyPokemon, setDailyPokemon] = useState(null);
-    const [comparisonResults, setComparisonResults] = useState({
-        isEqualName: false,
-        isEqualType1: false,
-        isEqualType2: false,
-        isEqualHabitat: false,
-        isEqualColors: false,
-        isEqualEvolutionStage: false,
-        isEqualHeight: false,
-        isEqualWeight: false,
-        isEqualGeneration: false,
-    });
     const [attemptCounter, setAttemptCounter] = useState(0);
-    const [showPopup, setShowPopup] = useState(false); // État pour gérer la visibilité du pop-up
+    const [showColorAnswerPopup, setShowColorAnswerPopup] = useState(false); // État pour gérer la visibilité du pop-up
+    const [showTalentHintPopup, setshowTalentHintPopup] = useState(false); // Etat pout gérer la visibilité du pop-up de l'indice du talent
+    const [showHabitatHintPopup, setshowHabitatHintPopup] = useState(false);
+    const [pokemonFound, setPokemonFound] = useState(false); // Nouvel état pour suivre si le Pokémon du jour a été trouvé
+
 
     useEffect(() => {
         // Fonction pour générer automatiquement le Pokémon quotidien à minuit
@@ -48,17 +45,35 @@ function Pokedex() {
             document.getElementById('talentHintId').style.opacity = 1;
         }
         if (attemptCounter >= 8) {
-            document.getElementById('genHintId').style.opacity = 1;
+            document.getElementById('habitatHintId').style.opacity = 1;
         }
     }, [attemptCounter]);
 
-    const openPopup = () => {
-        setShowPopup(true);
+    const openColorAnswerPopup = () => {
+        setShowColorAnswerPopup(true);
     };
 
     // Fonction pour fermer le pop-up
-    const closePopup = () => {
-        setShowPopup(false);
+    const closeColorAnswerPopup = () => {
+        setShowColorAnswerPopup(false);
+    };
+
+    const openTalentHintPopup = () => {
+        setshowTalentHintPopup(true);
+    };
+
+    // Fonction pour fermer le pop-up
+    const closeTalentHintPopup = () => {
+        setshowTalentHintPopup(false);
+    };
+
+    const openHabitatHintPopup = () => {
+        setshowHabitatHintPopup(true);
+    };
+
+    // Fonction pour fermer le pop-up
+    const closeHabitatHintPopup = () => {
+        setshowHabitatHintPopup(false);
     };
 
     const getRandomPokemon = async () => {
@@ -67,11 +82,6 @@ function Pokedex() {
         console.log(randomKey);
         const randomPokemon = await getPokemon(pokemonNames[randomKey]);
         return randomPokemon;
-    };
-
-    const handleGenerateRandomPokemon = async () => {
-        const newDailyPokemon = await getRandomPokemon();
-        setDailyPokemon(newDailyPokemon);
     };
 
     const handleInputChange = (event) => {
@@ -202,6 +212,22 @@ function Pokedex() {
         return pokemonDetails.data.id;
     }
 
+    const getPokemonAbility = async (pokemonDetails) => {
+        try {
+            const abilities = pokemonDetails.data.abilities;
+            const abilityNames = await Promise.all(abilities.map(async (ability) => {
+                const abilityResponse = await axios.get(ability.ability.url);
+                const abilityNameFr = abilityResponse.data.names.find(name => name.language.name === 'fr').name;
+                return abilityNameFr;
+            }));
+            return abilityNames;
+        } catch (error) {
+            console.error('Erreur lors de la récupération des capacités Pokémon :', error.message);
+            return [];
+        }
+    };
+
+
     const getPokemon = async (pokemonName) => {
 
         // Récupération des informations général du pokémon (cf. doc PokeAPI)
@@ -221,6 +247,7 @@ function Pokedex() {
         const weight = getPokemonWeight(pokemonDetails);
         const pokemonId = getPokemonId(pokemonDetails);
         const generation = getGenerationByPokemonId(pokemonId);
+        const talent = await getPokemonAbility(pokemonDetails);
         const newPokemonData = {
             name: pokemonName,
             pokemonSprite: pokemonSprite,
@@ -231,13 +258,14 @@ function Pokedex() {
             weight: weight,
             evolutionStage: evolutionStage,
             generation: generation,
+            talent: talent,
         };
-
+        console.log(newPokemonData.talent);
         return newPokemonData;
     }
 
     const handleInputSubmit = async () => {
-        if (pokemonName.trim() !== '') {
+        if (pokemonName.trim() !== '' && !pokemonFound) {
             try {
 
                 setAttemptCounter(attemptCounter + 1);
@@ -247,36 +275,15 @@ function Pokedex() {
                 // Récupérer le pokémon saisi par l'utilisateur
                 const userPokemonData = await getPokemon(pokemonEnglishName);
 
-                // Comparaison des informations
-                const isEqualName = userPokemonData.name.toLowerCase() === dailyPokemon.name.toLowerCase();
-                const isEqualType1 = userPokemonData.pokemonTypes[0] === dailyPokemon.pokemonTypes[0];
-                const isEqualType2 = (userPokemonData.pokemonTypes[1] || 'Aucun') === (dailyPokemon.pokemonTypes[1] || 'Aucun');
-                const isEqualHabitat = userPokemonData.pokemonHabitat === dailyPokemon.pokemonHabitat;
-                const isEqualColors = userPokemonData.colors === dailyPokemon.colors;
-                const isEqualEvolutionStage = userPokemonData.evolutionStage === dailyPokemon.evolutionStage;
-                const isEqualHeight = userPokemonData.height === dailyPokemon.height;
-                const isEqualWeight = userPokemonData.weight === dailyPokemon.weight;
-                const isEqualGeneration = userPokemonData.generation === dailyPokemon.generation;
-
-                // Mise à jour de l'état avec les résultats de la comparaison
-                setComparisonResults({
-                    isEqualName,
-                    isEqualType1,
-                    isEqualType2,
-                    isEqualHabitat,
-                    isEqualColors,
-                    isEqualEvolutionStage,
-                    isEqualHeight,
-                    isEqualWeight,
-                    isEqualGeneration,
-                });
-
-
                 // Créez une nouvelle copie du tableau avec le nouvel élément au début
                 const updatedList = [userPokemonData, ...pokemonDataList];
 
                 // Mettez à jour l'état avec la nouvelle copie du tableau
                 setPokemonDataList(updatedList);
+
+                if (pokemonEnglishName.toLowerCase() === dailyPokemon.name.toLowerCase()) {
+                    setPokemonFound(true); // Marquez le Pokémon comme trouvé
+                }
 
                 setPokemonName('');
             } catch (error) {
@@ -285,131 +292,226 @@ function Pokedex() {
         }
     };
     return (
-        <div className='pokedexBg'>
-            <div className='pokedexTop'>
-                <div className='returnButton'>
-                    <div className='circle-1'>
-                        <div className='circle-2'></div>
-                    </div>
-                </div>
-            </div>
-            <div className='mainContainer'>
-                <div className='pokemonTab'>
-                    <div className='pokemonTabHeader'>
-                        <div className='headerText'>
-                            <p>Pokemon</p>
-                            <p>Type 1</p>
-                            <p>Type 2</p>
-                            <p>Habitat</p>
-                            <p>Couleur</p>
-                            <p>Stade d'evolution</p>
-                            <p>Taille</p>
-                            <p>Poids</p>
-                            <p>Generation</p>
+        <body style={{backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', display : 'flex', justifyContent : 'center', alignItems : 'center',height : '100vh'}}>
+            <div className='pokedexBg'>
+                <div className='pokedexTop'>
+                    <div className='returnButton'>
+                        <div className='circle-1'>
+                            <div className='circle-2'></div>
                         </div>
                     </div>
-                    <div className='pokemonTabContainer'>
-                        {pokemonDataList.map((pokemonData, index) => (
-                            <div key={index} className="dynamic-div">
-                                <p><img className='sprite' src={pokemonData.pokemonSprite} alt={pokemonData.name} /></p>
-                                <p style={{ backgroundColor: pokemonData.pokemonTypes[0] === dailyPokemon.pokemonTypes[0] ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.pokemonTypes[0]}
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.pokemonTypes[1] === dailyPokemon.pokemonTypes[1] ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.pokemonTypes[1] || 'Aucun'}
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.pokemonHabitat === dailyPokemon.pokemonHabitat ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.pokemonHabitat}
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.colors === dailyPokemon.colors ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.colors}
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.evolutionStage === dailyPokemon.evolutionStage ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.evolutionStage}
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.height === dailyPokemon.height ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.height * 10} cm
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.weight === dailyPokemon.weight ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.weight / 10} kg
-                                </p>
-                                <p style={{ backgroundColor: pokemonData.generation === dailyPokemon.generation ? '#29E43C' : '#EB0F0F' }}>
-                                    {pokemonData.generation}
-                                </p>
+                </div>
+                <div className='mainContainer'>
+                    <div className='pokemonTab'>
+                        <div className='pokemonTabHeader'>
+                            <div className='headerText'>
+                                <div className='colNames'>
+                                    <p>Pokemon</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Type 1</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Type 2</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Habitat</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Couleur(s)</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Stade d'evolution</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Taille</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Poids</p>
+                                </div>
+                                <div className='colNames'>
+                                    <p>Generation</p>
+                                </div>
                             </div>
-                        ))}
-                    </div>
-                    <div className='pokemonTabFooter'>
-                        <div className='redPoint'></div>
-                        <input className='inputPokemon'
-                            type="text"
-                            placeholder="Nom du Pokémon"
-                            value={pokemonName}
-                            onChange={handleInputChange}
-                            onKeyDown={handleInputKeyDown}
-                        />
-                        <div className='details'>
-                            <button className='detailsButton' onClick={openPopup}>
-                                <img src={detailButton} alt="detail"/>
-                            </button>
+                        </div>
+                        <div className='pokemonTabContainer'>
+                            {pokemonDataList.map((pokemonData, index) => (
+                                <div key={index} className="dynamic-div">
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'>
+                                            <img className='sprite' src={pokemonData.pokemonSprite} alt={pokemonData.name} />
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.pokemonTypes[0] === dailyPokemon.pokemonTypes[0] ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.pokemonTypes[0]}</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.pokemonTypes[1] === dailyPokemon.pokemonTypes[1] ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.pokemonTypes[1] || 'Aucun'}</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.pokemonHabitat === dailyPokemon.pokemonHabitat ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.pokemonHabitat}</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.colors === dailyPokemon.colors ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.colors}</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.evolutionStage === dailyPokemon.evolutionStage ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.evolutionStage}</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.height === dailyPokemon.height ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.height * 10} cm</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.weight === dailyPokemon.weight ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.weight / 10} kg</span>
+                                        </div>
+                                    </div>
+                                    <div className='bgAnswserCard'>
+                                        <div className='answerCard'
+                                            style={{ backgroundColor: pokemonData.generation === dailyPokemon.generation ? '#29E43C' : '#EB0F0F' }}>
+                                            <span>{pokemonData.generation}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className='pokemonTabFooter'>
+                            <div className='redPoint'></div>
+                            <input className='inputPokemon'
+                                type="text"
+                                placeholder="Nom du Pokémon"
+                                value={pokemonName}
+                                onChange={handleInputChange}
+                                onKeyDown={handleInputKeyDown}
+                                disabled={pokemonFound} // Désactiver l'entrée si le Pokémon est trouvé
+                            />
+                            <div className='details'>
+                                <button className='detailsButton' onClick={openColorAnswerPopup}>
+                                    <img src={detailButton} alt="detail" />
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className='spaceBar'></div>
-                <div className='sideComponent'>
-                    <div className='ruleComponent'>
-                        <div className='rules'>
-                            <p>defi Journalier :</p>
-                            <p>Mettez a l'epreuve votre connaissance des pokémons et devoilez le mystère qui se cache derriere cette enigme..</p>
+                    <div className='spaceBar'></div>
+                    <div className='sideComponent'>
+                        <div className='ruleComponent'>
+                            <div className='rules'>
+                                <p>defi Journalier :</p>
+                                <p>Mettez a l'epreuve votre connaissance des pokémons et devoilez le mystère qui se cache derriere cette enigme..</p>
+                            </div>
+                            <div className='hints'>
+                                <button onClick={openTalentHintPopup} disabled={attemptCounter < 5}>
+                                    <img id="talentHintId"
+                                        src={talentHint}
+                                        alt="talentHint"
+                                        style={{ opacity: 0.5, width: 75 }}
+                                    />
+                                </button>
+                                <button
+                                    onClick={openHabitatHintPopup}
+                                    disabled={attemptCounter < 8}>
+                                    <img id='habitatHintId' src={habitatHint} alt="talentHint" style={{ opacity: 0.5, width: 75 }} />
+                                </button>
+                            </div>
                         </div>
-                        <div className='hints'>
-                            <button>
-                                <img id="talentHintId" src={talentHint} alt="talentHint" style={{ opacity: 0.5 }} />
-                            </button>
-                            <button>
-                                <img id='genHintId' src={genHint} alt="talentHint" style={{ opacity: 0.5 }} />
-                            </button>
+                        <div className='pokemonDropDownList'>
+                            {pokemonName.trim() !== '' && // Vérifie si la zone de texte n'est pas vide
+                                Object.keys(pokemonNames).filter((name) => name.toLowerCase().startsWith(pokemonName.toLowerCase())).map((name, index) => (
+                                    <p key={index}>{name}</p>
+                                ))
+                            }
                         </div>
-                        <div className='hintText'>
-                            <p>Talent</p>
-                            <p>Géneration</p>
-                        </div>
-                    </div>
-                    <div className='pokemonDropDownList'>
-                        {pokemonName.trim() !== '' && // Vérifie si la zone de texte n'est pas vide
-                            Object.keys(pokemonNames).filter((name) => name.toLowerCase().startsWith(pokemonName.toLowerCase())).map((name, index) => (
-                                <p key={index}>{name}</p>
-                            ))
-                        }
-                    </div>
 
-                    <div>
                         <div>
-                        
+                            <div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                {showHabitatHintPopup && (
+                    <div className='popup'>
+                        <div className='popupContent'>
+                            <div className='popupPlacement'>
+                                <p>Habitat du Pokemon :</p>
+                                <button
+                                    className='detailCloseButton'
+                                    onClick={closeHabitatHintPopup}>X
+                                </button>
+                            </div>
+                            <div className='popupPlacement'>
+                                <p>{dailyPokemon.pokemonHabitat}</p>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {showTalentHintPopup && (
+                    <div className='popup'>
+                        <div className='popupContent'>
+                            <div className='popupPlacement'>
+                                <p>Talents du Pokemon :</p>
+                                <button
+                                    className='detailCloseButton'
+                                    onClick={closeTalentHintPopup}>X
+                                </button>
+                            </div>
+                            <div className='popupPlacement'>
+                                {dailyPokemon.talent.map((ability, index) => (
+                                    <p key={index}>{ability}</p>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Popup */}
+                {showColorAnswerPopup && (
+                    <div className="popup">
+                        <div className='popupContent'>
+                            <div className="popupPlacement">
+                                <h2>Code couleur</h2>
+                                <button
+                                    className='detailCloseButton'
+                                    onClick={closeColorAnswerPopup}>X
+                                </button>
+                            </div>
+                            <div className='popupPlacement'>
+                                <div className='anwser'>
+                                    <img src={greenPoint} alt="Round vert significatif d'une réponse correct" />
+                                    <p>Correct</p>
+                                </div>
+                                <div className='anwser'>
+                                    <img src={redPoint} alt="Round rouge significatif d'une réponse incorrect" />
+                                    <p>Incorrect</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
-            {/* Popup */}
-            {showPopup && (
-                <div className="popup">
-                    <div className="popupTop">
-                        <h2>Code couleur</h2>
-                        <button onClick={closePopup}>Fermer</button>
-                    </div>
-                    <div className='popupBottom'>
-                        <div className='correctAnwser'>
-                            <div className=''></div>
-                            <div></div>
-                        </div>
-                        <div className='wrongAnswer'>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-            )}
-        </div>
+        </body>
+
+
     );
 }
 
