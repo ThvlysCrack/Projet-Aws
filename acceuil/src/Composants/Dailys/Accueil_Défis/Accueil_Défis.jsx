@@ -16,9 +16,8 @@ function Accueil_Défis() {
         <link rel="stylesheet" type="text/css" href="defis.css" />
         <title>Profil</title>
       </head>
-      <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover' }}>
+      <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh'}}>
         <img src={defiPng} alt="Défi" id="defiPng" />
-        <br />
         <div className="background-image-container"></div>
         <div id="pokemyst">
           <a href="/lien_pokemyst">
@@ -44,10 +43,6 @@ function Accueil_Défis() {
           <a href="/lien_desc">
             <img src={desc} alt="Description" />
           </a>
-          <br /><br /><br /><br /><br /><br /><br />
-        </div>
-        <div id="monDiv">
-          <p>Les défis quotidiens se renouvellent tout les jours à 00h00 UTC+1</p>
         </div>
       </body>
     </html>
