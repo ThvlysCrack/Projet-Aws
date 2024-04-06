@@ -9,8 +9,9 @@ const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
 var path = require('path');
 const User = require('./Schema');
+const { appendFile } = require("fs");
 
-
+app.get('/', (req, res) => res.status(200).send('Server is running!'));
 router.post("/register", async (req, res) => {
   const { pseudo, email, password } = req.body;
   

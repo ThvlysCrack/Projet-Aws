@@ -29,6 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/',Router);
+app.get('/', (req, res) => res.status(200).send('Server is running!'));
 
 //const JWT_SECRET = "jdhjjsssshjnqkjgftzksbvhjqn{}]\ndbdk,l";
 //const mongoUrl = "mongodb+srv://asma:SCI123@cluster0.nuo1d42.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
