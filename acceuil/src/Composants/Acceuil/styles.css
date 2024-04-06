@@ -15,6 +15,8 @@ body {
     flex-wrap: wrap;
     font-weight: bold;
     padding: 10px 0; /* Ajustez la marge en conséquence */
+    margin-left: 5px;
+    margin-top: 5px;
   }
   
   .site-container {
