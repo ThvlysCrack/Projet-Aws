@@ -12,7 +12,37 @@ const User = require('./Schema');
 const { appendFile } = require("fs");
 
 router.get('/', (req, res) => {
-  res.send('Server is running');
+  res.send(`
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Welcome</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f0f0f0;
+              text-align: center;
+              padding: 50px;
+          }
+          h1 {
+              color: #333;
+              font-size: 3em;
+              margin-bottom: 20px;
+          }
+          p {
+              color: #666;
+              font-size: 1.5em;
+          }
+      </style>
+  </head>
+  <body>
+        <h1>Welcome to PokeZap Backend Server!</h1>
+        <p>This is a server-side root route handler.</p>
+  </body>
+  </html>
+`);
 });
 
 router.post("/register", async (req, res) => {
