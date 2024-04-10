@@ -53,7 +53,6 @@ const LoginSignup = () => {
     return (
         <Backgroundtest image={backgroundImage}>
             <div className="container">
-                <img src={logo} alt="" className="logo" />
                 <div className="inputs">
                     {action === "CONNEXION" ? <div></div> : <div className="input">
                         <img src={user_icon} alt='' />

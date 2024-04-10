@@ -1,14 +1,24 @@
 import React from 'react';
 import './defis.css';
+import bgImage from '../../assets/images/Allgenv2.png';
 import defiPng from '../../assets/titles/D-fi-Quotidien-09-03-2024.png';
 import pokemyst from '../../assets/titles/Pok-mon-Myst-re-09-03-2024.png';
 import silhouette from '../../assets/titles/Silhouette-09-03-2024.png';
-import cap from '../../assets/titles/Capacit-09-03-2024.png';
-import type from '../../assets/titles/Type-09-03-2024.png';
+import carte from '../../assets/titles/CartePokemon.png';
 import desc from '../../assets/titles/-Description-09-03-2024.png';
-import bgImage from '../../assets/images/Allgenv2.png';
 
 function Accueil_Défis() {
+
+  const handleLinkClick = (e) => {
+    if (!e.target.closest('img')) {
+      e.preventDefault(); 
+    }
+  };
+
+  const handleImageClick = (e) => {
+    e.stopPropagation(); 
+  };
+
   return (
     <html lang="fr">
       <head>
@@ -16,32 +26,27 @@ function Accueil_Défis() {
         <link rel="stylesheet" type="text/css" href="defis.css" />
         <title>Profil</title>
       </head>
-      <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh'}}>
+      <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh'}} onClick={handleLinkClick}>
         <img src={defiPng} alt="Défi" id="defiPng" />
-        <div className="background-image-container"></div>
+
         <div id="pokemyst">
           <a href="/pokedex">
-            <img src={pokemyst} alt="Pokémon Mystère" />
+            <img src={pokemyst} alt="Pokémon Mystère" onClick={handleImageClick} />
           </a>
         </div>
         <div id="silhouette">
           <a href="/lien_silhouette">
-            <img src={silhouette} alt="Silhouette" />
+            <img src={silhouette} alt="Silhouette" onClick={handleImageClick} />
           </a>
         </div>
-        <div id="cap">
-          <a href="/lien_cap">
-            <img src={cap} alt="Capacité" />
-          </a>
-        </div>
-        <div id="type">
-          <a href="/lien_type">
-            <img src={type} alt="Type" />
+        <div id="carte">
+          <a href="/Carte">
+            <img src={carte} alt="Carte Pokémon" onClick={handleImageClick} />
           </a>
         </div>
         <div id="desc">
-          <a href="/lien_desc">
-            <img src={desc} alt="Description" />
+          <a href="/Description">
+            <img src={desc} alt="Description" onClick={handleImageClick} />
           </a>
         </div>
       </body>

@@ -1,9 +1,8 @@
 body {
-  margin: auto; 
+  margin: 0px; 
 }
 .HomeContainer {
     height: 90vh;
-    margin: auto;   
   }
   
   nav {
@@ -15,8 +14,8 @@ body {
     flex-wrap: wrap;
     font-weight: bold;
     padding: 10px 0; /* Ajustez la marge en conséquence */
-    margin-left: 5px;
-    margin-top: 5px;
+    margin-left: 1%;
+    margin-top: 1%;
   }
   
   .site-container {

@@ -1,0 +1,10 @@
+.logogen {
+    position: fixed;
+    opacity: 100%;
+    font-family: "OCR A Std", monospace;
+    cursor: pointer;
+    padding: 10px 0;
+    margin-left: 20px;
+    margin-left: 1%;
+    margin-top: 1%;
+}

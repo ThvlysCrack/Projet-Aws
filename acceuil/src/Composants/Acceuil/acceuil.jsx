@@ -11,9 +11,6 @@ export const Accueil = () => {
   return (
     <Backgroundtest image={backgroundImage}>
     <div className="HomeContainer">
-      <nav>
-        <img src={logo} alt="" className="logo" />
-      </nav> 
       <h1 className='droite'>Acceptez le défi et découvrez si vous avez les compétences nécessaires pour devenir un maître Pokémon !</h1>
     </div>
     </Backgroundtest>

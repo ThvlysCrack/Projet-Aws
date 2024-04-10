@@ -6,18 +6,13 @@
     height: auto;
 }
 
-
 #pokemyst img{
     display: block;
     margin-right: auto;
     margin-left: auto;
     width: 27%;
     height: auto;
-    transition: tranform 0.3s;
-}
-
-#pokemyst img:hover {
-    transform: scale(1.1);
+    transition: transform 0.3s;
 }
 
 #silhouette img{
@@ -26,37 +21,16 @@
     margin-left: auto;
     width: 17%;
     height: auto;
-    transition: tranform 0.3s;
+    transition: transform 0.3s;
 }
 
-#silhouette img:hover {
-    transform: scale(1.1);
-}
-
-#cap img{
+#carte img{
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 14%;
+    width: 25%;
     height: auto;
-    transition: tranform 0.3s;
-}
-
-#cap img:hover {
-    transform: scale(1.1);
-}
-
-#type img{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 9%;
-    height: auto;
-    transition: tranform 0.3s;
-}
-
-#type img:hover {
-    transform: scale(1.1);
+    transition: transform 0.3s;
 }
 
 #desc img{
@@ -65,17 +39,20 @@
     margin-left: auto;
     width: 20%;
     height: auto;
-    transition: tranform 0.3s;
+    transition: transform 0.3s;
 }
 
+#pokemyst img:hover,
+#silhouette img:hover,
+#carte img:hover,
 #desc img:hover {
-    transform: scale(1.1);
+    transition: transform 0.3s;
+    transform: scale(1.2);
 }
 
 #pokemyst,
 #silhouette,
-#cap,
-#type,
+#carte,
 #desc{
-    margin-bottom: 20px; /* Ajoutez la marge en bas de chaque div */
+    margin-bottom: 20px;
 }

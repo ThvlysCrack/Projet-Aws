@@ -33,15 +33,6 @@
     height: 150px;
 }
 
-.logo{
-    width: 100px;
-    opacity: 100%;
-    font-family: "OCR A Std", monospace;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-top: 5px;
-}
-
 .inputs{
     margin-top: 10%;
     display: flex;

@@ -50,12 +50,19 @@
     height: auto;
     transition: transform 0.3s;
 }
+#profilPng,
+#info ,
+#stat ,
+#palmares ,
+#perso {
+    margin-bottom: 2%;
+}
 
 #info img:hover,
 #stat img:hover,
 #palmares img:hover,
 #perso img:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .leaderboard {
