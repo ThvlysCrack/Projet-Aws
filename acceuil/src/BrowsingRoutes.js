@@ -18,6 +18,7 @@ import Personnalisation from './Composants/Profil/Personnalisation/Personnalisat
 import Statistiques from './Composants/Profil/Statistiques/Statistiques';
 import Carte from './Composants/Dailys/Carte/Carte';
 import Description from './Composants/Dailys/Description/Description';
+import Silhouette from './Composants/Dailys/Silhouette/silhouette';
 
 
 const BrowsingRoutes = () => {
@@ -35,6 +36,8 @@ const BrowsingRoutes = () => {
         <Route path="/Classement" element={<Classement/>} />
         <Route path="/Parametres" element={<Parametres/>} />
         <Route path="/APropos" element={<APropos/>} />
+        <Route path="/Silhouette" element={<Silhouette/>} />
+
         <Route path="/Informations" element={<EnDev/>} />
         <Route path="/Palmares" element={<EnDev/>} />
         <Route path="/Personnalisation" element={<EnDev/>} />*
