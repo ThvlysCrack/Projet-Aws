@@ -31,6 +31,29 @@ const userSchema = new mongoose.Schema({
 
 }, { timestamps: true })
 
+const dailyPokemonSchema = new mongoose.Schema({
+    pokemon1: {
+        type: String,
+        trim: true,
+        required: [true, 'pokemon is required']
+    },
+    pokemon2: {
+        type: String,
+        trim: true,
+        required: [true, 'pokemon is required']
+    },
+    pokemon3: {
+        type: String,
+        trim: true,
+        required: [true, 'pokemon is required']
+    },
+    pokemon4: {
+        type: String,
+        trim: true,
+        required: [true, 'pokemon is required']
+    }
+}, { timestamps: true })
+
 
 //encrypting password before saving
 userSchema.pre('save', async function (next) {
@@ -54,4 +77,7 @@ userSchema.methods.getJwtToken = function () {
 }
 
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = {
+    User: mongoose.model('users', userSchema),
+    DailyPokemon: mongoose.model('daily-pokemons', dailyPokemonSchema),
+  };
