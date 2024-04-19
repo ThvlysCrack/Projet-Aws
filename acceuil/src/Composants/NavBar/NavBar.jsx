@@ -24,6 +24,11 @@ function Navbar() {
   const backToNavbar = () => {
     setShowList(false); // Cacher la liste
   };
+  const handleLogout = () => {
+    // Remove the token and token expiration time from local storage
+    localStorage.removeItem('token');
+    localStorage.removeItem('tokenExpiration');
+  };
 
   return (
     <div>

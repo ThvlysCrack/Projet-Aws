@@ -20,6 +20,8 @@ const LoginSignup = () => {
             if (response.data.status === 'ok') {
                 // Login was successful
                 console.log('Token:', response.data.data);
+                localStorage.setItem('token', response.data.data); // Store the token in local storage
+                localStorage.setItem('tokenExpiration', Date.now() + 15 * 60 * 1000); // Store the token expiration time
             } else {
                 // Login failed
                 console.log('Error:', response.data.error);
