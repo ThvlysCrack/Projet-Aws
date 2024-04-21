@@ -8,7 +8,20 @@ import detailButton from '../../assets/images/pokedexButton.png'
 import redPoint from '../../assets/images/redPoint.svg';
 import greenPoint from '../../assets/images/greenPoint.svg';
 import bgImage from '../../assets/images/Allgenv2.png';
-import Backgroundtest from '../../Backgroundtest';
+async function getPokemonsOfTheDay() {
+    try {
+      const response = await axios.get('http://localhost:4000/daily-pokemons'); // Assurez-vous que l'URL est correcte
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        console.log('Erreur lors de la récupération des Pokémons du jour:', response.statusText);
+        return null;
+      }
+    } catch (error) {
+      console.error('Erreur lors de la récupération des Pokémons du jour:', error.message);
+      return null;
+    }
+  }
 
 function Pokedex() {
     const [pokemonName, setPokemonName] = useState('');
@@ -24,7 +37,9 @@ function Pokedex() {
     useEffect(() => {
         // Fonction pour générer automatiquement le Pokémon quotidien à minuit
         const generateDailyPokemon = async () => {
-            const newDailyPokemon = await getRandomPokemon();
+            const pokemonQuery = await getPokemonsOfTheDay();
+            const newDailyPokemon = await getPokemon(pokemonQuery.pokemon1);
+            console.log(newDailyPokemon);
             setDailyPokemon(newDailyPokemon);
         };
 
@@ -260,7 +275,7 @@ function Pokedex() {
             generation: generation,
             talent: talent,
         };
-        console.log(newPokemonData.talent);
+        //console.log(newPokemonData.talent);
         return newPokemonData;
     }
 

@@ -101,5 +101,5 @@ async function insertDailyPokemons() {
 
 // Planification de l'exécution quotidienne à minuit
 cron.schedule('* * * * *', () => {
-  insertDailyPokemons();
+  //insertDailyPokemons();
 });

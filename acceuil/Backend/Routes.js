@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
 var path = require('path');
-const User = require('./Schema');
+const { User, DailyPokemon } = require('./Schema');
 const { appendFile } = require("fs");
 
 router.get('/', (req, res) => {
@@ -181,6 +181,21 @@ router.post("/reset-password/:id/:token", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.json({ status: "Something Went Wrong" });
+  }
+});
+
+router.get('/daily-pokemons', async (req, res) => {
+  try {
+    // Récupérer les 4 Pokémons du jour
+    const dailyPokemons = await DailyPokemon.findOne({}, {}, { sort: { 'createdAt': -1 } });
+    if (dailyPokemons) {
+      res.status(200).json(dailyPokemons);
+    } else {
+      res.status(404).json({ message: "Aucun Pokémon trouvé pour aujourd'hui." });
+    }
+  } catch (error) {
+    console.error('Erreur lors de la récupération des Pokémons du jour :', error);
+    res.status(500).json({ error: 'Erreur serveur' });
   }
 });
 
