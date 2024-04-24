@@ -19,10 +19,9 @@ const LoginSignup = () => {
             const response = await axios.post('https://pokezapserver.vercel.app/login', { email, password });
             if (response.data.status === 'ok') {
                 // Login was successful
-                console.log('Token:', response.data.data);
-                localStorage.setItem('token', response.data.data); // Store the token in local storage
+                localStorage.setItem('token', response.data.data.token); // Store the token in local storage
                 localStorage.setItem('tokenExpiration', Date.now() + 15 * 60 * 1000); // Store the token expiration time
-                //localStorage.setItem('userId',)
+                localStorage.setItem('userId', response.data.data.userId); // Store the user's ID in local storage
             } else {
                 // Login failed
                 console.log('Error:', response.data.error);
