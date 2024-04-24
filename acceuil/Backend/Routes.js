@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
 var path = require('path');
-const { User, DailyPokemon } = require('./Schema');
+const { User, DailyPokemon, PlayerAdvancement } = require('./Schema');
 const { appendFile } = require("fs");
 
 router.get('/', (req, res) => {
@@ -64,12 +64,22 @@ router.post("/register", async (req, res) => {
       email,
       password: encryptedPassword,
     });
+
+    const pAdvancement = await PlayerAdvancement.create({
+      userId: newUser.id,
+      game1Advancement: [], game1Bool: false,
+      game2Advancement: [], game2Bool: false,
+      game3Advancement: [], game3Bool: false,
+      game4Advancement: [], game4Bool: false,
+      });
     console.log("user creasted successfully");
     res.status(201).json({ status: "Ok" });
   } catch (error) {
     console.error("Error registering user:", error.message);
     res.status(500).json({ error: "Internal server error" });
   }
+
+   
 });
 
 
@@ -90,7 +100,7 @@ router.post("/login", async (req, res) => {
     });
 
     if (res.status(201)) {
-      return res.json({ status: "ok", data: token });
+      return res.json({ status: "ok", data: token,  });
     } else {
       return res.json({ error: "error" });
     }
@@ -198,5 +208,54 @@ router.get('/daily-pokemons', async (req, res) => {
     res.status(500).json({ error: 'Erreur serveur' });
   }
 });
+
+// Route pour récupérer la liste game1Advancement
+router.get('/game1Advancement', async (req, res) => {
+  try {
+      // Récupérer le document playerAdvancement
+      const playerAdvancementDoc = await PlayerAdvancement.findOne();
+      
+      // Vérifier si le document existe et s'il contient la propriété game1Advancement
+      if (playerAdvancementDoc && playerAdvancementDoc.game1Advancement) {
+          // Retourner la liste game1Advancement
+          res.json(playerAdvancementDoc.game1Advancement);
+      } else {
+          // Si la propriété game1Advancement n'est pas définie ou si le document n'existe pas, retourner une liste vide
+          res.json([]);
+      }
+  } catch (error) {
+      // Gérer les erreurs
+      console.error("Erreur lors de la récupération de la liste game1Advancement :", error);
+      res.status(500).json({ error: 'Erreur lors de la récupération de la liste game1Advancement' });
+  }
+});
+
+// Route pour ajouter un élément à la liste game1Advancement
+router.post('/game1Advancement/add', async (req, res) => {
+  try {
+      // Récupérer l'élément à ajouter de la requête POST
+      const newItem = req.body.newItem;
+
+      // Vérifier si l'élément est une chaîne valide
+      if (typeof newItem !== 'string') {
+          return res.status(400).json({ error: 'L\'élément à ajouter doit être une chaîne de caractères' });
+      }
+
+      // Mettre à jour la liste game1Advancement dans la base de données en ajoutant le nouvel élément
+      const playerAdvancementDoc = await PlayerAdvancement.findOne();
+      if (playerAdvancementDoc) {
+          playerAdvancementDoc.game1Advancement.push(newItem);
+          await playerAdvancementDoc.save();
+          return res.json({ message: 'Élément ajouté avec succès à la liste game1Advancement' });
+      } else {
+          return res.status(404).json({ error: 'Document playerAdvancement introuvable' });
+      }
+  } catch (error) {
+      // Gérer les erreurs
+      console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
+      return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
+  }
+});
+
 
 module.exports = router;

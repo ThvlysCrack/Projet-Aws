@@ -8,6 +8,7 @@ import detailButton from '../../assets/images/pokedexButton.png'
 import redPoint from '../../assets/images/redPoint.svg';
 import greenPoint from '../../assets/images/greenPoint.svg';
 import bgImage from '../../assets/images/Allgenv2.png';
+
 async function getPokemonsOfTheDay() {
     try {
       const response = await axios.get('http://localhost:4000/daily-pokemons'); // Assurez-vous que l'URL est correcte
@@ -23,6 +24,35 @@ async function getPokemonsOfTheDay() {
     }
   }
 
+  // Fonction pour appeler la route et récupérer le résultat
+async function getGame1Advancement() {
+    try {
+        // Appel de la route sur le serveur local
+        const response = await axios.get('http://localhost:4000/game1Advancement');
+        
+        // Si la requête a réussi, retourner le résultat
+        return response.data;
+    } catch (error) {
+        // Gérer les erreurs
+        console.error("Erreur lors de la récupération de la liste game1Advancement :", error);
+        throw error; // Vous pouvez choisir de gérer l'erreur d'une autre manière selon vos besoins
+    }
+}
+
+// Fonction pour ajouter un élément à la liste game1Advancement
+async function addGame1AdvancementItem(newItem) {
+    try {
+        // Envoyer une requête POST à la route '/api/players/game1Advancement/add' sur le serveur local
+        const response = await axios.post('http://localhost:4000/game1Advancement/add', { newItem });
+        
+        // Si la requête a réussi, afficher le message de réussite
+        console.log(response.data.message);
+    } catch (error) {
+        // Si la requête a échoué, afficher l'erreur
+        console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error.response.data.error);
+    }
+}
+
 function Pokedex() {
     const [pokemonName, setPokemonName] = useState('');
     const [pokemonDataList, setPokemonDataList] = useState([]);
@@ -33,13 +63,13 @@ function Pokedex() {
     const [showHabitatHintPopup, setshowHabitatHintPopup] = useState(false);
     const [pokemonFound, setPokemonFound] = useState(false); // Nouvel état pour suivre si le Pokémon du jour a été trouvé
 
-
     useEffect(() => {
         // Fonction pour générer automatiquement le Pokémon quotidien à minuit
         const generateDailyPokemon = async () => {
             const pokemonQuery = await getPokemonsOfTheDay();
             const newDailyPokemon = await getPokemon(pokemonQuery.pokemon1);
-            console.log(newDailyPokemon);
+            //const val = await getGame1Advancement();
+              //console.log('Les pokémons saisis sont : ',val);
             setDailyPokemon(newDailyPokemon);
         };
 
@@ -295,6 +325,9 @@ function Pokedex() {
 
                 // Mettez à jour l'état avec la nouvelle copie du tableau
                 setPokemonDataList(updatedList);
+
+                // Enregistrer l'avancement du joueur dans la base de données
+                addGame1AdvancementItem(pokemonEnglishName);
 
                 if (pokemonEnglishName.toLowerCase() === dailyPokemon.name.toLowerCase()) {
                     setPokemonFound(true); // Marquez le Pokémon comme trouvé

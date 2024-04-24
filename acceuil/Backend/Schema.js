@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { ObjectId } = require('mongodb');
 require('dotenv').config();
 
 const userSchema = new mongoose.Schema({
@@ -54,6 +55,55 @@ const dailyPokemonSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
+const playerAdvancementSchema = new mongoose.Schema({
+        userId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: [true, 'L\'ID de l\'utilisateur est requis']
+        },
+        game1Advancement: {
+            type: [String], 
+            default: [],
+            trim: true
+        }, 
+        game1Bool: {
+            type: Boolean, 
+            trim: true,
+            default: false
+        },
+        game2Advancement: {
+            type: [String], 
+            default: [],
+            trim: true
+        }, 
+        game2Bool: {
+            type: Boolean, 
+            trim: true,
+            default: false
+        },
+        game3Advancement: {
+            type: [String], 
+            default: [],
+            trim: true
+        }, 
+        game3Bool: {
+            type: Boolean, 
+            trim: true,
+            default: false
+        },
+        game4Advancement: {
+            type: [String], 
+            default: [],
+            trim: true
+        }, 
+        game4Bool: {
+            type: Boolean, 
+            trim: true,
+            default: false
+        },
+        
+}, { timestamps: true })
+
 
 //encrypting password before saving
 userSchema.pre('save', async function (next) {
@@ -80,4 +130,5 @@ userSchema.methods.getJwtToken = function () {
 module.exports = {
     User: mongoose.model('users', userSchema),
     DailyPokemon: mongoose.model('daily-pokemons', dailyPokemonSchema),
+    PlayerAdvancement: mongoose.model('player-advancements', playerAdvancementSchema),
   };
