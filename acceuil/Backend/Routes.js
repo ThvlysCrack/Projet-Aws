@@ -66,7 +66,7 @@ router.post("/register", async (req, res) => {
     });
 
     const pAdvancement = await PlayerAdvancement.create({
-      userId: newUser.id,
+      userId: newUser._id,
       game1Advancement: [], game1Bool: false,
       game2Advancement: [], game2Bool: false,
       game3Advancement: [], game3Bool: false,
@@ -100,7 +100,7 @@ router.post("/login", async (req, res) => {
     });
 
     if (res.status(201)) {
-      return res.json({ status: "ok", data: token,  });
+      return res.json({ status: "ok", data: { token: token, userId: user._id }  });
     } else {
       return res.json({ error: "error" });
     }
