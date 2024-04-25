@@ -25,17 +25,18 @@ async function getPokemonsOfTheDay() {
   }
 
   // Fonction pour appeler la route et récupérer le résultat
-async function getGame1Advancement() {
+  async function getGame1Advancement() {
     try {
-        // Appel de la route sur le serveur local
-        const response = await axios.get('http://localhost:4000/game1Advancement');
+        // Get the userId from local storage
+        const userId = localStorage.getItem('userId');
+
+        // Call the game1Advancement route with the userId
+        const response = await axios.get(`http://localhost:4000/game1Advancement/${userId}`);
         
-        // Si la requête a réussi, retourner le résultat
         return response.data;
     } catch (error) {
-        // Gérer les erreurs
         console.error("Erreur lors de la récupération de la liste game1Advancement :", error);
-        throw error; // Vous pouvez choisir de gérer l'erreur d'une autre manière selon vos besoins
+        throw error;
     }
 }
 

@@ -109,43 +109,42 @@ router.post("/login", async (req, res) => {
 });
 
 
-router.post('/forgot-password', async (req, res) => {
+router.post("/forgot-password", async (req, res) => {
   const { email } = req.body;
+  try {
+    const oldUser = await User.findOne({ email });
+    if (!oldUser) {
+      return res.json({ status: "User Not Exists!!" });
+    }
+    const secret = process.env.JWT_Secret + oldUser.password;
+    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
+      expiresIn: "5m",
+    });
+    const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+    var transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USERNAME, //oldUser.email
+        pass: process.env.EMAIL_PASSWORD,
+      },
+    });
 
-  // Find the user by email
-  const user = await User.findOne({ email });
+    var mailOptions = {
+      from: "noreply@gmail.com",
+      to: email,
+      subject: "Password Reset",
+      text: link,
+    };
 
-  if (!user) {
-    return res.status(400).json({ message: 'No user exists with that email' });
-  }
-
-  // Generate a random token
-  const token = crypto.randomBytes(20).toString('hex');
-
-  // Store the token and the expiration time in the user's document
-  user.resetPasswordToken = token;
-  user.resetPasswordExpires = Date.now() + 3600000; // 1 hour from now
-  await user.save();
-
-  // Send an email to the user with the token
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.EMAIL_USERNAME,
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
-
-  const mailOptions = {
-    from: process.env.EMAIL_USERNAME,
-    to: email,
-    subject: 'Password Reset',
-    text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\nPlease click on the following link, or paste this into your browser to complete the process within one hour of receiving it:\n\nhttp://localhost:3000/reset-password?token=${token}\n\nIf you did not request this, please ignore this email and your password will remain unchanged.\n`,
-  };
-
-  await transporter.sendMail(mailOptions);
-
-  res.status(200).json({ message: 'Password reset email sent' });
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Email sent: " + info.response);
+      }
+    });
+    console.log(link);
+  } catch (error) { }
 });
 
 
@@ -211,23 +210,26 @@ router.get('/daily-pokemons', async (req, res) => {
 });
 
 // Route pour récupérer la liste game1Advancement
-router.get('/game1Advancement', async (req, res) => {
+router.get('/game1Advancement/:userId', async (req, res) => {
   try {
-      // Récupérer le document playerAdvancement
-      const playerAdvancementDoc = await PlayerAdvancement.findOne();
-      
-      // Vérifier si le document existe et s'il contient la propriété game1Advancement
-      if (playerAdvancementDoc && playerAdvancementDoc.game1Advancement) {
-          // Retourner la liste game1Advancement
-          res.json(playerAdvancementDoc.game1Advancement);
-      } else {
-          // Si la propriété game1Advancement n'est pas définie ou si le document n'existe pas, retourner une liste vide
-          res.json([]);
-      }
+    // Get the user's ID from the route parameters
+    const { userId } = req.params;
+
+    // Find the PlayerAdvancement document for this user
+    const playerAdvancementDoc = await PlayerAdvancement.findOne({ userId });
+
+    // Check if the document exists and if it contains the game1Advancement property
+    if (playerAdvancementDoc && playerAdvancementDoc.game1Advancement) {
+      // Return the game1Advancement list
+      res.json(playerAdvancementDoc.game1Advancement);
+    } else {
+      // If the game1Advancement property is not defined or if the document does not exist, return an empty list
+      res.json([]);
+    }
   } catch (error) {
-      // Gérer les erreurs
-      console.error("Erreur lors de la récupération de la liste game1Advancement :", error);
-      res.status(500).json({ error: 'Erreur lors de la récupération de la liste game1Advancement' });
+    // Handle errors
+    console.error("Error retrieving the game1Advancement list:", error);
+    res.status(500).json({ error: 'Error retrieving the game1Advancement list' });
   }
 });
 
