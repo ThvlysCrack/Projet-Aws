@@ -5,7 +5,8 @@ import user_icon from '../assets/images/person.png'
 import email_icon from '../assets/images/email.png'
 import password_icon from '../assets/images/password.png'
 import logo from '../assets/images/PokeZapv2.png'
-import backgroundImage from '../assets/images/Giratina.png';
+//import backgroundImage from '../assets/images/Giratina.png';
+import backgroundImage from '../assets/images/backgrounds101.jpg';
 import Backgroundtest from '../Backgroundtest';
 
 const LoginSignup = () => {
