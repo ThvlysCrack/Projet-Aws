@@ -18,6 +18,7 @@ import Personnalisation from './Composants/Profil/Personnalisation/Personnalisat
 import Statistiques from './Composants/Profil/Statistiques/Statistiques';
 import Carte from './Composants/Dailys/Carte/Carte';
 import Description from './Composants/Dailys/Description/Description';
+import ForgetPassword from './Composants/ForgetPassword/forgetpassword'
 
 
 const BrowsingRoutes = () => {
@@ -41,6 +42,7 @@ const BrowsingRoutes = () => {
         <Route path="/Statistiques" element={<EnDev/>} />
         <Route path="/Description" element={<EnDev/>} />
         <Route path="/Carte" element={<EnDev/>} />
+        <Route path="//forgot-password" element={<ForgetPassword/>} />
       </Routes>
     </Router>
   );

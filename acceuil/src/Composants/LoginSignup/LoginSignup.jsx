@@ -6,7 +6,7 @@ import email_icon from '../assets/images/email.png'
 import password_icon from '../assets/images/password.png'
 import logo from '../assets/images/PokeZapv2.png'
 //import backgroundImage from '../assets/images/Giratina.png';
-import backgroundImage from '../assets/images/backgrounds101.jpg';
+import backgroundImage from '../assets/images/background102.jpg';
 import Backgroundtest from '../Backgroundtest';
 
 const LoginSignup = () => {
@@ -45,6 +45,7 @@ const LoginSignup = () => {
             console.error('Error making request:', error);
         }
     };
+    const handleForgotPassword = () => {}
     const handleAction = () => {
         if (action === "CONNEXION") {
             handleLogin();
@@ -72,7 +73,7 @@ const LoginSignup = () => {
                     </div>
                     <button className="SubmitButton" onClick={handleAction}>Submit</button>
                 </div>
-                {action === "INSCRIPTION" ? <div></div> : <div className="forgot-password"><span>Mot de passe oublié?</span></div>}
+                {action === "INSCRIPTION" ? <div></div> : <div className="forgot-password"><a href="/forgot-password"><span>Mot de passe oublié?</span></a></div>}
 
                 <div className="submit-container">
                     <div className={action === "CONNEXION" ? "submit gray" : "submit"} onClick={() => { setAction("INSCRIPTION") }}>INSCRIPTION</div>

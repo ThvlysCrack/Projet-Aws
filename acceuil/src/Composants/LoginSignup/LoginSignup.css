@@ -55,14 +55,16 @@
 .forgot-password span{
     padding-left: 46%;
     font-size: 100%;
-    color: rgba(255, 255, 255, 0.811);
+    font-weight: bold;
+    color: rgba(255, 255, 255);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
     cursor: pointer;
 }
 .submit-container{
     display: flex;
     gap: 30px;
     margin: 60px auto;
-
 }
 .submit{
     display: flex;
@@ -100,6 +102,7 @@ color: #FFF;
 transition: background .15s ease, border .15s ease;
 cursor: pointer;
 -webkit-appearance: none;
+appearance: none;
 -Webkit-borderRadius: 0;
 border: 2px solid  #005BBB;
 border-radius: 4px;
