@@ -104,7 +104,21 @@ const playerAdvancementSchema = new mongoose.Schema({
         
 }, { timestamps: true })
 
-
+const ResetTokenSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true
+  },
+  token: {
+    type: String,
+    required: true
+  },
+  expires: {
+    type: Date,
+    default: Date.now() + 3600000 // Token expires in 1 hour
+  }
+});
 //encrypting password before saving
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
@@ -131,4 +145,5 @@ module.exports = {
     User: mongoose.model('users', userSchema),
     DailyPokemon: mongoose.model('daily-pokemons', dailyPokemonSchema),
     PlayerAdvancement: mongoose.model('player-advancements', playerAdvancementSchema),
+    ResetToken: mongoose.model('ResetToken',ResetTokenSchema),
   };
