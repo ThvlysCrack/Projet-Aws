@@ -109,42 +109,43 @@ router.post("/login", async (req, res) => {
 });
 
 
-router.post("/forgot-password", async (req, res) => {
+router.post('/forgot-password', async (req, res) => {
   const { email } = req.body;
-  try {
-    const oldUser = await User.findOne({ email });
-    if (!oldUser) {
-      return res.json({ status: "User Not Exists!!" });
-    }
-    const secret = process.env.JWT_Secret + oldUser.password;
-    const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
-      expiresIn: "5m",
-    });
-    const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
-    var transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "aws.web2024@gmail.com", //oldUser.email
-        pass: "tswvbvmlbrxwklpj",
-      },
-    });
 
-    var mailOptions = {
-      from: "noreply@gmail.com",
-      to: "asma.latoui02@gmail.com",
-      subject: "Password Reset",
-      text: link,
-    };
+  // Find the user by email
+  const user = await User.findOne({ email });
 
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Email sent: " + info.response);
-      }
-    });
-    console.log(link);
-  } catch (error) { }
+  if (!user) {
+    return res.status(400).json({ message: 'No user exists with that email' });
+  }
+
+  // Generate a random token
+  const token = crypto.randomBytes(20).toString('hex');
+
+  // Store the token and the expiration time in the user's document
+  user.resetPasswordToken = token;
+  user.resetPasswordExpires = Date.now() + 3600000; // 1 hour from now
+  await user.save();
+
+  // Send an email to the user with the token
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USERNAME,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USERNAME,
+    to: email,
+    subject: 'Password Reset',
+    text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\nPlease click on the following link, or paste this into your browser to complete the process within one hour of receiving it:\n\nhttp://localhost:3000/reset-password?token=${token}\n\nIf you did not request this, please ignore this email and your password will remain unchanged.\n`,
+  };
+
+  await transporter.sendMail(mailOptions);
+
+  res.status(200).json({ message: 'Password reset email sent' });
 });
 
 

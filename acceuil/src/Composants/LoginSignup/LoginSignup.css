@@ -1,15 +1,3 @@
-/*body {
-   background-image: url('../assets/Giratina.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    margin: 0; 
-    padding: 0; 
-    overflow-x: hidden; 
-    overflow-y: hidden;
-}*/
-
-
 .container{
     display: flex;
     flex-direction: column;
@@ -37,6 +25,7 @@
     margin-top: 10%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 25px;
 }
 
@@ -96,4 +85,23 @@
     color: #ffffff;
     font-size: 48px;
     font-weight: 700;
+}
+.SubmitButton {
+all: unset;
+background:  #005BBB;
+width: 220px;
+padding: 8px 16px;
+margin: 0;
+margin-bottom: 10px;
+text-align: center;
+font-size: 14pt;
+font-size: bold;
+color: #FFF;
+transition: background .15s ease, border .15s ease;
+cursor: pointer;
+-webkit-appearance: none;
+-Webkit-borderRadius: 0;
+border: 2px solid  #005BBB;
+border-radius: 4px;
+outline: 0;
 }

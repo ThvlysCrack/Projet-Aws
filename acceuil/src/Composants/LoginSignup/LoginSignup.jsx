@@ -69,7 +69,7 @@ const LoginSignup = () => {
                         <img src={password_icon} alt='' />
                         <input type="password" placeholder='Mot de passe' value={password} onChange={(e) => setPassword(e.target.value)} />
                     </div>
-                    <button onClick={handleAction}>Submit</button>
+                    <button className="SubmitButton" onClick={handleAction}>Submit</button>
                 </div>
                 {action === "INSCRIPTION" ? <div></div> : <div className="forgot-password"><span>Mot de passe oublié?</span></div>}
 
