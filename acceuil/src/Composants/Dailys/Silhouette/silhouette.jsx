@@ -7,7 +7,7 @@ import ZoomInIcon from '../../assets/images/zoom_in.png';
 import ZoomOutIcon from '../../assets/images/zoom_out.png'; 
 import DescriptionIcon from '../../assets/images/bouton_description.png';
 import backgroundImage from '../../assets/images/Allgenv2.png';
-import Backgroundtest from '../Backgroundtest';
+import Backgroundtest from '../../Backgroundtest';
 const Silhouette = () => {
   const [currentPokemon, setCurrentPokemon] = useState(null);
   const [userGuess, setUserGuess] = useState('');
