@@ -35,7 +35,7 @@ function Accueil_Défis() {
           </a>
         </div>
         <div id="silhouette">
-          <a href="/lien_silhouette">
+          <a href="/Silhouette">
             <img src={silhouette} alt="Silhouette" onClick={handleImageClick} />
           </a>
         </div>

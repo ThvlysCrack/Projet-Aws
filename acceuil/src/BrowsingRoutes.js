@@ -19,7 +19,7 @@ import Statistiques from './Composants/Profil/Statistiques/Statistiques';
 import Carte from './Composants/Dailys/Carte/Carte';
 import Description from './Composants/Dailys/Description/Description';
 import ForgetPassword from './Composants/ForgetPassword/forgetpassword'
-
+import Silhouette from './Composants/Dailys/Silhouette/silhouette';
 
 const BrowsingRoutes = () => {
   return (
@@ -43,6 +43,7 @@ const BrowsingRoutes = () => {
         <Route path="/Description" element={<EnDev/>} />
         <Route path="/Carte" element={<EnDev/>} />
         <Route path="//forgot-password" element={<ForgetPassword/>} />
+        <Route path="/Silhouette" element={<Silhouette/>} />
       </Routes>
     </Router>
   );
