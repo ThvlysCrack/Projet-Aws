@@ -6,6 +6,8 @@ import TitleImage from '../../assets/titles/try.png';
 import ZoomInIcon from '../../assets/images/zoom_in.png';
 import ZoomOutIcon from '../../assets/images/zoom_out.png'; 
 import DescriptionIcon from '../../assets/images/bouton_description.png';
+import backgroundImage from '../../assets/images/Allgenv2.png';
+import Backgroundtest from '../Backgroundtest';
 const Silhouette = () => {
   const [currentPokemon, setCurrentPokemon] = useState(null);
   const [userGuess, setUserGuess] = useState('');
@@ -148,6 +150,7 @@ const Silhouette = () => {
   };
 
   return (
+    <Backgroundtest image={backgroundImage}>
     <div className="silhouette-container">
       <img src={TitleImage} alt="Devine le Pokémon !" className="title-image" />
   
@@ -233,6 +236,7 @@ const Silhouette = () => {
         </div>
       </div>
     </div>
+    </Backgroundtest>
   );
   
 };

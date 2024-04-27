@@ -11,12 +11,7 @@
     text-align: center;
     padding: 20px;
   }
-  
-  body {
-    background-image: url('../../assets/images/Allgenv2.png');
-    background-size: auto;
-  }
-  
+ 
   .title-image {
     max-width: 650px;
     max-height: 100px;
