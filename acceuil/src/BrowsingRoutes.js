@@ -40,7 +40,7 @@ const BrowsingRoutes = () => {
         <Route path="/Palmares" element={<EnDev/>} />
         <Route path="/Personnalisation" element={<EnDev/>} />*
         <Route path="/Statistiques" element={<EnDev/>} />
-        <Route path="/Description" element={<EnDev/>} />
+        <Route path="/Description" element={<Description/>} />
         <Route path="/Carte" element={<EnDev/>} />
         <Route path="//forgot-password" element={<ForgetPassword/>} />
         <Route path="/Silhouette" element={<Silhouette/>} />

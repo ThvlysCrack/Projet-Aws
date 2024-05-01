@@ -1,0 +1,100 @@
+/* Description.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.description-box {
+  margin-top: 10%;
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.description-box h2 {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.p {
+  color: #ffffff;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.guess-input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.submit-button,
+.next-button {
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.correct-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4caf50; /* Couleur de fond verte pour le message de réussite */
+  border-radius: 20px; /* Bords très arrondis */
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+.bottom-box {
+  display: flex;
+  justify-content: center;
+}
+
+.suggestions-box {
+  max-height: 190px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.suggestion {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.suggestion span {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
