@@ -25,18 +25,17 @@ async function getPokemonsOfTheDay() {
   }
 
   // Fonction pour appeler la route et récupérer le résultat
-  async function getGame1Advancement() {
+async function getGame1Advancement() {
     try {
-        // Get the userId from local storage
-        const userId = localStorage.getItem('userId');
-
-        // Call the game1Advancement route with the userId
-        const response = await axios.get(`http://localhost:4000/game1Advancement/${userId}`);
+        // Appel de la route sur le serveur local
+        const response = await axios.get('http://localhost:4000/game1Advancement');
         
+        // Si la requête a réussi, retourner le résultat
         return response.data;
     } catch (error) {
+        // Gérer les erreurs
         console.error("Erreur lors de la récupération de la liste game1Advancement :", error);
-        throw error;
+        throw error; // Vous pouvez choisir de gérer l'erreur d'une autre manière selon vos besoins
     }
 }
 
@@ -74,7 +73,21 @@ function Pokedex() {
             setDailyPokemon(newDailyPokemon);
         };
 
-        // Obtenez la date actuelle et définissez un délai pour déclencher la génération automatique du Pokémon quotidien à minuit
+        // IL FAUT CHANGER CA !!!!!!!!!!!Obtenez la date actuelle et définissez un délai pour déclencher la génération automatique du Pokémon quotidien à minuit
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
+        // IL FAUT CHANGER CA !!!!!!!!!!!
         const now = new Date();
         const timeUntilMidnight = new Date(now);
         timeUntilMidnight.setHours(24, 0, 0, 0);
@@ -461,34 +474,35 @@ function Pokedex() {
                     </div>
                     <div className='spaceBar'></div>
                     <div className='sideComponent'>
-                        <div className='ruleComponent'>
-                            <div className='rules'>
-                                <p>defi Journalier :</p>
-                                <p>Mettez a l'epreuve votre connaissance des pokémons et devoilez le mystère qui se cache derriere cette enigme..</p>
+                        <div className='sCPosition'>
+                            <div className='ruleComponent'>
+                                <div className='rules'>
+                                    <p>defi Journalier :</p>
+                                    <p>Mettez a l'epreuve votre connaissance des pokémons et devoilez le mystère qui se cache derriere cette enigme..</p>
+                                </div>
+                                <div className='hints'>
+                                    <button onClick={openTalentHintPopup} disabled={attemptCounter < 5}>
+                                        <img id="talentHintId"
+                                            src={talentHint}
+                                            alt="talentHint"
+                                            style={{ opacity: 0.5, width: 75 }}
+                                        />
+                                    </button>
+                                    <button
+                                        onClick={openHabitatHintPopup}
+                                        disabled={attemptCounter < 8}>
+                                        <img id='habitatHintId' src={habitatHint} alt="talentHint" style={{ opacity: 0.5, width: 75 }} />
+                                    </button>
+                                </div>
                             </div>
-                            <div className='hints'>
-                                <button onClick={openTalentHintPopup} disabled={attemptCounter < 5}>
-                                    <img id="talentHintId"
-                                        src={talentHint}
-                                        alt="talentHint"
-                                        style={{ opacity: 0.5, width: 75 }}
-                                    />
-                                </button>
-                                <button
-                                    onClick={openHabitatHintPopup}
-                                    disabled={attemptCounter < 8}>
-                                    <img id='habitatHintId' src={habitatHint} alt="talentHint" style={{ opacity: 0.5, width: 75 }} />
-                                </button>
+                            <div className='pokemonDropDownList'>
+                                {pokemonName.trim() !== '' && // Vérifie si la zone de texte n'est pas vide
+                                    Object.keys(pokemonNames).filter((name) => name.toLowerCase().startsWith(pokemonName.toLowerCase())).map((name, index) => (
+                                        <p key={index}>{name}</p>
+                                    ))
+                                }
                             </div>
                         </div>
-                        <div className='pokemonDropDownList'>
-                            {pokemonName.trim() !== '' && // Vérifie si la zone de texte n'est pas vide
-                                Object.keys(pokemonNames).filter((name) => name.toLowerCase().startsWith(pokemonName.toLowerCase())).map((name, index) => (
-                                    <p key={index}>{name}</p>
-                                ))
-                            }
-                        </div>
-
                         <div>
                             <div>
 

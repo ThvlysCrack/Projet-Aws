@@ -194,6 +194,7 @@ p {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     /* Ajout de l'ombre */
 }
+
 .pokemonTabContainer {
     position: relative;
     display: flex;
@@ -287,7 +288,7 @@ p {
     position: relative;
     background-color: red;
     height: 70%;
-    width: 4%;   
+    width: 4%;
     border-radius: 100px;
     border: #000000 2px solid;
     left: 1%;
@@ -320,6 +321,15 @@ p {
     background-color: #860000;
 }
 
+.sCPosition {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+}
+
 .ruleComponent {
     position: relative;
     display: flex;
@@ -343,7 +353,7 @@ p {
 
 .ruleComponent p {
     width: 80%;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .hints {
@@ -409,17 +419,55 @@ p {
         flex-grow: 1;
         text-align: center;
     }
+    .redPoint {
+        width: 5.5%;
+    }
+
+    .ruleComponent p {
+        width: 80%;
+        font-size: 0.7em;
+    }
 }
 
 @media screen and (max-width : 1024px) {
     .pokedexBg {
-        width: 80vw;
+        width: 768px;
+    }
+
+    .sCPosition {
+        width: 100%;
+    }
+
+    .ruleComponent p {
+        width: 80%;
+        font-size: 0em;
+    }
+
+    .hints {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .colNames p {
+        font-size: 0.45em;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .answerCard span {
+        font-size: 0.5em;
+        font-family: 'PKMN RBYGSC';
+    }
+
+    .redPoint {
+        width: 7%;
     }
 }
 
 @media screen and (max-width : 770px) {
     .pokedexBg {
-        width: 600px;
+        width: 530px;
         height: 700px;
     }
 
@@ -451,7 +499,7 @@ p {
         justify-content: center;
         width: 100%;
         height: 40%;
-        gap: 5%;
+        gap: 0%;
         margin-bottom: 2%;
     }
 
@@ -464,6 +512,33 @@ p {
         width: 40%;
         height: 80%;
         margin-bottom: 0%;
+    }
+
+    .pokemonTabFooter {
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+    }
+
+    .redPoint {
+        width: 5%;
+    }
+
+    .inputPokemon {
+        height: 30%;
+    }
+
+    .pokedexTop {
+        height: 8%;
+        justify-content: center;
+    }
+
+    .circle-1 {
+        width: 55%;
+        height: 55%;
+    }
+    .sCPosition {
+        flex-direction: row;
+        gap: 4%;
     }
 }
 
