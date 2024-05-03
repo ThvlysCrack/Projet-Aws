@@ -147,7 +147,6 @@ router.post("/forgot-password", async (req, res) => {
   } catch (error) { }
 });
 
-
 router.get("/reset-password/:id/:token", async (req, res) => {
   const { id, token } = req.params;
   console.log(req.params);

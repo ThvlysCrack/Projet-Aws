@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import Accueil from './Composants/Acceuil/acceuil';
 import LoginSignup from './Composants/LoginSignup/LoginSignup';
 import NavBar from './Composants/NavBar/NavBar';
@@ -21,32 +22,50 @@ import Description from './Composants/Dailys/Description/Description';
 import ForgetPassword from './Composants/ForgetPassword/forgetpassword'
 import Silhouette from './Composants/Dailys/Silhouette/silhouette';
 
+// This is a mock function, replace it with your actual authentication check
+function isUserConnected() {
+  const token = localStorage.getItem('token');
+  return token != null;
+}
+
+function ProtectedRoute({ children }) {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+      if (!isUserConnected()) {
+          navigate('/Connexion');
+      }
+  }, [navigate]);
+
+  return isUserConnected() ? children : null;
+}
+
 const BrowsingRoutes = () => {
-  return (
-    <Router>
-      <NavBar />
-      <Logo />
-      <Routes>
-        <Route exact path="/" element={<Accueil/>} />
+return (
+  <Router>
+    <NavBar />
+    <Logo />
+    <Routes>
+    <Route exact path="/" element={<Accueil/>} />
         <Route path="/Connexion" element={<LoginSignup/>} />
-        <Route path="/Defis-quotidiens" element={<Defis/>} />
-        <Route path="/Profil" element={<Profil/>} />
-        <Route path="/pokedex" element={<Classic/>} />
-        <Route path="/Jeu_Libre" element={<JeuLibre/>} />
-        <Route path="/Classement" element={<Classement/>} />
-        <Route path="/Parametres" element={<Parametres/>} />
+        <Route path="/Defis-quotidiens" element={<ProtectedRoute><Defis/></ProtectedRoute>} />
+        <Route path="/Profil" element={<ProtectedRoute><Profil/></ProtectedRoute>} />
+        <Route path="/pokedex" element={<ProtectedRoute><Classic/></ProtectedRoute>} />
+        <Route path="/Jeu_Libre" element={<ProtectedRoute><JeuLibre/></ProtectedRoute>} />
+        <Route path="/Classement" element={<ProtectedRoute><Classement/></ProtectedRoute>} />
+        <Route path="/Parametres" element={<ProtectedRoute><Parametres/></ProtectedRoute>} />
         <Route path="/APropos" element={<APropos/>} />
-        <Route path="/Informations" element={<Informations/>} />
-        <Route path="/Palmares" element={<EnDev/>} />
-        <Route path="/Personnalisation" element={<EnDev/>} />*
-        <Route path="/Statistiques" element={<EnDev/>} />
-        <Route path="/Description" element={<Description/>} />
-        <Route path="/Carte" element={<EnDev/>} />
-        <Route path="//forgot-password" element={<ForgetPassword/>} />
-        <Route path="/Silhouette" element={<Silhouette/>} />
+        <Route path="/Informations" element={<ProtectedRoute><Informations/></ProtectedRoute>} />
+        <Route path="/Palmares" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
+        <Route path="/Personnalisation" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
+        <Route path="/Statistiques" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
+        <Route path="/Description" element={<ProtectedRoute><Description/></ProtectedRoute>} />
+        <Route path="/Carte" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
+        <Route path="/forgot-password" element={<ProtectedRoute><ForgetPassword/></ProtectedRoute>} />
+        <Route path="/Silhouette" element={<ProtectedRoute><Silhouette/></ProtectedRoute>} />
       </Routes>
-    </Router>
-  );
+  </Router>
+);
 };
 
 export default BrowsingRoutes;
