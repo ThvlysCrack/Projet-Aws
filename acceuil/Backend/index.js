@@ -100,6 +100,6 @@ async function insertDailyPokemons() {
 }
 
 // Planification de l'exécution quotidienne à minuit
-cron.schedule('* * * * *', () => {
+cron.schedule('0 22 * * *', () => {
   //insertDailyPokemons();
 });

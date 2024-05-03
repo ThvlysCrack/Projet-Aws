@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'PKMN RBYGSC';
+    /* src: url('../../assets/fonts/PKMN\ RBYGSC.woff') format('truetype'); */
+    src : url('../../assets/fonts/PKMN-RBYGSC.woff') format('truetype');
+}
+
+.infoMainContainer {
+    display: flex;
+    width: 1200px;
+    height: 70vh;
+    background-color: red;
+    border-radius: 50px;
+    flex-direction: column;
+}
+
+.topBorderContainer {
+    height: 10%;
+    background-color: #f8f9fb;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom: #ddd196 solid 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topBorderContainer span {
+    font-family: 'PKMN RBYGSC';
+}
+
+.bottomBorderContainer {
+    height: 10%;
+    background-color: #f8f9fb;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: #ddd196 solid 3px;
+}
+
+.infoTabContainer {
+    height: 80%;
+    display: flex;
+}
+
+.leftBorderContainer {
+    width: 10%;
+    background-color: #dc5b3b;
+}
+
+.rightBorderContainer {
+    width: 10%;
+    background-color: #dc5b3b;
+}
+
+.profilContent {
+    width: 80%;
+    background-color: #e8e9eb;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+}
+
+.profilPictureContent {
+    display: flex;
+    height: 25%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.profilPicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: #dc5b3b solid 2px;
+    background-color: bisque;
+}
+
+.gridBox {
+    width: 80%;
+    height: 75%;
+}
+
+.gridContent {
+    width: 100%;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+.gridRow {
+    display: flex;
+    width: 100%;
+}
+
+.gridCell {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.gridCell2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.gridCell span {
+    font-family: 'PKMN RBYGSC';
+    margin-left: 3%;
+}
+
+.gridCell2 span {
+    font-family: 'PKMN RBYGSC';
+    margin-left: 3%;
+}
+
+.value {
+    width: 90%;
+    height: 35%;
+    border: black solid 1px;
+    background-color: #f3f4f6;
+    margin-top: 1%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;  
+}
+
+.label {
+    width: 100%;
+}

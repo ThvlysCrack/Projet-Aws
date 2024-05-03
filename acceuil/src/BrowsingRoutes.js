@@ -36,7 +36,7 @@ const BrowsingRoutes = () => {
         <Route path="/Classement" element={<Classement/>} />
         <Route path="/Parametres" element={<Parametres/>} />
         <Route path="/APropos" element={<APropos/>} />
-        <Route path="/Informations" element={<EnDev/>} />
+        <Route path="/Informations" element={<Informations/>} />
         <Route path="/Palmares" element={<EnDev/>} />
         <Route path="/Personnalisation" element={<EnDev/>} />*
         <Route path="/Statistiques" element={<EnDev/>} />
