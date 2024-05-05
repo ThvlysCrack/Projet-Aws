@@ -99,13 +99,9 @@ router.post("/login", async (req, res) => {
       expiresIn: "15m",
     });
 
-    if (res.status(201)) {
-      return res.json({ status: "ok", data: { token: token, userId: user._id }  });
-    } else {
-      return res.json({ error: "error" });
-    }
-  }
-  res.json({ status: "error", error: "InvAlid Password" });
+      return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
+   }
+   return res.status(401).json({ status: "error", error: "InvAlid Password" });
 });
 
 
