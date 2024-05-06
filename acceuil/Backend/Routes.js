@@ -52,7 +52,9 @@ router.post("/register", async (req, res) => {
     if (!pseudo || !email || !password) {
       throw new Error("Missing required fields");
     }
-    const encryptedPassword = await bcrypt.hash(password, 10);
+    const salt = await bcrypt.genSalt();
+    const encryptedPassword = await bcrypt.hash(password, salt);
+    console.log('comparison result:', encryptedPassword);
     const oldUser = await User.findOne({ email });
     if (oldUser) {
       console.log("User already exists");
@@ -61,7 +63,7 @@ router.post("/register", async (req, res) => {
 
     const newUser = await User.create({
       pseudo,
-      email: email.toLowerCase(),
+      email,
       password: encryptedPassword,
     });
 
@@ -84,24 +86,23 @@ router.post("/register", async (req, res) => {
 
 
 router.post("/login", async (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   const { email, password } = req.body;
 
   if (!email || !password) {
     return res.status(400).json({ error: "Email and password are required" });
   }
-  const user = await User.findOne({ email: email.toLowerCase() });
-  if (!user) {
-    return res.json({ error: "User Not found" });
-  }
-  if (await bcrypt.compare(password, user.password)) {
-    const token = jwt.sign({ email: user.email }, process.env.JWT_Secret, {
-      expiresIn: "15m",
-    });
+  const user = await User.findOne({ email: email});
+  //console.log('comparison result:', user);
+  if (!user) { return res.json({ error: "User Not found" });  }
 
-      return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
+  const isPasswordCorrect = await bcrypt.compare(password, user.password);
+  if (!isPasswordCorrect) {
+    return res.status(401).json({ status: "error", error: "InvAlid Password" });
    }
-   return res.status(401).json({ status: "error", error: "InvAlid Password" });
+   const token = jwt.sign({ email: user.email }, process.env.JWT_Secret, {
+    expiresIn: "15m", });
+    return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
 });
 
 
