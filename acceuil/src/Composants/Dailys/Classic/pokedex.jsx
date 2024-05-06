@@ -11,7 +11,7 @@ import bgImage from '../../assets/images/Allgenv2.png';
 
 async function getPokemonsOfTheDay() {
     try {
-      const response = await axios.get('http://localhost:4000/daily-pokemons'); // Assurez-vous que l'URL est correcte
+      const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons'); // Assurez-vous que l'URL est correcte
       if (response.status === 200) {
         return response.data;
       } else {
@@ -24,53 +24,39 @@ async function getPokemonsOfTheDay() {
     }
   }
 
-  function isUserConnected() {
-    // Get the token and tokenTime from local storage
-    const token = localStorage.getItem('token');
-    const tokenTime = localStorage.getItem('tokenTime');
-
-    // Check if the token exists
-    if (!token || !tokenTime) {
-        return false;
-    }
-
-    // Get the current time
-    const currentTime = Date.now();
-
-    // Check if the token is expired
-    if (currentTime - tokenTime > 900000) { // 900000 milliseconds = 15 minutes
-        return false;
-    }
-
-    return true;
-}
-
-// Fonction pour appeler la route et récupérer le résultat
-async function getGame1Advancement() {
+  async function addGame1AdvancementItem(newItem) {
     try {
-        // Appel de la route sur le serveur local
-        const response = await axios.get('http://localhost:4000/game1Advancement');
-        
-        // Si la requête a réussi, retourner le résultat
-        return response.data;
-    } catch (error) {
-        // Gérer les erreurs
-        console.error("Erreur lors de la récupération de la liste game1Advancement :", error);
-        throw error; // Vous pouvez choisir de gérer l'erreur d'une autre manière selon vos besoins
-    }
-}
+        // Récupérer l'ID utilisateur depuis le stockage local
+        const userId = localStorage.getItem('userId');
 
-// Fonction pour ajouter un élément à la liste game1Advancement
-async function addGame1AdvancementItem(newItem) {
-    try {
-        // Envoyer une requête POST à la route '/api/players/game1Advancement/add' sur le serveur local
-        const response = await axios.post('http://localhost:4000/game1Advancement/add', { newItem });
+        // Vérifier si l'ID utilisateur est présent
+        if (!userId) {
+            console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+            return;
+        }
+
+        // Envoyer une requête POST à la route '/game1Advancement/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+        const response = await axios.post(`https://pokezapserver.vercel.app/game1Advancement/add/${userId}`, { newItem });
         
         // Si la requête a réussi, afficher le message de réussite
         console.log(response.data.message);
     } catch (error) {
         // Si la requête a échoué, afficher l'erreur
         console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error.response.data.error);
+    }
+}
+
+async function getGame1Advancement(userId) {
+    try {
+        // Envoyer une requête GET à la route '/game1Advancement/:userId' sur le serveur local avec l'ID utilisateur
+        const response = await axios.get(`https://pokezapserver.vercel.app/game1Advancement/${userId}`);
+
+        // Si la requête a réussi, retourner la liste game1Advancement
+        return response.data;
+    } catch (error) {
+        // Si la requête a échoué, afficher l'erreur
+        console.error("Erreur lors de la récupération de la liste game1Advancement :", error.response.data.error);
+        return null;
     }
 }
 
@@ -94,6 +80,7 @@ function Pokedex() {
               //console.log('Les pokémons saisis sont : ',val);
             setDailyPokemon(newDailyPokemon);
         };
+        
         
         // IL FAUT CHANGER CA !!!!!!!!!!!Obtenez la date actuelle et définissez un délai pour déclencher la génération automatique du Pokémon quotidien à minuit
         // IL FAUT CHANGER CA !!!!!!!!!!!
@@ -130,6 +117,30 @@ function Pokedex() {
         }
     }, [attemptCounter]);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userId = localStorage.getItem('userId');
+                const advancement = await getGame1Advancement(userId);
+                if (advancement) {
+                    // Utiliser Promise.all pour attendre que toutes les opérations asynchrones se terminent
+                    const pokemonDataPromises = advancement.map(async item => {
+                        return await getPokemon(item);
+                    });
+                    const pokemonData = await Promise.all(pokemonDataPromises);
+                    // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées
+                    setPokemonDataList(pokemonData.reverse());
+                }
+            } catch (error) {
+                console.error("Erreur lors de la récupération de l'avancement du joueur :", error);
+            }
+        };
+        fetchData(); // Appel de la fonction fetchData au chargement initial
+    }, []);
+    
+    
+
+    
     const openColorAnswerPopup = () => {
         setShowColorAnswerPopup(true);
     };
@@ -155,14 +166,6 @@ function Pokedex() {
     // Fonction pour fermer le pop-up
     const closeHabitatHintPopup = () => {
         setshowHabitatHintPopup(false);
-    };
-
-    const getRandomPokemon = async () => {
-        const pokemonKeys = Object.keys(pokemonNames);
-        const randomKey = pokemonKeys[Math.floor(Math.random() * pokemonKeys.length)];
-        console.log(randomKey);
-        const randomPokemon = await getPokemon(pokemonNames[randomKey]);
-        return randomPokemon;
     };
 
     const handleInputChange = (event) => {
@@ -307,7 +310,7 @@ function Pokedex() {
             return [];
         }
     };
-
+    
 
     const getPokemon = async (pokemonName) => {
 
@@ -358,6 +361,8 @@ function Pokedex() {
 
                 // Créez une nouvelle copie du tableau avec le nouvel élément au début
                 const updatedList = [userPokemonData, ...pokemonDataList];
+
+                console.log(updatedList)
 
                 // Mettez à jour l'état avec la nouvelle copie du tableau
                 setPokemonDataList(updatedList);

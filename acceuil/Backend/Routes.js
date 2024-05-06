@@ -234,31 +234,33 @@ router.get('/game1Advancement/:userId', async (req, res) => {
 });
 
 // Route pour ajouter un élément à la liste game1Advancement
-router.post('/game1Advancement/add', async (req, res) => {
+router.post('/game1Advancement/add/:userId', async (req, res) => {
   try {
-      // Récupérer l'élément à ajouter de la requête POST
-      const newItem = req.body.newItem;
+    const userId = req.params.userId;
+    // Récupérer l'élément à ajouter de la requête POST
+    const newItem = req.body.newItem;
 
-      // Vérifier si l'élément est une chaîne valide
-      if (typeof newItem !== 'string') {
-          return res.status(400).json({ error: 'L\'élément à ajouter doit être une chaîne de caractères' });
-      }
+    // Vérifier si l'élément est une chaîne valide
+    if (typeof newItem !== 'string') {
+      return res.status(400).json({ error: 'L\'élément à ajouter doit être une chaîne de caractères' });
+    }
 
-      // Mettre à jour la liste game1Advancement dans la base de données en ajoutant le nouvel élément
-      const playerAdvancementDoc = await PlayerAdvancement.findOne();
-      if (playerAdvancementDoc) {
-          playerAdvancementDoc.game1Advancement.push(newItem);
-          await playerAdvancementDoc.save();
-          return res.json({ message: 'Élément ajouté avec succès à la liste game1Advancement' });
-      } else {
-          return res.status(404).json({ error: 'Document playerAdvancement introuvable' });
-      }
+    // Mettre à jour la liste game1Advancement dans la base de données en ajoutant le nouvel élément
+    const playerAdvancementDoc = await PlayerAdvancement.findOne({ userId: userId });
+    if (playerAdvancementDoc) {
+      playerAdvancementDoc.game1Advancement.push(newItem);
+      await playerAdvancementDoc.save();
+      return res.json({ message: 'Élément ajouté avec succès à la liste game1Advancement pour l\'utilisateur avec ID: ' + userId });
+    } else {
+      return res.status(404).json({ error: 'Document playerAdvancement introuvable pour l\'utilisateur avec ID: ' + userId });
+    }
   } catch (error) {
-      // Gérer les erreurs
-      console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
-      return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
+    // Gérer les erreurs
+    console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
+    return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
   }
 });
+
 
 
 module.exports = router;

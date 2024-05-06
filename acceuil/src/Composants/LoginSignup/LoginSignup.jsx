@@ -17,7 +17,7 @@ const LoginSignup = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('http://localhost:4000/login', { email, password });
+            const response = await axios.post('https://pokezapserver.vercel.app/login', { email, password });
             if (response.data.status === 'ok') {
                 // Login was successful
                 localStorage.setItem('token', response.data.data.token); // Store the token in local storage
