@@ -33,8 +33,8 @@ const DescriptionGame = () => {
       console.log(pokemonQuery);
       const newDailyPokemon = await pokemonQuery.pokemon3;
       console.log(newDailyPokemon)
-      console.log(`https://pokeapi.co/api/v2/pokemon-species/${currentPokemon.id}`)
-      const randomId = getPokemonDetails(newDailyPokemon.data.id)//Math.floor(Math.random() * 1025) + 1;
+      const randomPokemon = await getPokemonDetails(newDailyPokemon)//Math.floor(Math.random() * 1025) + 1;
+      const randomId = randomPokemon.data.id
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
       setCurrentPokemon(response.data);
 

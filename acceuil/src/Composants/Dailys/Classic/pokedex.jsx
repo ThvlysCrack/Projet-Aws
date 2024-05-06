@@ -24,7 +24,28 @@ async function getPokemonsOfTheDay() {
     }
   }
 
-  // Fonction pour appeler la route et récupérer le résultat
+  function isUserConnected() {
+    // Get the token and tokenTime from local storage
+    const token = localStorage.getItem('token');
+    const tokenTime = localStorage.getItem('tokenTime');
+
+    // Check if the token exists
+    if (!token || !tokenTime) {
+        return false;
+    }
+
+    // Get the current time
+    const currentTime = Date.now();
+
+    // Check if the token is expired
+    if (currentTime - tokenTime > 900000) { // 900000 milliseconds = 15 minutes
+        return false;
+    }
+
+    return true;
+}
+
+// Fonction pour appeler la route et récupérer le résultat
 async function getGame1Advancement() {
     try {
         // Appel de la route sur le serveur local
@@ -62,8 +83,9 @@ function Pokedex() {
     const [showTalentHintPopup, setshowTalentHintPopup] = useState(false); // Etat pout gérer la visibilité du pop-up de l'indice du talent
     const [showHabitatHintPopup, setshowHabitatHintPopup] = useState(false);
     const [pokemonFound, setPokemonFound] = useState(false); // Nouvel état pour suivre si le Pokémon du jour a été trouvé
-
+    
     useEffect(() => {
+        
         // Fonction pour générer automatiquement le Pokémon quotidien à minuit
         const generateDailyPokemon = async () => {
             const pokemonQuery = await getPokemonsOfTheDay();
@@ -72,7 +94,7 @@ function Pokedex() {
               //console.log('Les pokémons saisis sont : ',val);
             setDailyPokemon(newDailyPokemon);
         };
-
+        
         // IL FAUT CHANGER CA !!!!!!!!!!!Obtenez la date actuelle et définissez un délai pour déclencher la génération automatique du Pokémon quotidien à minuit
         // IL FAUT CHANGER CA !!!!!!!!!!!
         // IL FAUT CHANGER CA !!!!!!!!!!!
