@@ -149,7 +149,7 @@ const DescriptionGame = () => {
   };
 
   return (
-    <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '100% 100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', overflow: 'hidden' }}>
+    <div style={{ backgroundImage: `url(${backgroundImage})`,backgroundPosition: 'center', backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', overflow: 'hidden' }}>
       <div className="container">
         <div className="description-box">
           {/*<h2>{frenchName}</h2>*/}

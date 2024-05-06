@@ -102,6 +102,7 @@ router.post("/login", async (req, res) => {
    }
    const token = jwt.sign({ email: user.email }, process.env.JWT_Secret, {
     expiresIn: "15m", });
+    console.log('connexion successful');
     return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
   } catch (error) {console.error('Error in login route:', error);
   return res.status(500).json({ error: 'Internal Server Error' });
