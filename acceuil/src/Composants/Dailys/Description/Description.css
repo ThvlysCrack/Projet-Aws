@@ -1,4 +1,7 @@
-/* Description.css */
+@font-face {
+  font-family: 'PKMN RBYGSC';
+  src: url('../../assets/fonts/PKMN-RBYGSC.woff') format('truetype');
+}
 
 .container {
   display: flex;
@@ -18,7 +21,7 @@
 
 .description-box h2 {
   color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-family: 'PKMN RBYGSC', Arial, sans-serif;
 }
 
 .p {
@@ -26,6 +29,7 @@
   padding: 8px;
   font-size: 16px;
   margin-bottom: 20px;
+  font-family: 'PKMN RBYGSC';
 }
 
 .guess-input {
@@ -33,15 +37,18 @@
   font-size: 16px;
   border-radius: 4px;
   margin-bottom: 10px;
+  font-family: 'PKMN RBYGSC';
+  text-align: center;
 }
 
 .submit-button,
 .next-button {
-  color: #ffffff;
+  color: rgb(0, 0, 0);
   padding: 8px 16px;
   font-size: 16px;
   border-radius: 4px;
   margin-bottom: 10px;
+  font-family: 'PKMN RBYGSC';
 }
 
 .correct-message {
@@ -52,7 +59,7 @@
   text-align: center;
   color: #ffffff;
   font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-family: 'PKMN RBYGSC';
 }
 
 .bottom-box {
@@ -77,13 +84,14 @@
 }
 
 .suggestion img {
-  width: 32px;
-  height: 32px;
+  width: 80px;
+  height: 80px;
   margin-right: 10px;
 }
 
 .suggestion span {
   font-size: 16px;
+  font-family: 'PKMN RBYGSC';
   color: #ffffff;
 }
 
@@ -97,4 +105,27 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "PKMN RBYGSC";
+}
+
+.attempts-box {
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.attempts-box h3 {
+  color: #ffffff;
+  font-family: 'PKMN RBYGSC';
+  margin-bottom: 10px;
+}
+
+.attempts-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.attempts-box li {
+  color: #ffffff;
+  font-family: 'PKMN RBYGSC';
+  font-size: 16px;
 }

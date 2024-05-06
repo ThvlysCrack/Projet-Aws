@@ -12,9 +12,29 @@ const DescriptionGame = () => {
   const [suggestionsWithSprites, setSuggestionsWithSprites] = useState([]);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
+  async function getPokemonsOfTheDay() {
+    try {
+      const response = await axios.get('http://localhost:4000/daily-pokemons'); // Assurez-vous que l'URL est correcte
+      if (response.status === 200) {
+        return response.data;
+      } else {
+        console.log('Erreur lors de la récupération des Pokémons du jour:', response.statusText);
+        return null;
+      }
+    } catch (error) {
+      console.error('Erreur lors de la récupération des Pokémons du jour:', error.message);
+      return null;
+    }
+  };
+
   const fetchRandomPokemon = async () => {
     try {
-      const randomId = Math.floor(Math.random() * 898) + 1;
+      const pokemonQuery = await getPokemonsOfTheDay();
+      console.log(pokemonQuery);
+      const newDailyPokemon = await pokemonQuery.pokemon3;
+      console.log(newDailyPokemon)
+      console.log(`https://pokeapi.co/api/v2/pokemon-species/${currentPokemon.id}`)
+      const randomId = getPokemonDetails(newDailyPokemon.data.id)//Math.floor(Math.random() * 1025) + 1;
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
       setCurrentPokemon(response.data);
 
@@ -35,18 +55,24 @@ const DescriptionGame = () => {
     const fetchPokemonDescription = async () => {
       if (currentPokemon) {
         try {
-          const response = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${currentPokemon.id}`);
-          const { flavor_text_entries } = response.data;
-          
-          const frenchDescriptionEntry = flavor_text_entries.find(entry => entry.language.name === 'fr');
-
-          if (frenchDescriptionEntry) {
-            let frenchDescription = frenchDescriptionEntry.flavor_text;
-            const pokemonName = frenchName.toLowerCase();
-            const regex = new RegExp(pokemonName, 'gi');
-            frenchDescription = frenchDescription.replace(regex, '???');
-            setDescription(frenchDescription);
+          let frenchDescription = '';
+          if (currentPokemon.id === 1024) {
+            frenchDescription = "Il se protège en transformant de l’énergie en cristal solide. Ce Pokémon est à l’origine du phénomène de Téracristallisation.";
+          } else if (currentPokemon.id === 1025) {
+            frenchDescription = "Il fait manger à sa cible un mochi empoisonné qui éveille les désirs et révèle le potentiel. Il la contrôle ensuite grâce à ses chaînes.";
+          } else {
+            const response = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${currentPokemon.id}`);
+            const { flavor_text_entries } = response.data;
+            const frenchDescriptionEntry = flavor_text_entries.find(entry => entry.language.name === 'fr');
+    
+            if (frenchDescriptionEntry) {
+              frenchDescription = frenchDescriptionEntry.flavor_text;
+              const pokemonName = frenchName.toLowerCase();
+              const regex = new RegExp(pokemonName, 'gi');
+              frenchDescription = frenchDescription.replace(regex, '???');
+            }
           }
+          setDescription(frenchDescription);
         } catch (error) {
           console.error('Error fetching Pokémon description:', error);
         }
@@ -112,6 +138,12 @@ const DescriptionGame = () => {
     });
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleGuess();
+    }
+  };
+
   const resetUserGuess = () => {
     setUserGuess(''); // Réinitialiser la zone de texte userGuess
   };
@@ -120,15 +152,17 @@ const DescriptionGame = () => {
     <div style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: '100% 100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', overflow: 'hidden' }}>
       <div className="container">
         <div className="description-box">
-          <h2>{frenchName}</h2>
+          {/*<h2>{frenchName}</h2>*/}
           <div className='p'>{description}</div>
           <input
             type="text"
             value={userGuess}
             onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
             placeholder="Entrez le nom du Pokémon"
             className="guess-input"
           />
+          <br />
           <button onClick={handleGuess} className="submit-button">Soumettre</button>
         </div>
         {showSuccessMessage && (
