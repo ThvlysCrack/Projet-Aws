@@ -119,14 +119,6 @@ const ResetTokenSchema = new mongoose.Schema({
     default: Date.now() + 3600000 // Token expires in 1 hour
   }
 });
-//encrypting password before saving
-userSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) {
-        next();
-    }
-    this.password = await bcrypt.hash(this.password, 10)
-})
-
 
 // compare user password
 userSchema.methods.comparePassword = async function (enteredPassword) {
@@ -139,7 +131,6 @@ userSchema.methods.getJwtToken = function () {
         expiresIn: 3600
     });
 }
-
 
 module.exports = {
     User: mongoose.model('users', userSchema),
