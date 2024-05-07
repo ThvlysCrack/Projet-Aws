@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import backgroundImage from '../assets/images/background102.jpg';
 import Backgroundtest from '../Backgroundtest';
-import 'acceuil/src/Composants/ForgetPassword/Restpassword.css';
+import './Restpassword.css';
 import { Link } from 'react-router-dom';
 
 const ResetPassword = () => {

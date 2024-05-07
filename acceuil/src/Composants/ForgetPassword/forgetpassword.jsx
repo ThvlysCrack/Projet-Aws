@@ -3,6 +3,7 @@ import axios from 'axios'
 //import backgroundImage from '../assets/images/Giratina.png';
 import backgroundImage from '../assets/images/background102.jpg';
 import Backgroundtest from '../Backgroundtest';
+import './forgetpassword.css';
 
 const Forgetpassword = () => {
     const [email, setEmail] = useState('');
@@ -19,14 +20,15 @@ const Forgetpassword = () => {
 
     return (
         <Backgroundtest image={backgroundImage}>
-        <form onSubmit={(e) => e.preventDefault()}>
+        <form className="myform" onSubmit={(e) => e.preventDefault()}>
           <input
+          className="myinput"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-            />
-          <button type="button" onClick={handleSubmit}>Send Email</button>
+          />
+          <button className="mybutton" type="button" onClick={handleSubmit}>Send Email</button>
         </form>
         </Backgroundtest>
     )
