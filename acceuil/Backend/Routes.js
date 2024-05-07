@@ -105,7 +105,7 @@ router.post("/login", async (req, res) => {
     console.log('connexion successful');
     return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
   } catch (error) {console.error('Error in login route:', error);
-  return res.status(500).json({ error: 'Internal Server Error' });
+  return res.status(500).json({ error: error.message });
   }
   });
 
@@ -121,7 +121,7 @@ router.post("/forgot-password", async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
       expiresIn: "5m",
     });
-    const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+    const link = `http://localhost:4000/reset-password/${oldUser._id}/${token}`;
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
