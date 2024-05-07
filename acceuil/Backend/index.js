@@ -34,11 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use('/',Router);
 
-//const JWT_SECRET = "jdhjjsssshjnqkjgftzksbvhjqn{}]\ndbdk,l";
-//const mongoUrl = "mongodb+srv://asma:SCI123@cluster0.nuo1d42.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-mongoose.connect(process.env.DB_URI, {
-  useNewUrlParser: true,
-})
+mongoose.connect(process.env.DB_URI)
   .then(() => {
     console.log("Connected to database");
   })
