@@ -7,7 +7,7 @@ import NavBar from './Composants/NavBar/NavBar';
 import Defis from './Composants/Dailys/Accueil_Défis/Accueil_Défis';
 import Profil from './Composants/Profil/profil';
 import Classic from './Composants/Dailys/Classic/pokedex';
-import JeuLibre from './Composants/Jeu_Libre/Accueil_jeu_libre/Accueil_Jeux'
+import JeuLibre from './Composants/JeuLibre/Accueil_jeu_libre/Accueil_Jeux'
 import Classement from './Composants/Classement/Classement';
 import Parametres from './Composants/Parametres/Parametres';
 import APropos from './Composants/APropos/Apropos';
@@ -21,6 +21,7 @@ import Carte from './Composants/Dailys/Carte/Carte';
 import Description from './Composants/Dailys/Description/Description';
 import ForgetPassword from './Composants/ForgetPassword/forgetpassword'
 import Silhouette from './Composants/Dailys/Silhouette/silhouette';
+import Type from './Composants/JeuLibre/Type/Type';
 
 // This is a mock function, replace it with your actual authentication check
 function isUserConnected() {
@@ -50,8 +51,8 @@ return (
         <Route path="/Connexion" element={<LoginSignup/>} />
         <Route path="/Defis-quotidiens" element={<Defis/>} />
         <Route path="/Profil" element={<ProtectedRoute><Profil/></ProtectedRoute>} />
-        <Route path="/pokedex" element={<ProtectedRoute><Classic/></ProtectedRoute>} />
-        <Route path="/Jeu_Libre" element={<ProtectedRoute><JeuLibre/></ProtectedRoute>} />
+        <Route path="/pokedex" element={<Classic/>} />
+        <Route path="/JeuLibre" element={<JeuLibre/>} />
         <Route path="/Classement" element={<ProtectedRoute><Classement/></ProtectedRoute>} />
         <Route path="/Parametres" element={<ProtectedRoute><Parametres/></ProtectedRoute>} />
         <Route path="/APropos" element={<APropos/>} />
@@ -63,6 +64,7 @@ return (
         <Route path="/Carte" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/forgot-password" element={<ProtectedRoute><ForgetPassword/></ProtectedRoute>} />
         <Route path="/Silhouette" element={<ProtectedRoute><Silhouette/></ProtectedRoute>} />
+        <Route path="/Type" element={<Type/>} />
       </Routes>
   </Router>
 );

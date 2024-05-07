@@ -11,6 +11,7 @@ import classementImage from '../assets/titles/Classement.png';
 import parametresImage from '../assets/titles/Parametres.png';
 import connexionImage from '../assets/titles/INSCRIPTION.png';
 import aProposImage from '../assets/titles/A propos.png';
+import deconnexionImage from '../assets/titles/Déconnexion.png';
 
 function Navbar() {
   const [showList, setShowList] = useState(false); // État pour contrôler l'affichage de la liste
@@ -55,7 +56,7 @@ function Navbar() {
                 <a href="/Defis-quotidiens"><img src={defiImage} alt="Défi Quotidien" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
               <div className="navbar-list-item">
-                <a href="/Jeu_Libre"><img src={jeuImage} alt="Jeu Libre" style={{ width: 'auto', height: '20px' }}/></a>
+                <a href="/JeuLibre"><img src={jeuImage} alt="Jeu Libre" style={{ width: 'auto', height: '20px' }}/></a>
               </div>
               <div className="navbar-list-item">
                 <a href="/Profil"><img src={profilImage} alt="Profil" style={{ width: 'auto', height: '20px' }}/></a>
@@ -68,6 +69,9 @@ function Navbar() {
               </div>
               <div className="navbar-list-item">
                 <a href="/Connexion"><img src={connexionImage} alt="Connexion/Inscription" style={{ width: 'auto', height: '50px' }}/></a>
+              </div>
+              <div className='navbar-list-item'> 
+                <img src={deconnexionImage} alt="déconnexion" style={{ width: 'auto', height: '20px' }}/>
               </div>
               <div className="navbar-list-item">
                 <a href="/APropos"><img src={aProposImage} alt="À propos" style={{ width: 'auto', height: '22px' }}/></a>
