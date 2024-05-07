@@ -52,7 +52,9 @@ router.post("/register", async (req, res) => {
     if (!pseudo || !email || !password) {
       throw new Error("Missing required fields");
     }
-    const encryptedPassword = await bcrypt.hash(password, 10);
+    const salt = await bcrypt.genSalt();
+    const encryptedPassword = await bcrypt.hash(password, salt);
+    console.log('comparison result:', encryptedPassword);
     const oldUser = await User.findOne({ email });
     if (oldUser) {
       console.log("User already exists");
@@ -61,7 +63,7 @@ router.post("/register", async (req, res) => {
 
     const newUser = await User.create({
       pseudo,
-      email: email.toLowerCase(),
+      email,
       password: encryptedPassword,
     });
 
@@ -84,25 +86,28 @@ router.post("/register", async (req, res) => {
 
 
 router.post("/login", async (req, res) => {
-  console.log(req.body);
+  try {
   const { email, password } = req.body;
 
   if (!email || !password) {
     return res.status(400).json({ error: "Email and password are required" });
   }
-  const user = await User.findOne({ email: email.toLowerCase() });
-  if (!user) {
-    return res.json({ error: "User Not found" });
-  }
-  if (await bcrypt.compare(password, user.password)) {
-    const token = jwt.sign({ email: user.email }, process.env.JWT_Secret, {
-      expiresIn: "15m",
-    });
+  const user = await User.findOne({ email: email});
+  //console.log('comparison result:', user);
+  if (!user) { return res.json({ error: "User Not found" });  }
 
-      return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
+  const isPasswordCorrect = await bcrypt.compare(password, user.password);
+  if (!isPasswordCorrect) {
+    return res.status(401).json({ status: "error", error: "InvAlid Password" });
    }
-   return res.status(401).json({ status: "error", error: "InvAlid Password" });
-});
+   const token = jwt.sign({ email: user.email }, process.env.JWT_Secret, {
+    expiresIn: "15m", });
+    console.log('connexion successful');
+    return res.status(200).json({ status: "ok", data: { token: token, userId: user._id }  });
+  } catch (error) {console.error('Error in login route:', error);
+  return res.status(500).json({ error: error.message });
+  }
+  });
 
 
 router.post("/forgot-password", async (req, res) => {
@@ -116,7 +121,7 @@ router.post("/forgot-password", async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser._id }, secret, {
       expiresIn: "5m",
     });
-    const link = `http://localhost:5000/reset-password/${oldUser._id}/${token}`;
+    const link = `http://localhost:4000/reset-password/${oldUser._id}/${token}`;
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -229,31 +234,33 @@ router.get('/game1Advancement/:userId', async (req, res) => {
 });
 
 // Route pour ajouter un élément à la liste game1Advancement
-router.post('/game1Advancement/add', async (req, res) => {
+router.post('/game1Advancement/add/:userId', async (req, res) => {
   try {
-      // Récupérer l'élément à ajouter de la requête POST
-      const newItem = req.body.newItem;
+    const userId = req.params.userId;
+    // Récupérer l'élément à ajouter de la requête POST
+    const newItem = req.body.newItem;
 
-      // Vérifier si l'élément est une chaîne valide
-      if (typeof newItem !== 'string') {
-          return res.status(400).json({ error: 'L\'élément à ajouter doit être une chaîne de caractères' });
-      }
+    // Vérifier si l'élément est une chaîne valide
+    if (typeof newItem !== 'string') {
+      return res.status(400).json({ error: 'L\'élément à ajouter doit être une chaîne de caractères' });
+    }
 
-      // Mettre à jour la liste game1Advancement dans la base de données en ajoutant le nouvel élément
-      const playerAdvancementDoc = await PlayerAdvancement.findOne();
-      if (playerAdvancementDoc) {
-          playerAdvancementDoc.game1Advancement.push(newItem);
-          await playerAdvancementDoc.save();
-          return res.json({ message: 'Élément ajouté avec succès à la liste game1Advancement' });
-      } else {
-          return res.status(404).json({ error: 'Document playerAdvancement introuvable' });
-      }
+    // Mettre à jour la liste game1Advancement dans la base de données en ajoutant le nouvel élément
+    const playerAdvancementDoc = await PlayerAdvancement.findOne({ userId: userId });
+    if (playerAdvancementDoc) {
+      playerAdvancementDoc.game1Advancement.push(newItem);
+      await playerAdvancementDoc.save();
+      return res.json({ message: 'Élément ajouté avec succès à la liste game1Advancement pour l\'utilisateur avec ID: ' + userId });
+    } else {
+      return res.status(404).json({ error: 'Document playerAdvancement introuvable pour l\'utilisateur avec ID: ' + userId });
+    }
   } catch (error) {
-      // Gérer les erreurs
-      console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
-      return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
+    // Gérer les erreurs
+    console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
+    return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
   }
 });
+
 
 
 module.exports = router;

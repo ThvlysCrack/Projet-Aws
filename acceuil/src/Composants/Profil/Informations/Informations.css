@@ -6,7 +6,7 @@
 
 .infoMainContainer {
     display: flex;
-    width: 1200px;
+    width: 80%;
     height: 70vh;
     background-color: red;
     border-radius: 50px;
@@ -84,28 +84,35 @@
 .gridContent {
     width: 100%;
     height:100%;
-    display: grid;
-    grid-template-columns: repeat(2,50%);
+    display: flex;
 }
 
-.gridRow {
+.leftSide {
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    width: 50%;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: flex-end;
+}
+
+
+.rightSide .gridCell {
+    align-items: flex-end;
 }
 
 .gridCell {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     justify-content: center;
-}
-
-.gridCell2 {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-    align-items: flex-end;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .gridCell span {
@@ -120,7 +127,7 @@
 
 .value {
     width: 90%;
-    height: 35%;
+    height: 50%;
     border: black solid 1px;
     background-color: #f3f4f6;
     margin-top: 1%;
@@ -130,5 +137,32 @@
 }
 
 .label {
-    width: 100%;
+    width: 90%;
+}
+
+@media screen and (max-width : 1000px) {
+    .gridContent{
+        flex-direction: column;
+        align-items: center;
+    }  
+    .gridBox {
+        width: 100%;
+    } 
+    .rightSide .gridCell {
+        align-items: start;
+    }
+    .rightSide {
+        align-items: center;
+    }
+    .leftSide {
+        align-items: center;
+    }
+    .spliter {
+        width: 40%;
+        background-color: black;
+        height: 30px;
+        
+    }
+    
+
 }

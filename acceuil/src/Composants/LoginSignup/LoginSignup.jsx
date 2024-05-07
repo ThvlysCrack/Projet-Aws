@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import './LoginSignup.css'
 import user_icon from '../assets/images/person.png'
@@ -14,7 +15,8 @@ const LoginSignup = () => {
     const [pseudo, setPseudo] = useState('');
     const [password, setPassword] = useState('');
     const [action, setAction] = useState('CONNEXION');
-
+    const navigate = useNavigate();
+    
     const handleLogin = async () => {
         try {
             const response = await axios.post('https://pokezapserver.vercel.app/login', { email, password });
@@ -23,6 +25,7 @@ const LoginSignup = () => {
                 localStorage.setItem('token', response.data.data.token); // Store the token in local storage
                 localStorage.setItem('tokenExpiration', Date.now() + 15 * 60 * 1000); // Store the token expiration time
                 localStorage.setItem('userId', response.data.data.userId); // Store the user's ID in local storage
+                navigate('/Defis-quotidiens');
             } else {
                 // Login failed
                 console.log('Error:', response.data.error);

@@ -49,7 +49,7 @@ return (
     <Routes>
     <Route exact path="/" element={<Accueil/>} />
         <Route path="/Connexion" element={<LoginSignup/>} />
-        <Route path="/Defis-quotidiens" element={<Defis/>} />
+        <Route path="/Defis-quotidiens" element={ <ProtectedRoute><Defis/></ProtectedRoute>} />
         <Route path="/Profil" element={<ProtectedRoute><Profil/></ProtectedRoute>} />
         <Route path="/pokedex" element={<Classic/>} />
         <Route path="/JeuLibre" element={<JeuLibre/>} />
@@ -60,7 +60,7 @@ return (
         <Route path="/Palmares" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/Personnalisation" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/Statistiques" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
-        <Route path="/Description" element={<Description/>} />
+        <Route path="/Description" element={<ProtectedRoute><Description/></ProtectedRoute>} />
         <Route path="/Carte" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/forgot-password" element={<ProtectedRoute><ForgetPassword/></ProtectedRoute>} />
         <Route path="/Silhouette" element={<ProtectedRoute><Silhouette/></ProtectedRoute>} />
