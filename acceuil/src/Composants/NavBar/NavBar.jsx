@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
 import lines from '../assets/images/3lines.png';
@@ -15,6 +16,7 @@ import deconnexionImage from '../assets/titles/Déconnexion.png';
 
 function Navbar() {
   const [showList, setShowList] = useState(false); // État pour contrôler l'affichage de la liste
+  const navigate = useNavigate();
 
   // Fonction pour basculer l'état de l'affichage de la liste
   const toggleList = () => {
@@ -29,6 +31,8 @@ function Navbar() {
     // Remove the token and token expiration time from local storage
     localStorage.removeItem('token');
     localStorage.removeItem('tokenExpiration');
+    localStorage.removeItem('userId');
+    navigate('/');
   };
 
   return (
@@ -71,7 +75,7 @@ function Navbar() {
                 <a href="/Connexion"><img src={connexionImage} alt="Connexion/Inscription" style={{ width: 'auto', height: '50px' }}/></a>
               </div>
               <div className='navbar-list-item'> 
-                <img src={deconnexionImage} alt="déconnexion" style={{ width: 'auto', height: '20px' }}/>
+                <img src={deconnexionImage} alt="déconnexion" style={{ width: 'auto', height: '20px' }} onClick={handleLogout}/>
               </div>
               <div className="navbar-list-item">
                 <a href="/APropos"><img src={aProposImage} alt="À propos" style={{ width: 'auto', height: '22px' }}/></a>

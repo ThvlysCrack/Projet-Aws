@@ -62,7 +62,7 @@ return (
         <Route path="/Statistiques" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/Description" element={<ProtectedRoute><Description/></ProtectedRoute>} />
         <Route path="/Carte" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
-        <Route path="/forgot-password" element={<ProtectedRoute><ForgetPassword/></ProtectedRoute>} />
+        <Route path="/forgot-password" element={<ForgetPassword/>} />
         <Route path="/Silhouette" element={<ProtectedRoute><Silhouette/></ProtectedRoute>} />
         <Route path="/Type" element={<Type/>} />
       </Routes>
