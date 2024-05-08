@@ -251,6 +251,13 @@ async (req, res) => {
 });
 
 router.get('/daily-pokemons', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     // Récupérer les 4 Pokémons du jour
     const dailyPokemons = await DailyPokemon.findOne({}, {}, { sort: { 'createdAt': -1 } });
@@ -263,10 +270,25 @@ router.get('/daily-pokemons', async (req, res) => {
     console.error('Erreur lors de la récupération des Pokémons du jour :', error);
     res.status(500).json({ error: 'Erreur serveur' });
   }
+  } catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+  }
+  } else {
+  // If there's no Authorization header, send an error response
+  res.status(401).json({ message: 'No token provided' });
+  }
 });
 
 // Route pour récupérer la liste game1Advancement
 router.get('/game1Advancement/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     // Get the user's ID from the route parameters
     const { userId } = req.params;
@@ -287,10 +309,24 @@ router.get('/game1Advancement/:userId', async (req, res) => {
     console.error("Error retrieving the game1Advancement list:", error);
     res.status(500).json({ error: 'Error retrieving the game1Advancement list' });
   }
+  } catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+  }
+  } else {
+  // If there's no Authorization header, send an error response
+  res.status(401).json({ message: 'No token provided' });
+  }
 });
 
 // Route pour récupérer la liste userProfil
 router.get('/userProfil/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     // Get the user's ID from the route parameters
     const { userId } = req.params;
@@ -311,10 +347,24 @@ router.get('/userProfil/:userId', async (req, res) => {
     console.error("Error retrieving the game1Advancement list:", error);
     res.status(500).json({ error: 'Error retrieving the game1Advancement list' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour ajouter un élément à la liste game1Advancement
 router.post('/game1Advancement/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
     // Récupérer l'élément à ajouter de la requête POST
@@ -339,10 +389,25 @@ router.post('/game1Advancement/add/:userId', async (req, res) => {
     console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
     return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
 router.post('/update-game1score/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
 
@@ -369,10 +434,25 @@ router.post('/update-game1score/add/:userId', async (req, res) => {
     console.error("Erreur lors de la mise à jour du score game1score :", error);
     return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
 router.post('/update-game2score/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
 
@@ -399,10 +479,25 @@ router.post('/update-game2score/add/:userId', async (req, res) => {
     console.error("Erreur lors de la mise à jour du score game1score :", error);
     return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
 router.post('/update-game3score/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
 
@@ -429,5 +524,13 @@ router.post('/update-game3score/add/:userId', async (req, res) => {
     console.error("Erreur lors de la mise à jour du score game1score :", error);
     return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 module.exports = router;

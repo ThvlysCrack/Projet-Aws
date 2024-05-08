@@ -11,7 +11,12 @@ import bgImage from '../../assets/images/Allgenv2.png';
 
 async function getPokemonsOfTheDay() {
     try {
-      const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons'); // Assurez-vous que l'URL est correcte
+      const token = localStorage.getItem('token');
+      const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons', {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    }); // Assurez-vous que l'URL est correcte
       if (response.status === 200) {
         return response.data;
       } else {
@@ -28,7 +33,7 @@ async function getPokemonsOfTheDay() {
     try {
         // Récupérer l'ID utilisateur depuis le stockage local
         const userId = localStorage.getItem('userId');
-
+        const token = localStorage.getItem('token');
         // Vérifier si l'ID utilisateur est présent
         if (!userId) {
             console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
@@ -36,7 +41,11 @@ async function getPokemonsOfTheDay() {
         }
 
         // Envoyer une requête POST à la route '/game1Advancement/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
-        const response = await axios.post(`https://pokezapserver.vercel.app/game1Advancement/add/${userId}`, { newItem });
+        const response = await axios.post(`https://pokezapserver.vercel.app/game1Advancement/add/${userId}`, { newItem }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         
         // Si la requête a réussi, afficher le message de réussite
         console.log(response.data.message);
@@ -49,7 +58,7 @@ async function addGame1ScoreItem(newItem) {
     try {
         // Récupérer l'ID utilisateur depuis le stockage local
         const userId = localStorage.getItem('userId');
-
+        const token = localStorage.getItem('token');
         // Vérifier si l'ID utilisateur est présent
         if (!userId) {
             console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
@@ -57,7 +66,11 @@ async function addGame1ScoreItem(newItem) {
         }
 
         // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
-        const response = await axios.post(`http://localhost:4000/update-game1score/add/${userId}`, { newItem });
+        const response = await axios.post(`http://localhost:4000/update-game1score/add/${userId}`, { newItem }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         
         // Si la requête a réussi, afficher le message de réussite
         console.log(response.data.message);
@@ -69,8 +82,13 @@ async function addGame1ScoreItem(newItem) {
 
 async function getGame1Advancement(userId) {
     try {
+        const token = localStorage.getItem('token');
         // Envoyer une requête GET à la route '/game1Advancement/:userId' sur le serveur local avec l'ID utilisateur
-        const response = await axios.get(`https://pokezapserver.vercel.app/game1Advancement/${userId}`);
+        const response = await axios.get(`https://pokezapserver.vercel.app/game1Advancement/${userId}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
 
         // Si la requête a réussi, retourner la liste game1Advancement
         return response.data;

@@ -8,7 +8,12 @@ import './silhouette.css';
 
 async function getPokemonsOfTheDay() {
     try {
-        const response = await axios.get('http://localhost:4000/daily-pokemons');
+        const token = localStorage.getItem('token');
+        const response = await axios.get('http://localhost:4000/daily-pokemons', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         if (response.status === 200) {
             return response.data;
         } else {
