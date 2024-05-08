@@ -32,6 +32,42 @@ const userSchema = new mongoose.Schema({
 
 }, { timestamps: true })
 
+const userProfilSchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: [true, 'L\'ID de l\'utilisateur est requis']
+    },
+    pseudo: {
+        type: String,
+        ref: 'User',
+        required: [true, 'L\'ID de l\'utilisateur est requis']
+    },
+    bestRank: {
+        type: Number,
+        default: 0, 
+        trim: true
+    },
+    title: {
+        type: String,
+        trim: true,
+        required: [true, 'Title is required'],
+        default: 'Débutant'
+    },
+    classicScore: {
+        type: Number, 
+        default: 0,
+    },
+    silouhetteScore: {
+        type: Number, 
+        default: 0,
+    },
+    descriptionScore: {
+        type: Number, 
+        default: 0,
+    },
+}, { timestamps: true})
+
 const dailyPokemonSchema = new mongoose.Schema({
     pokemon1: {
         type: String,
@@ -56,52 +92,53 @@ const dailyPokemonSchema = new mongoose.Schema({
 }, { timestamps: true })
 
 const playerAdvancementSchema = new mongoose.Schema({
-        userId: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'User',
-            required: [true, 'L\'ID de l\'utilisateur est requis']
-        },
-        game1Advancement: {
-            type: [String], 
-            default: [],
-            trim: true
-        }, 
-        game1Bool: {
-            type: Boolean, 
-            trim: true,
-            default: false
-        },
-        game2Advancement: {
-            type: [String], 
-            default: [],
-            trim: true
-        }, 
-        game2Bool: {
-            type: Boolean, 
-            trim: true,
-            default: false
-        },
-        game3Advancement: {
-            type: [String], 
-            default: [],
-            trim: true
-        }, 
-        game3Bool: {
-            type: Boolean, 
-            trim: true,
-            default: false
-        },
-        game4Advancement: {
-            type: [String], 
-            default: [],
-            trim: true
-        }, 
-        game4Bool: {
-            type: Boolean, 
-            trim: true,
-            default: false
-        },
-        
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: [true, 'L\'ID de l\'utilisateur est requis']
+    },
+    game1Advancement: {
+        type: [String], 
+        default: [],
+        trim: true
+    }, 
+    game1Bool: {
+        type: Boolean, 
+        trim: true,
+        default: false
+    },
+    game1score: {
+        type: Number,
+        default:0,
+    },
+    game2Advancement: {
+        type: [String], 
+        default: [],
+        trim: true
+    }, 
+    game2Bool: {
+        type: Boolean, 
+        trim: true,
+        default: false
+    },
+    game2score: {
+        type: Number,
+        default:0,
+    },
+    game3Advancement: {
+        type: [String], 
+        default: [],
+        trim: true
+    }, 
+    game3Bool: {
+        type: Boolean, 
+        trim: true,
+        default: false
+    },
+    game3score: {
+        type: Number,
+        default:0,
+    },    
 }, { timestamps: true })
 
 const ResetTokenSchema = new mongoose.Schema({
@@ -134,6 +171,7 @@ userSchema.methods.getJwtToken = function () {
 
 module.exports = {
     User: mongoose.model('users', userSchema),
+    UserProfil: mongoose.model('user-profils', userProfilSchema),
     DailyPokemon: mongoose.model('daily-pokemons', dailyPokemonSchema),
     PlayerAdvancement: mongoose.model('player-advancements', playerAdvancementSchema),
     ResetToken: mongoose.model('ResetToken',ResetTokenSchema),

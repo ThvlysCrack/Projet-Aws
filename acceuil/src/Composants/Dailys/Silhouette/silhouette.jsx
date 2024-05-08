@@ -145,7 +145,7 @@ function Silhouette() {
         }
     };
     return (
-        <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <body style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: 'center', backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <div className="main">
                 <div className='maincontainer'>
                     <div className="game border">
@@ -185,6 +185,7 @@ function Silhouette() {
                             </div>
                         </div>
                     </div>
+                    <br />
                     <div className="guessBox">
                         {inputValue !== '' && (
                             <div className="suggestionsBox">
@@ -201,26 +202,29 @@ function Silhouette() {
                             </div>
                         )}
                     </div>
-                    <div className='dynamicContent'>
-                        {guessedPokemon.map((guess, index) => (
-                            <div className="dynamic-div2" 
-                            style={{ backgroundColor: guess.Name === dailyPokemon.Name ? '#29E43C' : '#EB0F0F' }}>
-                                <div className='bgAnswserCard2'>
-                                    <div className='answerCard2'>
-                                        <img src={guess.Sprite} alt={guess.FrenchName} />
-                                    </div> 
-                                </div>
-                                <div className='pokemonNameGuess'>
-                                    <span>{guess.FrenchName}</span>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
                     {pokemonFound && (
                         <div className="resultBox">
                             <p>Félicitations! Vous avez trouvé le Pokémon en {attemptCounter} tentatives!</p>
                         </div>
                     )}
+                    <div className='blocS'>
+                        <div className='dynamicContent'>
+                            {guessedPokemon.map((guess, index) => (
+                                <div className="dynamic-div2"
+                                    style={{ backgroundColor: guess.Name === dailyPokemon.Name ? '#29E43C' : '#EB0F0F' }}>
+                                    <div className='bgAnswserCard2'>
+                                        <div className='answerCard2'>
+                                            <img src={guess.Sprite} alt={guess.FrenchName} />
+                                        </div>
+                                    </div>
+                                    <div className='pokemonNameGuess'>
+                                        <span>{guess.FrenchName}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </body>

@@ -19,6 +19,45 @@ async function getPokemonsOfTheDay() {
   }
 }
 
+function calculateScore(numAttempts) {
+  // Initialiser le score à 100
+  let score = 100;
+
+  // Calculer le nombre d'erreurs
+  const numErrors = (numAttempts > 0) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
+
+  // Déduire les points en fonction du nombre d'erreurs
+  score -= numErrors;
+
+  // Assurer que le score ne devienne pas négatif
+  score = Math.max(score, 0);
+  console.log(typeof (score))
+  return score;
+}
+
+async function addGame3ScoreItem(newItem) {
+  try {
+    // Récupérer l'ID utilisateur depuis le stockage local
+    const userId = localStorage.getItem('userId');
+
+    // Vérifier si l'ID utilisateur est présent
+    if (!userId) {
+      console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+      return;
+    }
+
+    // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+    const response = await axios.post(`http://localhost:4000/update-game3score/add/${userId}`, { newItem });
+
+    // Si la requête a réussi, afficher le message de réussite
+    console.log(response.data.message);
+  } catch (error) {
+    // Si la requête a échoué, afficher l'erreur
+    console.error("Erreur lors de l'ajout d'un élément à la liste game1Score :", error.response.data.error);
+  }
+}
+
+
 function Description() {
   const [dailyPokemon, setDailyPokemon] = useState(0);
   const [inputValue, setInputValue] = useState('');
@@ -106,23 +145,8 @@ function Description() {
     if (inputValue.trim() !== '' && !pokemonFound) {
       try {
         const pokemonEnglishName = getEnglishPokemonName(inputValue);
-
+  
         if (pokemonNames.hasOwnProperty(inputValue)) {
-          // Vérifiez si le Pokémon est déjà deviné
-          if (guessedPokemon.includes(pokemonEnglishName.toLowerCase())) {
-            // Si le Pokémon est déjà deviné, ne faites rien
-            setInputValue('');
-            return;
-          }
-
-          setAttemptCounter(attemptCounter + 1);
-
-          if (pokemonEnglishName.toLowerCase() === dailyPokemon.Name.toLowerCase()) {
-            setPokemonFound(true);
-          }
-
-          setInputValue('');
-          // Ajoutez le Pokémon deviné à guessedPokemon
           const pokemonDetails = await getPokemonDetails(pokemonEnglishName);
           const pokemonSprite = await getPokemonSprite(pokemonDetails);
           const p = {
@@ -130,7 +154,24 @@ function Description() {
             Sprite: pokemonSprite,
             FrenchName: inputValue
           };
+  
+          // Vérifier si le Pokémon est déjà deviné
+          if (guessedPokemon.some(guess => guess.Name.toLowerCase() === p.Name.toLowerCase())) {
+            // Si le Pokémon est déjà deviné, ne faites rien
+            setInputValue('');
+            return;
+          }
+  
+          setAttemptCounter(attemptCounter + 1);
+  
+          if (pokemonEnglishName.toLowerCase() === dailyPokemon.Name.toLowerCase()) {
+            setPokemonFound(true);
+            const score = calculateScore(attemptCounter + 1);
+            addGame3ScoreItem(score);
+          }
+  
           setGuessedPokemon([p, ...guessedPokemon]);
+          setInputValue('');
         } else {
           setInputValue(''); // Réinitialiser la valeur de l'input si le nom n'est pas trouvé
         }
@@ -139,6 +180,7 @@ function Description() {
       }
     }
   };
+  
   return (
     <body style={{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: 'center', backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <div className='descriptionContainer'>
@@ -154,28 +196,15 @@ function Description() {
               className="guess-input"
               disabled={pokemonFound}
             />
+            <br />
+            <button onClick={handleInputSubmit} className="submit-button">Soumettre</button>
           </div>
-          <div className='descriptionDynamicDiv'>
-            {guessedPokemon.map((guess, index) => (
-              <div className="dynamic-div2"
-                style={{ backgroundColor: guess.Name === dailyPokemon.Name ? '#29E43C' : '#EB0F0F' }}>
-                <div className='bgAnswserCard2'>
-                  <div className='answerCard2'>
-                    <img src={guess.Sprite} alt={guess.FrenchName} />
-                  </div>
-                </div>
-                <div className='pokemonNameGuess'>
-                  <span>{guess.FrenchName}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className='descriptionDynamicDiv'>
+          <br />
+          <div className='pokemonSuggestionContainer'>
             {inputValue !== '' && (
-              <div className="suggestionsBox">
+              <div className="bottom-box">
                 {suggestions.length > 0 && (
-                  <div className="suggestion-dropdown">
+                  <div className="suggestions-box">
                     {suggestionsWithSprites.map((suggestion, index) => (
                       <div key={index} onClick={() => handleSuggestionClick(suggestion.name)} className="suggestion-item">
                         <div className='sugSprite'><img src={suggestion.sprite} alt={suggestion.name} /></div>
@@ -187,6 +216,29 @@ function Description() {
               </div>
             )}
           </div>
+          
+          <div className='blocD'>
+            <div className='descriptionDynamicDiv'>
+              {guessedPokemon.map((guess, index) => (
+                <div className="dynamic-div2"
+                  style={{ backgroundColor: guess.Name === dailyPokemon.Name ? '#29E43C' : '#EB0F0F' }}>
+                  <div className='bgAnswserCard2'>
+                    <div className='answerCard2'>
+                      <img src={guess.Sprite} alt={guess.FrenchName} />
+                    </div>
+                  </div>
+                  <div className='pokemonNameGuess'>
+                    <span>{guess.FrenchName}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {pokemonFound && (
+            <div className="descriptionResultBox">
+              <p>Félicitations! Vous avez trouvé le Pokémon en {attemptCounter} tentatives!</p>
+            </div>
+          )}
         </div>
       </div>
     </body>

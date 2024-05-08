@@ -96,6 +96,6 @@ async function insertDailyPokemons() {
 }
 
 // Planification de l'exécution quotidienne à minuit
-cron.schedule('0 22 * * *', () => {
-  //insertDailyPokemons();
+cron.schedule('26 23 * * *', () => {
+  insertDailyPokemons();
 });

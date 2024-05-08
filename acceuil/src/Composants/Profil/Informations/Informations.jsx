@@ -1,21 +1,63 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Informations.css';
+import axios from 'axios';
 import bgImage from '../../assets/images/APropos.jpg';
 
+async function getProfilInformation(userId) {
+    try {
+        const response = await axios.get(`http://localhost:4000/userProfil/${userId}`);
+        return response.data;
+    } catch (error) {
+        console.error("Erreur lors de la récupération des informations du profil :", error.response.data.error);
+        return null;
+    }
+}
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+}
+
 function Informations() {
+    const [profilInfo, setProfilInfo] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const userId = localStorage.getItem('userId');
+                console.log(userId)
+                let userInfo = JSON.parse(localStorage.getItem('profilInfo'));
+                console.log(userInfo)
+                //console.log(userInfo.userId)
+                if (!userInfo) {
+                    userInfo = await getProfilInformation(userId);
+                    console.log(userInfo)
+                    localStorage.setItem('profilInfo', JSON.stringify(userInfo));
+                }
+                setProfilInfo(userInfo);
+            } catch (error) {
+                console.error("Erreur lors de la récupération du profil du joueur :", error);
+            }
+        };
+        fetchData();
+    }, []);
+
     useEffect(() => {
         const adjustGridColumns = () => {
             const gridCells = document.querySelectorAll('.gridCell');
             gridCells.forEach(cell => {
                 const value = cell.querySelector('.value');
                 if (value && value.offsetWidth > cell.offsetWidth) {
-                    cell.parentNode.style.gridTemplateColumns = "auto"; // Ajuste la grille sur une colonne
+                    cell.parentNode.style.gridTemplateColumns = "auto";
                 }
             });
         };
-
         adjustGridColumns();
-    }, []); // le tableau vide en second argument garantit que cela ne se produit qu'une seule fois après le montage initial
+    }, []);
+
     return (
         <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div className='infoMainContainer'>
@@ -32,84 +74,40 @@ function Informations() {
                             <div className='gridContent'>
                                 <div className='leftSide'>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Pseudo</span></div>
-                                        <div className='value'><span>Kama</span></div>
+                                        <div className='label'><span>Pseudo </span></div>
+                                        <div className='value'><span> {profilInfo ? profilInfo.pseudo : ""} </span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
                                         <div className='label'><span>Titre</span></div>
-                                        <div className='value'><span>Roi du pétrole</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.title : ""}</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Pseudo</span></div>
-                                        <div className='value'><span>Kama</span></div>
+                                        <div className='label'><span>Date de création</span></div>
+                                        <div className='value'><span>{profilInfo ? formatDate(profilInfo.createdAt) : ""}</span></div>
                                     </div>
                                     <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Titre</span></div>
-                                        <div className='value'><span>Roi du pétrole</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Pseudo</span></div>
-                                        <div className='value'><span>Kama</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Titre</span></div>
-                                        <div className='value'><span>Roi du pétrole</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Pseudo</span></div>
-                                        <div className='value'><span>Kama</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Titre</span></div>
-                                        <div className='value'><span>Roi du pétrole</span></div>
-                                    </div>
                                 </div>
                                 <div className='rightSide'>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Date de création</span></div>
-                                        <div className='value'><span>02/05/2024</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
                                         <div className='label'><span>Meilleur Rang</span></div>
-                                        <div className='value'><span>1</span></div>
+                                        <div className='value'><span>{profilInfo ? (profilInfo.bestRank !== 0 ? profilInfo.bestRank : "N'a jamais joué") : ""}</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Pseudo</span></div>
-                                        <div className='value'><span>Kama</span></div>
+                                        <div className='label'><span>Jeu Classique</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.classicScore : ""} tentatives</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Titre</span></div>
-                                        <div className='value'><span>Roi du pétrole</span></div>
+                                        <div className='label'><span> Jeu Silhouette</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.silhouetteScore : ""} tentatives</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Date de création</span></div>
-                                        <div className='value'><span>02/05/2024</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Meilleur Rang</span></div>
-                                        <div className='value'><span>1</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Pseudo</span></div>
-                                        <div className='value'><span>Kama</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
-                                        <div className='label'><span>Titre</span></div>
-                                        <div className='value'><span>Roi du pétrole</span></div>
+                                        <div className='label'><span>Jeu Description</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.descriptionScore : ""} tentatives</span></div>
                                     </div>
                                 </div>
                             </div>

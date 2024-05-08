@@ -8,7 +8,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
 var path = require('path');
-const { User, DailyPokemon, PlayerAdvancement } = require('./Schema');
+const { User, DailyPokemon, PlayerAdvancement, UserProfil} = require('./Schema');
 const { appendFile } = require("fs");
 
 router.get('/', (req, res) => {
@@ -67,13 +67,23 @@ router.post("/register", async (req, res) => {
       password: encryptedPassword,
     });
 
+    const userProfil = await UserProfil.create({
+      userId: newUser._id,
+      pseudo: newUser.pseudo,
+      bestRank: 0, 
+      title: 'Débutant',
+      classicScore: 0,
+      silouhetteScore: 0,
+      descriptionScore: 0,
+    });
+
     const pAdvancement = await PlayerAdvancement.create({
       userId: newUser._id,
-      game1Advancement: [], game1Bool: false,
-      game2Advancement: [], game2Bool: false,
-      game3Advancement: [], game3Bool: false,
-      game4Advancement: [], game4Bool: false,
+      game1Advancement: [], game1Bool: false,game1score: 0,
+      game2Advancement: [], game2Bool: false,game2score: 0,
+      game3Advancement: [], game3Bool: false,game3score: 0,
       });
+
     console.log("user creasted successfully");
     res.status(201).json({ status: "Ok" });
   } catch (error) {
@@ -233,6 +243,30 @@ router.get('/game1Advancement/:userId', async (req, res) => {
   }
 });
 
+// Route pour récupérer la liste userProfil
+router.get('/userProfil/:userId', async (req, res) => {
+  try {
+    // Get the user's ID from the route parameters
+    const { userId } = req.params;
+
+    // Find the PlayerAdvancement document for this user
+    const userProfilDoc = await UserProfil.findOne({ userId });
+
+    // Check if the document exists and if it contains the game1Advancement property
+    if (userProfilDoc) {
+      // Return the game1Advancement list
+      res.json(userProfilDoc);
+    } else {
+      // If the game1Advancement property is not defined or if the document does not exist, return an empty list
+      res.json([]);
+    }
+  } catch (error) {
+    // Handle errors
+    console.error("Error retrieving the game1Advancement list:", error);
+    res.status(500).json({ error: 'Error retrieving the game1Advancement list' });
+  }
+});
+
 // Route pour ajouter un élément à la liste game1Advancement
 router.post('/game1Advancement/add/:userId', async (req, res) => {
   try {
@@ -261,6 +295,93 @@ router.post('/game1Advancement/add/:userId', async (req, res) => {
   }
 });
 
+// Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
+router.post('/update-game1score/add/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
 
+    // Récupérer le score à mettre à jour de la requête POST
+    const newItem = parseInt(req.body.newItem,10);
 
+    // Vérifier si le score est un nombre valide
+    if (typeof newItem !== 'number') {
+      return res.status(400).json({ error: `Le score à mettre à jour doit être un nombre, mais le type fourni est : ${typeof newItem}` });
+    }
+  
+
+    // Mettre à jour le score game1score dans la table playeradvancement dans la base de données
+    const playerAdvancementDoc = await PlayerAdvancement.findOne({ userId: userId });
+    if (playerAdvancementDoc) {
+      playerAdvancementDoc.game1score = newItem;
+      await playerAdvancementDoc.save();
+      return res.json({ message: 'Score mis à jour avec succès pour l\'utilisateur avec ID: ' + userId });
+    } else {
+      return res.status(404).json({ error: 'Document playerAdvancement introuvable pour l\'utilisateur avec ID: ' + userId });
+    }
+  } catch (error) {
+    // Gérer les erreurs
+    console.error("Erreur lors de la mise à jour du score game1score :", error);
+    return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
+  }
+});
+
+// Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
+router.post('/update-game2score/add/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    // Récupérer le score à mettre à jour de la requête POST
+    const newItem = parseInt(req.body.newItem,10);
+
+    // Vérifier si le score est un nombre valide
+    if (typeof newItem !== 'number') {
+      return res.status(400).json({ error: `Le score à mettre à jour doit être un nombre, mais le type fourni est : ${typeof newItem}` });
+    }
+  
+
+    // Mettre à jour le score game1score dans la table playeradvancement dans la base de données
+    const playerAdvancementDoc = await PlayerAdvancement.findOne({ userId: userId });
+    if (playerAdvancementDoc) {
+      playerAdvancementDoc.game2score = newItem;
+      await playerAdvancementDoc.save();
+      return res.json({ message: 'Score mis à jour avec succès pour l\'utilisateur avec ID: ' + userId });
+    } else {
+      return res.status(404).json({ error: 'Document playerAdvancement introuvable pour l\'utilisateur avec ID: ' + userId });
+    }
+  } catch (error) {
+    // Gérer les erreurs
+    console.error("Erreur lors de la mise à jour du score game1score :", error);
+    return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
+  }
+});
+
+// Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
+router.post('/update-game3score/add/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    // Récupérer le score à mettre à jour de la requête POST
+    const newItem = parseInt(req.body.newItem,10);
+
+    // Vérifier si le score est un nombre valide
+    if (typeof newItem !== 'number') {
+      return res.status(400).json({ error: `Le score à mettre à jour doit être un nombre, mais le type fourni est : ${typeof newItem}` });
+    }
+  
+
+    // Mettre à jour le score game1score dans la table playeradvancement dans la base de données
+    const playerAdvancementDoc = await PlayerAdvancement.findOne({ userId: userId });
+    if (playerAdvancementDoc) {
+      playerAdvancementDoc.game3score = newItem;
+      await playerAdvancementDoc.save();
+      return res.json({ message: 'Score mis à jour avec succès pour l\'utilisateur avec ID: ' + userId });
+    } else {
+      return res.status(404).json({ error: 'Document playerAdvancement introuvable pour l\'utilisateur avec ID: ' + userId });
+    }
+  } catch (error) {
+    // Gérer les erreurs
+    console.error("Erreur lors de la mise à jour du score game1score :", error);
+    return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
+  }
+});
 module.exports = router;

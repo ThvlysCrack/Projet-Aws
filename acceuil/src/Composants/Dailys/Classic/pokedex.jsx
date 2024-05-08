@@ -45,6 +45,27 @@ async function getPokemonsOfTheDay() {
         console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error.response.data.error);
     }
 }
+async function addGame1ScoreItem(newItem) {
+    try {
+        // Récupérer l'ID utilisateur depuis le stockage local
+        const userId = localStorage.getItem('userId');
+
+        // Vérifier si l'ID utilisateur est présent
+        if (!userId) {
+            console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+            return;
+        }
+
+        // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+        const response = await axios.post(`http://localhost:4000/update-game1score/add/${userId}`, { newItem });
+        
+        // Si la requête a réussi, afficher le message de réussite
+        console.log(response.data.message);
+    } catch (error) {
+        // Si la requête a échoué, afficher l'erreur
+        console.error("Erreur lors de l'ajout d'un élément à la liste game1Score :", error.response.data.error);
+    }
+}
 
 async function getGame1Advancement(userId) {
     try {
@@ -61,6 +82,7 @@ async function getGame1Advancement(userId) {
 }
 
 function Pokedex() {
+
     const [pokemonName, setPokemonName] = useState('');
     const [pokemonDataList, setPokemonDataList] = useState([]);
     const [dailyPokemon, setDailyPokemon] = useState(null);
@@ -121,22 +143,31 @@ function Pokedex() {
         const fetchData = async () => {
             try {
                 const userId = localStorage.getItem('userId');
-                const advancement = await getGame1Advancement(userId);
-                if (advancement) {
-                    // Utiliser Promise.all pour attendre que toutes les opérations asynchrones se terminent
-                    const pokemonDataPromises = advancement.map(async item => {
-                        return await getPokemon(item);
-                    });
-                    const pokemonData = await Promise.all(pokemonDataPromises);
-                    // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées
-                    setPokemonDataList(pokemonData.reverse());
+                console.log(userId)
+                let classicAdvancement = JSON.parse(localStorage.getItem('classicAdvancement'));
+                console.log(classicAdvancement)
+                if (userId != classicAdvancement.userId) {
+                    classicAdvancement = await getGame1Advancement(userId);
+                    console.log(classicAdvancement)
+                    if (classicAdvancement) {
+                        const pokemonDataPromises = classicAdvancement.map(async item => {
+                            return await getPokemon(item);
+                        });
+                        const pokemonData = await Promise.all(pokemonDataPromises);
+                        // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées 
+                        localStorage.setItem('classicAdvancement', JSON.stringify(pokemonData.reverse()));
+                    }else {
+                        localStorage.setItem('classicAdvancement', JSON.stringify([]));
+                    }   
                 }
+                setPokemonDataList(classicAdvancement);
             } catch (error) {
-                console.error("Erreur lors de la récupération de l'avancement du joueur :", error);
+                console.error("Erreur lors de la récupération du profil du joueur :", error);
             }
         };
-        fetchData(); // Appel de la fonction fetchData au chargement initial
+        fetchData();
     }, []);
+
     
     
 
@@ -310,6 +341,23 @@ function Pokedex() {
             return [];
         }
     };
+
+    function calculateScore(numAttempts) {
+        // Initialiser le score à 100
+        let score = 100;
+        
+        // Calculer le nombre d'erreurs
+        const numErrors = (numAttempts > 0) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
+    
+        // Déduire les points en fonction du nombre d'erreurs
+        score -= numErrors;
+    
+        // Assurer que le score ne devienne pas négatif
+        score = Math.max(score, 0);
+        console.log(typeof(score))
+        return score;
+    }
+    
     
 
     const getPokemon = async (pokemonName) => {
@@ -351,8 +399,8 @@ function Pokedex() {
     const handleInputSubmit = async () => {
         if (pokemonName.trim() !== '' && !pokemonFound) {
             try {
-
                 setAttemptCounter(attemptCounter + 1);
+                
                 // Récupération du nom du pokémon en Anglais pour L'API
                 const pokemonEnglishName = getEnglishPokemonName(pokemonName);
 
@@ -362,8 +410,6 @@ function Pokedex() {
                 // Créez une nouvelle copie du tableau avec le nouvel élément au début
                 const updatedList = [userPokemonData, ...pokemonDataList];
 
-                console.log(updatedList)
-
                 // Mettez à jour l'état avec la nouvelle copie du tableau
                 setPokemonDataList(updatedList);
 
@@ -372,6 +418,8 @@ function Pokedex() {
 
                 if (pokemonEnglishName.toLowerCase() === dailyPokemon.name.toLowerCase()) {
                     setPokemonFound(true); // Marquez le Pokémon comme trouvé
+                    const score = calculateScore(attemptCounter + 1)
+                    addGame1ScoreItem(score)
                 }
 
                 setPokemonName('');
@@ -381,7 +429,7 @@ function Pokedex() {
         }
     };
     return (
-        <body style={{backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', display : 'flex', justifyContent : 'center', alignItems : 'center',height : '100vh'}}>
+        <body style={{backgroundImage: `url(${bgImage})`, backgroundPosition: 'center', backgroundSize: 'cover', display : 'flex', justifyContent : 'center', alignItems : 'center',height : '100vh'}}>
             <div className='pokedexBg'>
                 <div className='pokedexTop'>
                     <div className='returnButton'>
