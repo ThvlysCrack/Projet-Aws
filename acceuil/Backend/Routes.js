@@ -7,9 +7,11 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
+const { body, validationResult } = require('express-validator')
 var path = require('path');
 const { User, DailyPokemon, PlayerAdvancement, UserProfil} = require('./Schema');
 const { appendFile } = require("fs");
+
 
 router.get('/', (req, res) => {
   res.send(`
@@ -45,9 +47,21 @@ router.get('/', (req, res) => {
 `);
 });
 
-router.post("/register", async (req, res) => {
+router.post("/register", 
+// Express Validator middleware
+[
+  body('pseudo').trim().notEmpty().withMessage('Le pseudo est requis'),
+  body('email').trim().isEmail().withMessage('Veuillez entrer un email valide'),
+  body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
+  body('password').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/).withMessage('Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial'),
+], async (req, res) => {
+  // Check for validation errors
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+  // If validation passes, proceed with registration
   const { pseudo, email, password } = req.body;
-  
   try {
     if (!pseudo || !email || !password) {
       throw new Error("Missing required fields");
@@ -95,7 +109,18 @@ router.post("/register", async (req, res) => {
 });
 
 
-router.post("/login", async (req, res) => {
+router.post("/login",  
+// Express Validator middleware
+[
+  body('email').trim().isEmail().withMessage('Veuillez entrer un email valide'),
+  body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
+],
+async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   try {
   const { email, password } = req.body;
 
@@ -120,7 +145,17 @@ router.post("/login", async (req, res) => {
   });
 
 
-router.post("/forgot-password", async (req, res) => {
+router.post("/forgot-password",  
+// Express Validator middleware
+[
+  body('email').trim().isEmail().withMessage('Veuillez entrer un email valide'),
+],
+async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   const { email } = req.body;
   try {
     const oldUser = await User.findOne({ email });
@@ -174,7 +209,18 @@ router.get("/reset-password/:id/:token", async (req, res) => {
     res.send("Not Verified");
   }
 });
-router.post("/reset-password/:id/:token", async (req, res) => {
+router.post("/reset-password/:id/:token",  
+// Express Validator middleware
+[
+  body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
+  body('password').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/).withMessage('Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial'),
+],
+async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   const { id, token } = req.params;
   const { password } = req.body;
 
