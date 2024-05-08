@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'PKMN RBYGSC';
+    src: url('../assets/fonts/PKMN-RBYGSC.woff') format('truetype');
+}
+
+.container {
+    width: 80%;
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenant {
+    margin-top: 75px;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.pres {
+    color: white;
+    font-size: 18px; /* Taille de la police */
+    margin-bottom: 20px; /* Marge inférieure de 20 pixels */
+    font-family: 'PKMN RBYGSC';
+}
+
+.list-item {
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    justify-content: center; /* Centrage horizontal des éléments */
+    align-items: center; /* Centrage vertical des éléments */
+    flex-direction: column;
+}
+
+.list-text {
+    color: white;
+    font-size: 16px; /* Taille de la police */
+    font-family: 'PKMN RBYGSC';
+    margin-bottom: 5px;
+}
+
+.list-img img {
+    width: 100px; /* Largeur de l'image */
+    height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
+    cursor: pointer; /* Curseur de type pointeur */
+}
+
+/* Style pour le fond de la page */
+body {
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression des espacements internes par défaut */
+    font-family: Arial, sans-serif; /* Police par défaut */
+    background-color: #f2f2f2; /* Couleur de fond de la page */
+}
+
+/* Style pour le survol de l'image */
+.list-img img:hover {
+    transform: scale(1.1); /* Agrandissement de l'image au survol */
+}
