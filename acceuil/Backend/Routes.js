@@ -7,9 +7,11 @@ const cors = require("cors");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
+const { body, validationResult } = require('express-validator')
 var path = require('path');
 const { User, DailyPokemon, PlayerAdvancement, UserProfil} = require('./Schema');
 const { appendFile } = require("fs");
+
 
 router.get('/', (req, res) => {
   res.send(`
@@ -45,9 +47,21 @@ router.get('/', (req, res) => {
 `);
 });
 
-router.post("/register", async (req, res) => {
+router.post("/register", 
+// Express Validator middleware
+[
+  body('pseudo').trim().notEmpty().withMessage('Le pseudo est requis'),
+  body('email').trim().isEmail().withMessage('Veuillez entrer un email valide'),
+  body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
+  body('password').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/).withMessage('Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial'),
+], async (req, res) => {
+  // Check for validation errors
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+  // If validation passes, proceed with registration
   const { pseudo, email, password } = req.body;
-  
   try {
     if (!pseudo || !email || !password) {
       throw new Error("Missing required fields");
@@ -95,7 +109,18 @@ router.post("/register", async (req, res) => {
 });
 
 
-router.post("/login", async (req, res) => {
+router.post("/login",  
+// Express Validator middleware
+[
+  body('email').trim().isEmail().withMessage('Veuillez entrer un email valide'),
+  body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
+],
+async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   try {
   const { email, password } = req.body;
 
@@ -120,7 +145,17 @@ router.post("/login", async (req, res) => {
   });
 
 
-router.post("/forgot-password", async (req, res) => {
+router.post("/forgot-password",  
+// Express Validator middleware
+[
+  body('email').trim().isEmail().withMessage('Veuillez entrer un email valide'),
+],
+async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   const { email } = req.body;
   try {
     const oldUser = await User.findOne({ email });
@@ -174,7 +209,18 @@ router.get("/reset-password/:id/:token", async (req, res) => {
     res.send("Not Verified");
   }
 });
-router.post("/reset-password/:id/:token", async (req, res) => {
+router.post("/reset-password/:id/:token",  
+// Express Validator middleware
+[
+  body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
+  body('password').matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])/).withMessage('Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial'),
+],
+async (req, res) => {
+  // Check for validation errors
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
   const { id, token } = req.params;
   const { password } = req.body;
 
@@ -205,6 +251,13 @@ router.post("/reset-password/:id/:token", async (req, res) => {
 });
 
 router.get('/daily-pokemons', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     // Récupérer les 4 Pokémons du jour
     const dailyPokemons = await DailyPokemon.findOne({}, {}, { sort: { 'createdAt': -1 } });
@@ -217,10 +270,25 @@ router.get('/daily-pokemons', async (req, res) => {
     console.error('Erreur lors de la récupération des Pokémons du jour :', error);
     res.status(500).json({ error: 'Erreur serveur' });
   }
+  } catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+  }
+  } else {
+  // If there's no Authorization header, send an error response
+  res.status(401).json({ message: 'No token provided' });
+  }
 });
 
 // Route pour récupérer la liste game1Advancement
 router.get('/game1Advancement/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     // Get the user's ID from the route parameters
     const { userId } = req.params;
@@ -241,10 +309,24 @@ router.get('/game1Advancement/:userId', async (req, res) => {
     console.error("Error retrieving the game1Advancement list:", error);
     res.status(500).json({ error: 'Error retrieving the game1Advancement list' });
   }
+  } catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+  }
+  } else {
+  // If there's no Authorization header, send an error response
+  res.status(401).json({ message: 'No token provided' });
+  }
 });
 
 // Route pour récupérer la liste userProfil
 router.get('/userProfil/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     // Get the user's ID from the route parameters
     const { userId } = req.params;
@@ -265,10 +347,24 @@ router.get('/userProfil/:userId', async (req, res) => {
     console.error("Error retrieving the game1Advancement list:", error);
     res.status(500).json({ error: 'Error retrieving the game1Advancement list' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour ajouter un élément à la liste game1Advancement
 router.post('/game1Advancement/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
     // Récupérer l'élément à ajouter de la requête POST
@@ -293,10 +389,25 @@ router.post('/game1Advancement/add/:userId', async (req, res) => {
     console.error("Erreur lors de l'ajout d'un élément à la liste game1Advancement :", error);
     return res.status(500).json({ error: 'Erreur lors de l\'ajout de l\'élément à la liste game1Advancement' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
 router.post('/update-game1score/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
 
@@ -323,10 +434,25 @@ router.post('/update-game1score/add/:userId', async (req, res) => {
     console.error("Erreur lors de la mise à jour du score game1score :", error);
     return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
 router.post('/update-game2score/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
 
@@ -353,10 +479,25 @@ router.post('/update-game2score/add/:userId', async (req, res) => {
     console.error("Erreur lors de la mise à jour du score game1score :", error);
     return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 
 // Route pour récupérer le score du joueur et mettre à jour le score dans la table playeradvancement sur le tuple game1score
 router.post('/update-game3score/add/:userId', async (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (authHeader) {
+    const token = authHeader.split(' ')[1];
+
+  try {
+      const decoded = jwt.verify(token, process.env.JWT_Secret);
   try {
     const userId = req.params.userId;
 
@@ -383,5 +524,13 @@ router.post('/update-game3score/add/:userId', async (req, res) => {
     console.error("Erreur lors de la mise à jour du score game1score :", error);
     return res.status(500).json({ error: 'Erreur lors de la mise à jour du score game1score' });
   }
+} catch (error) {
+  // If the token is not valid, send an error response
+  res.status(401).json({ message: 'Invalid token' });
+}
+} else {
+// If there's no Authorization header, send an error response
+res.status(401).json({ message: 'No token provided' });
+}
 });
 module.exports = router;

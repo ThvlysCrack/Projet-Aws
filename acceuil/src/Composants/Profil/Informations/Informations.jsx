@@ -5,7 +5,12 @@ import bgImage from '../../assets/images/APropos.jpg';
 
 async function getProfilInformation(userId) {
     try {
-        const response = await axios.get(`http://localhost:4000/userProfil/${userId}`);
+        const token = localStorage.getItem('token');
+        const response = await axios.get(`http://localhost:4000/userProfil/${userId}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
         return response.data;
     } catch (error) {
         console.error("Erreur lors de la récupération des informations du profil :", error.response.data.error);

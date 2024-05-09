@@ -18,18 +18,26 @@ const userSchema = new mongoose.Schema({
         trim: true,
         required: [true, 'e-mail is required'],
         unique: true,
-        match: [
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-            'Please add a valid email'
-        ]
+        validate: {
+            validator: function(value) {
+                // Vérifie si l'email est au bon format
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+            },
+            message: 'Please add a valid email'
+        }
+
     },
     password: {
         type: String,
         trim: true,
-        required: [true, 'password is required'],
-        minlength: [6, 'password must have at least (6) caracters'],
+        required: [true, 'Password is required'],
+        validate: {
+            validator: function(password) {
+                return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(password);
+            },
+            message: 'Password must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character, and must be at least 8 characters long'
+        }
     },
-
 }, { timestamps: true })
 
 const userProfilSchema = new mongoose.Schema({
