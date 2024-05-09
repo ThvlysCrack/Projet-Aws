@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import './Classement.css';
-import bgImage from '../assets/images/background102.jpg';
+import bgImage from '../assets/images/espacedracoecto.png';
 import trophy from '../assets/images/win.jpg';
-import badge from '../assets/images/badgegold.png'
+import badge from '../assets/images/badgegold.png';
+import master from '../assets/images/Master-Ball.png';
+import hyper from '../assets/images/HyperBall.png';
+import superb from '../assets/images/SuperBall.png';
+import poke from '../assets/images/PokeBall.png';
 
 function Classement() {
   const [searchText, setSearchText] = useState('');
@@ -17,11 +21,7 @@ function Classement() {
     { rank: 3, name: 'Elias', score: 154 },
     { rank: 4, name: 'Asma', score: 100 },
     { rank: 5, name: 'Yann', score: 82 },
-    { rank: 1, name: 'Ilyes', score: 239 },
-    { rank: 2, name: 'Aymen', score: 209 },
-    { rank: 3, name: 'Elias', score: 154 },
-    { rank: 4, name: 'Asma', score: 100 },
-    { rank: 5, name: 'Yann', score: 82 },
+    // Add more players here...
   ];
 
   const filteredPlayers = players.filter(player =>
@@ -57,7 +57,12 @@ function Classement() {
           <tbody>
             {filteredPlayers.map((player, index) => (
               <tr key={index} className={index === 0 ? 'winner' : index === 1 ? 'runner-up' : index === 2 ? 'second-runner-up' : ''}>
-                <td className="rank">{player.rank}</td>
+                <td className="rank">
+                  {index === 0 && <img src={master} alt="Master Ball" />}
+                  {index === 1 && <img src={hyper} alt="Hyper Ball" />}
+                  {index === 2 && <img src={superb} alt="Super Ball" />}
+                  {(index !== 0 && index !== 1 && index !== 2) && <img src={poke} alt="Poke Ball" />}
+                </td>
                 <td>{player.name}</td>
                 <td>{player.score}</td>
               </tr>

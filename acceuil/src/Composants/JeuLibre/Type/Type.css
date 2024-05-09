@@ -8,40 +8,179 @@
     src: url('../../assets/fonts/Square.woff') format('truetype');
 }
 
-.chrono{
+.chrono {
     margin-top: 150px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.pokemontre{
+.pokemontre {
     position: relative;
 }
 
-.pokemontre img{
+.pokemontre img {
     height: auto;
     width: 300px;
     border-radius: 20px;
 }
 
-.bouton img{
+.bouton img {
     height: auto;
     width: 100px;
     border-radius: 20px;
     transition: transform 0.3s;
 }
 
-.bouton img:hover{
+.bouton img:hover {
     transform: scale(1.3);
 }
 
 .countdown {
     color: rgb(56, 80, 48);
     font-family: 'Square';
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 100px;
 }
+
+.guessInput {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 0 auto;
+    width: 90%;
+    font-family: 'PKMN RBYGSC';
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.rdtype {
+    color: white;
+    left: 50%;
+    font-family: 'PKMN RBYGSC';
+    text-align: center;
+    font-size: 30px;
+}
+
+.correctGuess {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    max-height: 200px;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin-top: 5px;
+}
+
+.pokemonGuess {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 25px;
+}
+  
+.pokemonGuess img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.pokemonGuess p {
+    font-size: 16px;
+    font-family: 'PKMN RBYGSC';
+    color: #ffffff;
+}
+
+.suggestions {
+    position: relative;
+    width: 70%; /* Largeur ajustée */
+    margin: 0 auto; 
+    background-color: white;
+    border-radius: 25px;
+    z-index: 999;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.suggestion {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.suggestion img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #add8e6;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+.modal-content p {
+  font-family: 'PKMN RBYGSC';
+  font-size: 20px;
+  color: #333;
+}
+
+.replayButton {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    font-family: 'PKMN RBYGSC'; 
+}
+  
+.replayButton:hover {
+    background-color: #2f7e32; /* Couleur de fond au survol */
+}
+
+.instructions{
+    background-color: #8651e9;
+    font-size: 20px;
+    font-family: 'PKMN RBYGSC'; 
+    color: #333;
+    max-width: 400px;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+}
+  

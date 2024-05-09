@@ -51,11 +51,11 @@ return (
         <Route path="/Connexion" element={<LoginSignup/>} />
         <Route path="/Defis-quotidiens" element={ <ProtectedRoute><Defis/></ProtectedRoute>} />
         <Route path="/Profil" element={<ProtectedRoute><Profil/></ProtectedRoute>} />
-        <Route path="/pokedex" element={<Classic/>} />
-        <Route path="/JeuLibre" element={<JeuLibre/>} />
+        <Route path="/pokedex" element={<ProtectedRoute><Classic/></ProtectedRoute>} />
+        <Route path="/JeuLibre" element={<ProtectedRoute><JeuLibre/></ProtectedRoute>} />
         <Route path="/Classement" element={<ProtectedRoute><Classement/></ProtectedRoute>} />
         <Route path="/Parametres" element={<ProtectedRoute><Parametres/></ProtectedRoute>} />
-        <Route path="/APropos" element={<APropos/>} />
+        <Route path="/APropos" element={<ProtectedRoute><APropos/></ProtectedRoute>} />
         <Route path="/Informations" element={<ProtectedRoute><Informations/></ProtectedRoute>} />
         <Route path="/Palmares" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/Personnalisation" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
@@ -64,7 +64,7 @@ return (
         <Route path="/Carte" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/forgot-password" element={<ForgetPassword/>} />
         <Route path="/Silhouette" element={<ProtectedRoute><Silhouette/></ProtectedRoute>} />
-        <Route path="/Type" element={<Type/>} />
+        <Route path="/Type" element={<ProtectedRoute><Type/></ProtectedRoute>} />
       </Routes>
   </Router>
 );

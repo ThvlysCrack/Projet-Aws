@@ -4,21 +4,21 @@ import bgImage from '../assets/images/APropos.jpg';
 import locateIt from '../assets/Logos/logolocateIt.png'; 
 import cookapp from '../assets/Logos/logocookapp.png'
 import wyw from '../assets/Logos/RondSansFond.png'
-import oneimg from '../assets/images/PokeZapv2.png'
+import oneimg from '../assets/Logos/one.png'
 
 function APropos(){
     const locateItlink = "https://awsgroupe71.netlify.app"
     const cookApplink = "https://cook-app-cyan.vercel.app"
     const wywlink = "https://what-you-watched.vercel.app"
-    const one = "" //Mettre le lien
+    const one = "https://onegame.vercel.app" 
 
     return (
-        <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh'}}>
+        <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh', overflow:'hidden', margin: '0', padding:'0'}}>
             <div className='container'>
                 <div className='contenant'>
                     <div className='pres'>
                         Ce site à été réalisé dans le cadre d'un projet universitaire de sécurité informatique par 4 étudiants ayant une envie commune de faire un site 
-                        de jeu. Quoi de mieux pour cela que l'univers Pokémon. C'est ainsi que nous avons le plaisir de vous présenter PokeZap. 
+                        de jeu. C'est ainsi que nous avons le plaisir de vous présenter PokeZap. 
                     </div>
                     <div className='list-item'>
                         <div className='list-text'>
@@ -56,7 +56,7 @@ function APropos(){
                         </div>
                         <div className='list-img'>
                             <a href={one} target="_blank" rel="noopener noreferrer"> 
-                                <img src={oneimg} alt="CookApp" /> {/*Ajouter le logo de one */}
+                                <img src={oneimg} alt="CookApp"/>
                             </a>
                         </div>
                     </div>

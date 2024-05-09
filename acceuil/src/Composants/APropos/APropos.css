@@ -10,6 +10,7 @@
     text-align: center; 
     align-items: center;
     flex-direction: column;
+    height:  100vh;
 }
 
 .contenant {
@@ -19,6 +20,7 @@
     padding: 20px;
     border-radius: 50px;
     text-align: center;
+    overflow-y: auto;
 }
 
 .pres {
@@ -46,6 +48,8 @@
     width: 100px; /* Largeur de l'image */
     height: auto; /* Hauteur automatique pour maintenir le rapport hauteur/largeur */
     cursor: pointer; /* Curseur de type pointeur */
+    border-radius: 50px;
+    transition: transform 0.3s;
 }
 
 /* Style pour le fond de la page */

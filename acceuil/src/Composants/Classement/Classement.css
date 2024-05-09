@@ -200,3 +200,8 @@
     color: white;
     inset-block: 30
 }
+
+.rank img{
+  height: 30px;
+  width: auto;
+}
