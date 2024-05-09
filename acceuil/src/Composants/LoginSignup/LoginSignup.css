@@ -1,27 +1,14 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /*max-width: 600px;*/
     margin: auto;
     background: transparent;
     padding-bottom: 30px;
     margin-top: 20px;
-    
-}
-.header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 9px;
-    margin-bottom: 15%;
-}
-.header img{
-    
-    height: 150px;
 }
 
-.inputs{
+.inputs {
     margin-top: 10%;
     display: flex;
     flex-direction: column;
@@ -29,21 +16,23 @@
     gap: 25px;
 }
 
-.input{
+.input-container {
+    position: relative;
+}
+
+.input {
     display: flex;
     align-items: center;
     margin: auto;
-    /*width: 90%;
-    max-width: 480px;
-    height: 60px;*/
     background: #eaeaea;
     border-radius: 6px;
 }
-.input img{
+
+.input img {
     margin: 0px 30px;
 }
 
-.input input{
+.input input {
     height: 50px;
     width: 400px;
     background: transparent;
@@ -52,7 +41,8 @@
     color: #797979;
     font-size: 19px;
 }
-.forgot-password span{
+
+.forgot-password span {
     font-size: 100%;
     font-weight: bold;
     color: rgba(255, 255, 255);
@@ -61,12 +51,14 @@
     cursor: pointer;
     align-items: center;
 }
-.submit-container{
+
+.submit-container {
     display: flex;
     gap: 30px;
     margin: 60px auto;
 }
-.submit{
+
+.submit {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,32 +71,38 @@
     font-weight: 700;
     cursor: pointer;
 }
-.gray{
+
+.gray {
     background: #eaeaea;
     color: #676767;
 }
-.text{
-    color: #ffffff;
-    font-size: 48px;
-    font-weight: 700;
-}
+
 .SubmitButton {
-all: unset;
-background:  #005BBB;
-width: 220px;
-padding: 8px 16px;
-margin: 0;
-margin-bottom: 10px;
-text-align: center;
-font-size: 14pt;
-font-size: bold;
-color: #FFF;
-transition: background .15s ease, border .15s ease;
-cursor: pointer;
--webkit-appearance: none;
-appearance: none;
--Webkit-borderRadius: 0;
-border: 2px solid  #005BBB;
-border-radius: 4px;
-outline: 0;
+    all: unset;
+    background: #005BBB;
+    width: 220px;
+    padding: 8px 16px;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14pt;
+    font-size: bold;
+    color: #FFF;
+    transition: background .15s ease, border .15s ease;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    -Webkit-borderRadius: 0;
+    border: 2px solid #005BBB;
+    border-radius: 4px;
+    outline: 0;
+}
+
+.error {
+    color: red;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    font-size: 12px;
+    font-family: Arial, sans-serif; 
 }
