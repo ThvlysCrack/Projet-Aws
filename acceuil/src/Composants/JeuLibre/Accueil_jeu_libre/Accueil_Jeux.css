@@ -1,5 +1,20 @@
-title{
-    height: 20%;
-    width: auto;
-    justify-content: center;
+.background {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Pour s'assurer que le conteneur occupe toute la hauteur de l'écran */
+    background-size: 100% 100%; /* Ajustement de la taille de l'image de fond */
+}
+
+.cont {
+    text-align: center; /* Centrer le contenu du conteneur */
+}
+
+.titre img {
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.titre img:hover {
+    transform: scale(1.1); /* Agrandissement de l'image au survol */
 }

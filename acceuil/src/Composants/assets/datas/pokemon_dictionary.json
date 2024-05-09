@@ -1,0 +1,5127 @@
+{
+    "bulbizarre": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+    ],
+    "herbizarre": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
+    ],
+    "florizarre": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
+    ],
+    "salamèche": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
+    ],
+    "reptincel": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png"
+    ],
+    "dracaufeu": [
+        "feu",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+    ],
+    "carapuce": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+    ],
+    "carabaffe": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png"
+    ],
+    "tortank": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png"
+    ],
+    "chenipan": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png"
+    ],
+    "chrysacier": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png"
+    ],
+    "papilusion": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png"
+    ],
+    "aspicot": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png"
+    ],
+    "coconfort": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png"
+    ],
+    "dardargnan": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png"
+    ],
+    "roucool": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png"
+    ],
+    "roucoups": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png"
+    ],
+    "roucarnage": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png"
+    ],
+    "rattata": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png"
+    ],
+    "rattatac": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png"
+    ],
+    "piafabec": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/21.png"
+    ],
+    "rapasdepic": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/22.png"
+    ],
+    "abo": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png"
+    ],
+    "arbok": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png"
+    ],
+    "pikachu": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    ],
+    "raichu": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
+    ],
+    "sabelette": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png"
+    ],
+    "sablaireau": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png"
+    ],
+    "nidoran♀": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/29.png"
+    ],
+    "nidorina": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png"
+    ],
+    "nidoqueen": [
+        "poison",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png"
+    ],
+    "nidoran♂": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/32.png"
+    ],
+    "nidorino": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png"
+    ],
+    "nidoking": [
+        "poison",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png"
+    ],
+    "mélofée": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png"
+    ],
+    "mélodelfe": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png"
+    ],
+    "goupix": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/37.png"
+    ],
+    "feunard": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/38.png"
+    ],
+    "rondoudou": [
+        "normal",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png"
+    ],
+    "grodoudou": [
+        "normal",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png"
+    ],
+    "nosferapti": [
+        "poison",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png"
+    ],
+    "nosferalto": [
+        "poison",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png"
+    ],
+    "mystherbe": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png"
+    ],
+    "ortide": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png"
+    ],
+    "rafflesia": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png"
+    ],
+    "paras": [
+        "insecte",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png"
+    ],
+    "parasect": [
+        "insecte",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png"
+    ],
+    "mimitoss": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/48.png"
+    ],
+    "aéromite": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png"
+    ],
+    "taupiqueur": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png"
+    ],
+    "triopikeur": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png"
+    ],
+    "miaouss": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png"
+    ],
+    "persian": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png"
+    ],
+    "psykokwak": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png"
+    ],
+    "akwakwak": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png"
+    ],
+    "férosinge": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png"
+    ],
+    "colossinge": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png"
+    ],
+    "caninos": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png"
+    ],
+    "arcanin": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png"
+    ],
+    "ptitard": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png"
+    ],
+    "têtarte": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png"
+    ],
+    "tartard": [
+        "eau",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png"
+    ],
+    "abra": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png"
+    ],
+    "kadabra": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png"
+    ],
+    "alakazam": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png"
+    ],
+    "machoc": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png"
+    ],
+    "machopeur": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/67.png"
+    ],
+    "mackogneur": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/68.png"
+    ],
+    "chétiflor": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png"
+    ],
+    "boustiflor": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png"
+    ],
+    "empiflor": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png"
+    ],
+    "tentacool": [
+        "eau",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/72.png"
+    ],
+    "tentacruel": [
+        "eau",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png"
+    ],
+    "racaillou": [
+        "roche",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png"
+    ],
+    "gravalanch": [
+        "roche",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/75.png"
+    ],
+    "grolem": [
+        "roche",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/76.png"
+    ],
+    "ponyta": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png"
+    ],
+    "galopa": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png"
+    ],
+    "ramoloss": [
+        "eau",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/79.png"
+    ],
+    "flagadoss": [
+        "eau",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png"
+    ],
+    "magnéti": [
+        "électrik",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png"
+    ],
+    "magnéton": [
+        "électrik",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png"
+    ],
+    "canarticho": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/83.png"
+    ],
+    "doduo": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/84.png"
+    ],
+    "dodrio": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/85.png"
+    ],
+    "otaria": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png"
+    ],
+    "lamantine": [
+        "eau",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png"
+    ],
+    "tadmorv": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png"
+    ],
+    "grotadmorv": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png"
+    ],
+    "kokiyas": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png"
+    ],
+    "crustabri": [
+        "eau",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png"
+    ],
+    "fantominus": [
+        "spectre",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png"
+    ],
+    "spectrum": [
+        "spectre",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png"
+    ],
+    "ectoplasma": [
+        "spectre",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png"
+    ],
+    "onix": [
+        "roche",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png"
+    ],
+    "soporifik": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png"
+    ],
+    "hypnomade": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png"
+    ],
+    "krabby": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/98.png"
+    ],
+    "krabboss": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png"
+    ],
+    "voltorbe": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png"
+    ],
+    "électrode": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png"
+    ],
+    "noeunoeuf": [
+        "plante",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/102.png"
+    ],
+    "noadkoko": [
+        "plante",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/103.png"
+    ],
+    "osselait": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/104.png"
+    ],
+    "ossatueur": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/105.png"
+    ],
+    "kicklee": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png"
+    ],
+    "tygnon": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/107.png"
+    ],
+    "excelangue": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/108.png"
+    ],
+    "smogo": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png"
+    ],
+    "smogogo": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png"
+    ],
+    "rhinocorne": [
+        "sol",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png"
+    ],
+    "rhinoféros": [
+        "sol",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png"
+    ],
+    "leveinard": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png"
+    ],
+    "saquedeneu": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png"
+    ],
+    "kangourex": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/115.png"
+    ],
+    "hypotrempe": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/116.png"
+    ],
+    "hypocéan": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/117.png"
+    ],
+    "poissirène": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png"
+    ],
+    "poissoroy": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png"
+    ],
+    "stari": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png"
+    ],
+    "staross": [
+        "eau",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png"
+    ],
+    "m. mime": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png"
+    ],
+    "insécateur": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png"
+    ],
+    "lippoutou": [
+        "glace",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/124.png"
+    ],
+    "élektek": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/125.png"
+    ],
+    "magmar": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/126.png"
+    ],
+    "scarabrute": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/127.png"
+    ],
+    "tauros": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/128.png"
+    ],
+    "magicarpe": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png"
+    ],
+    "léviator": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png"
+    ],
+    "lokhlass": [
+        "eau",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png"
+    ],
+    "métamorph": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+    ],
+    "évoli": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png"
+    ],
+    "aquali": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png"
+    ],
+    "voltali": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png"
+    ],
+    "pyroli": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png"
+    ],
+    "porygon": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png"
+    ],
+    "amonita": [
+        "roche",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/138.png"
+    ],
+    "amonistar": [
+        "roche",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/139.png"
+    ],
+    "kabuto": [
+        "roche",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/140.png"
+    ],
+    "kabutops": [
+        "roche",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/141.png"
+    ],
+    "ptéra": [
+        "roche",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/142.png"
+    ],
+    "ronflex": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png"
+    ],
+    "artikodin": [
+        "glace",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png"
+    ],
+    "électhor": [
+        "électrik",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png"
+    ],
+    "sulfura": [
+        "feu",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png"
+    ],
+    "minidraco": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png"
+    ],
+    "draco": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png"
+    ],
+    "dracolosse": [
+        "dragon",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+    ],
+    "mewtwo": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+    ],
+    "mew": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png"
+    ],
+    "germignon": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png"
+    ],
+    "macronium": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png"
+    ],
+    "méganium": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png"
+    ],
+    "héricendre": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png"
+    ],
+    "feurisson": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png"
+    ],
+    "typhlosion": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png"
+    ],
+    "kaiminus": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png"
+    ],
+    "crocrodil": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png"
+    ],
+    "aligatueur": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png"
+    ],
+    "fouinette": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png"
+    ],
+    "fouinar": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png"
+    ],
+    "hoothoot": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png"
+    ],
+    "noarfang": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/164.png"
+    ],
+    "coxy": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png"
+    ],
+    "coxyclaque": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png"
+    ],
+    "mimigal": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png"
+    ],
+    "migalos": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png"
+    ],
+    "nostenfer": [
+        "poison",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png"
+    ],
+    "loupio": [
+        "eau",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png"
+    ],
+    "lanturn": [
+        "eau",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png"
+    ],
+    "pichu": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png"
+    ],
+    "mélo": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/173.png"
+    ],
+    "toudoudou": [
+        "normal",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/174.png"
+    ],
+    "togepi": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png"
+    ],
+    "togetic": [
+        "fée",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png"
+    ],
+    "natu": [
+        "psy",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png"
+    ],
+    "xatu": [
+        "psy",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png"
+    ],
+    "wattouat": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png"
+    ],
+    "lainergie": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png"
+    ],
+    "pharamp": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png"
+    ],
+    "joliflor": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png"
+    ],
+    "marill": [
+        "eau",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/183.png"
+    ],
+    "azumarill": [
+        "eau",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png"
+    ],
+    "simularbre": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/185.png"
+    ],
+    "tarpaud": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png"
+    ],
+    "granivol": [
+        "plante",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/187.png"
+    ],
+    "floravol": [
+        "plante",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png"
+    ],
+    "cotovol": [
+        "plante",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png"
+    ],
+    "capumain": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png"
+    ],
+    "tournegrin": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/191.png"
+    ],
+    "héliatronc": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png"
+    ],
+    "yanma": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/193.png"
+    ],
+    "axoloto": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png"
+    ],
+    "maraiste": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png"
+    ],
+    "mentali": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png"
+    ],
+    "noctali": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png"
+    ],
+    "cornèbre": [
+        "ténèbres",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/198.png"
+    ],
+    "roigada": [
+        "eau",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png"
+    ],
+    "feuforêve": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png"
+    ],
+    "zarbi": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png"
+    ],
+    "qulbutoké": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png"
+    ],
+    "girafarig": [
+        "normal",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/203.png"
+    ],
+    "pomdepik": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png"
+    ],
+    "foretress": [
+        "insecte",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png"
+    ],
+    "insolourdo": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png"
+    ],
+    "scorplane": [
+        "sol",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/207.png"
+    ],
+    "steelix": [
+        "acier",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png"
+    ],
+    "snubbull": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png"
+    ],
+    "granbull": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png"
+    ],
+    "qwilfish": [
+        "eau",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png"
+    ],
+    "cizayox": [
+        "insecte",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png"
+    ],
+    "caratroc": [
+        "insecte",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png"
+    ],
+    "scarhino": [
+        "insecte",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png"
+    ],
+    "farfuret": [
+        "ténèbres",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/215.png"
+    ],
+    "teddiursa": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/216.png"
+    ],
+    "ursaring": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png"
+    ],
+    "limagma": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png"
+    ],
+    "volcaropod": [
+        "feu",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/219.png"
+    ],
+    "marcacrin": [
+        "glace",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/220.png"
+    ],
+    "cochignon": [
+        "glace",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/221.png"
+    ],
+    "corayon": [
+        "eau",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/222.png"
+    ],
+    "rémoraid": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/223.png"
+    ],
+    "octillery": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/224.png"
+    ],
+    "cadoizo": [
+        "glace",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/225.png"
+    ],
+    "démanta": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/226.png"
+    ],
+    "airmure": [
+        "acier",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png"
+    ],
+    "malosse": [
+        "ténèbres",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/228.png"
+    ],
+    "démolosse": [
+        "ténèbres",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png"
+    ],
+    "hyporoi": [
+        "eau",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png"
+    ],
+    "phanpy": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/231.png"
+    ],
+    "donphan": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png"
+    ],
+    "porygon2": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png"
+    ],
+    "cerfrousse": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/234.png"
+    ],
+    "queulorior": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/235.png"
+    ],
+    "debugant": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/236.png"
+    ],
+    "kapoera": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/237.png"
+    ],
+    "lippouti": [
+        "glace",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/238.png"
+    ],
+    "élekid": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png"
+    ],
+    "magby": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png"
+    ],
+    "écrémeuh": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png"
+    ],
+    "leuphorie": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png"
+    ],
+    "raikou": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png"
+    ],
+    "entei": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png"
+    ],
+    "suicune": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png"
+    ],
+    "embrylex": [
+        "roche",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png"
+    ],
+    "ymphect": [
+        "roche",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png"
+    ],
+    "tyranocif": [
+        "roche",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png"
+    ],
+    "lugia": [
+        "psy",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png"
+    ],
+    "ho-oh": [
+        "feu",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png"
+    ],
+    "celebi": [
+        "psy",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/251.png"
+    ],
+    "arcko": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png"
+    ],
+    "massko": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/253.png"
+    ],
+    "jungko": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png"
+    ],
+    "poussifeu": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png"
+    ],
+    "galifeu": [
+        "feu",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/256.png"
+    ],
+    "braségali": [
+        "feu",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png"
+    ],
+    "gobou": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png"
+    ],
+    "flobio": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/259.png"
+    ],
+    "laggron": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png"
+    ],
+    "medhyèna": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/261.png"
+    ],
+    "grahyèna": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/262.png"
+    ],
+    "zigzaton": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/263.png"
+    ],
+    "linéon": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/264.png"
+    ],
+    "chenipotte": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/265.png"
+    ],
+    "armulys": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/266.png"
+    ],
+    "charmillon": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/267.png"
+    ],
+    "blindalys": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/268.png"
+    ],
+    "papinox": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/269.png"
+    ],
+    "nénupiot": [
+        "eau",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/270.png"
+    ],
+    "lombre": [
+        "eau",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/271.png"
+    ],
+    "ludicolo": [
+        "eau",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png"
+    ],
+    "grainipiot": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/273.png"
+    ],
+    "pifeuil": [
+        "plante",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/274.png"
+    ],
+    "tengalice": [
+        "plante",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/275.png"
+    ],
+    "nirondelle": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/276.png"
+    ],
+    "hélédelle": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/277.png"
+    ],
+    "goélise": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/278.png"
+    ],
+    "bekipan": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png"
+    ],
+    "tarsal": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/280.png"
+    ],
+    "kirlia": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/281.png"
+    ],
+    "gardevoir": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png"
+    ],
+    "arakdo": [
+        "insecte",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/283.png"
+    ],
+    "maskadra": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/284.png"
+    ],
+    "balignon": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/285.png"
+    ],
+    "chapignon": [
+        "plante",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png"
+    ],
+    "parecool": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/287.png"
+    ],
+    "vigoroth": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/288.png"
+    ],
+    "monaflèmit": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png"
+    ],
+    "ningale": [
+        "insecte",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/290.png"
+    ],
+    "ninjask": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/291.png"
+    ],
+    "munja": [
+        "insecte",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/292.png"
+    ],
+    "chuchmur": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/293.png"
+    ],
+    "ramboum": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/294.png"
+    ],
+    "brouhabam": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/295.png"
+    ],
+    "makuhita": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/296.png"
+    ],
+    "hariyama": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png"
+    ],
+    "azurill": [
+        "normal",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/298.png"
+    ],
+    "tarinor": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/299.png"
+    ],
+    "skitty": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/300.png"
+    ],
+    "delcatty": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/301.png"
+    ],
+    "ténéfix": [
+        "ténèbres",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/302.png"
+    ],
+    "mysdibule": [
+        "acier",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/303.png"
+    ],
+    "galekid": [
+        "acier",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/304.png"
+    ],
+    "galegon": [
+        "acier",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/305.png"
+    ],
+    "galeking": [
+        "acier",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png"
+    ],
+    "méditikka": [
+        "combat",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/307.png"
+    ],
+    "charmina": [
+        "combat",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png"
+    ],
+    "dynavolt": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/309.png"
+    ],
+    "élecsprint": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png"
+    ],
+    "posipi": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/311.png"
+    ],
+    "négapi": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/312.png"
+    ],
+    "muciole": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/313.png"
+    ],
+    "lumivole": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/314.png"
+    ],
+    "rosélia": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/315.png"
+    ],
+    "gloupti": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/316.png"
+    ],
+    "avaltout": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/317.png"
+    ],
+    "carvanha": [
+        "eau",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/318.png"
+    ],
+    "sharpedo": [
+        "eau",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/319.png"
+    ],
+    "wailmer": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/320.png"
+    ],
+    "wailord": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png"
+    ],
+    "chamallot": [
+        "feu",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/322.png"
+    ],
+    "camérupt": [
+        "feu",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/323.png"
+    ],
+    "chartor": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png"
+    ],
+    "spoink": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/325.png"
+    ],
+    "groret": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/326.png"
+    ],
+    "spinda": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/327.png"
+    ],
+    "kraknoix": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/328.png"
+    ],
+    "vibraninf": [
+        "sol",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/329.png"
+    ],
+    "libégon": [
+        "sol",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/330.png"
+    ],
+    "cacnea": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/331.png"
+    ],
+    "cacturne": [
+        "plante",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/332.png"
+    ],
+    "tylton": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/333.png"
+    ],
+    "altaria": [
+        "dragon",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png"
+    ],
+    "mangriff": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/335.png"
+    ],
+    "séviper": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/336.png"
+    ],
+    "séléroc": [
+        "roche",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png"
+    ],
+    "solaroc": [
+        "roche",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/338.png"
+    ],
+    "barloche": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/339.png"
+    ],
+    "barbicha": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/340.png"
+    ],
+    "écrapince": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/341.png"
+    ],
+    "colhomard": [
+        "eau",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/342.png"
+    ],
+    "balbuto": [
+        "sol",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/343.png"
+    ],
+    "kaorine": [
+        "sol",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/344.png"
+    ],
+    "lilia": [
+        "roche",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/345.png"
+    ],
+    "vacilys": [
+        "roche",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/346.png"
+    ],
+    "anorith": [
+        "roche",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/347.png"
+    ],
+    "armaldo": [
+        "roche",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/348.png"
+    ],
+    "barpau": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/349.png"
+    ],
+    "milobellus": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/350.png"
+    ],
+    "morphéo": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/351.png"
+    ],
+    "kecleon": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/352.png"
+    ],
+    "polichombr": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/353.png"
+    ],
+    "branette": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/354.png"
+    ],
+    "skelénox": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/355.png"
+    ],
+    "téraclope": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/356.png"
+    ],
+    "tropius": [
+        "plante",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/357.png"
+    ],
+    "éoko": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png"
+    ],
+    "absol": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png"
+    ],
+    "okéoké": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/360.png"
+    ],
+    "stalgamin": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/361.png"
+    ],
+    "oniglali": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png"
+    ],
+    "obalie": [
+        "glace",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/363.png"
+    ],
+    "phogleur": [
+        "glace",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/364.png"
+    ],
+    "kaimorse": [
+        "glace",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/365.png"
+    ],
+    "coquiperl": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/366.png"
+    ],
+    "serpang": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/367.png"
+    ],
+    "rosabyss": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/368.png"
+    ],
+    "relicanth": [
+        "eau",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/369.png"
+    ],
+    "lovdisc": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/370.png"
+    ],
+    "draby": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/371.png"
+    ],
+    "drackhaus": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/372.png"
+    ],
+    "drattak": [
+        "dragon",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png"
+    ],
+    "terhal": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/374.png"
+    ],
+    "métang": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"
+    ],
+    "métalosse": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png"
+    ],
+    "regirock": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/377.png"
+    ],
+    "regice": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/378.png"
+    ],
+    "registeel": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png"
+    ],
+    "latias": [
+        "dragon",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/380.png"
+    ],
+    "latios": [
+        "dragon",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/381.png"
+    ],
+    "kyogre": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png"
+    ],
+    "groudon": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png"
+    ],
+    "rayquaza": [
+        "dragon",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png"
+    ],
+    "jirachi": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/385.png"
+    ],
+    "deoxys": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png"
+    ],
+    "tortipouss": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/387.png"
+    ],
+    "boskara": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/388.png"
+    ],
+    "torterra": [
+        "plante",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png"
+    ],
+    "ouisticram": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/390.png"
+    ],
+    "chimpenfeu": [
+        "feu",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/391.png"
+    ],
+    "simiabraz": [
+        "feu",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png"
+    ],
+    "tiplouf": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png"
+    ],
+    "prinplouf": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/394.png"
+    ],
+    "pingoléon": [
+        "eau",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png"
+    ],
+    "étourmi": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/396.png"
+    ],
+    "étourvol": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/397.png"
+    ],
+    "étouraptor": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png"
+    ],
+    "keunotor": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/399.png"
+    ],
+    "castorno": [
+        "normal",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/400.png"
+    ],
+    "crikzik": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/401.png"
+    ],
+    "mélokrik": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/402.png"
+    ],
+    "lixy": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/403.png"
+    ],
+    "luxio": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/404.png"
+    ],
+    "luxray": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png"
+    ],
+    "rozbouton": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/406.png"
+    ],
+    "roserade": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png"
+    ],
+    "kranidos": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/408.png"
+    ],
+    "charkos": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png"
+    ],
+    "dinoclier": [
+        "roche",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/410.png"
+    ],
+    "bastiodon": [
+        "roche",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/411.png"
+    ],
+    "cheniti": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png"
+    ],
+    "cheniselle": [
+        "insecte",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png"
+    ],
+    "papilord": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/414.png"
+    ],
+    "apitrini": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/415.png"
+    ],
+    "apireine": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/416.png"
+    ],
+    "pachirisu": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/417.png"
+    ],
+    "mustébouée": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/418.png"
+    ],
+    "mustéflott": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/419.png"
+    ],
+    "ceribou": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/420.png"
+    ],
+    "ceriflor": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/421.png"
+    ],
+    "sancoki": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/422.png"
+    ],
+    "tritosor": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png"
+    ],
+    "capidextre": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/424.png"
+    ],
+    "baudrive": [
+        "spectre",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/425.png"
+    ],
+    "grodrive": [
+        "spectre",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/426.png"
+    ],
+    "laporeille": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/427.png"
+    ],
+    "lockpin": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png"
+    ],
+    "magirêve": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png"
+    ],
+    "corboss": [
+        "ténèbres",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/430.png"
+    ],
+    "chaglam": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/431.png"
+    ],
+    "chaffreux": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/432.png"
+    ],
+    "korillon": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/433.png"
+    ],
+    "moufouette": [
+        "poison",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/434.png"
+    ],
+    "moufflair": [
+        "poison",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/435.png"
+    ],
+    "archéomire": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/436.png"
+    ],
+    "archéodong": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/437.png"
+    ],
+    "manzaï": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/438.png"
+    ],
+    "mime jr.": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/439.png"
+    ],
+    "ptiravi": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/440.png"
+    ],
+    "pijako": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/441.png"
+    ],
+    "spiritomb": [
+        "spectre",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png"
+    ],
+    "griknot": [
+        "dragon",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/443.png"
+    ],
+    "carmache": [
+        "dragon",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/444.png"
+    ],
+    "carchacrok": [
+        "dragon",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png"
+    ],
+    "goinfrex": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/446.png"
+    ],
+    "riolu": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/447.png"
+    ],
+    "lucario": [
+        "combat",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png"
+    ],
+    "hippopotas": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/449.png"
+    ],
+    "hippodocus": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png"
+    ],
+    "rapion": [
+        "poison",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/451.png"
+    ],
+    "drascore": [
+        "poison",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/452.png"
+    ],
+    "cradopaud": [
+        "poison",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/453.png"
+    ],
+    "coatox": [
+        "poison",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/454.png"
+    ],
+    "vortente": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/455.png"
+    ],
+    "écayon": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/456.png"
+    ],
+    "luminéon": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/457.png"
+    ],
+    "babimanta": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/458.png"
+    ],
+    "blizzi": [
+        "plante",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/459.png"
+    ],
+    "blizzaroi": [
+        "plante",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png"
+    ],
+    "dimoret": [
+        "ténèbres",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png"
+    ],
+    "magnézone": [
+        "électrik",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/462.png"
+    ],
+    "coudlangue": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png"
+    ],
+    "rhinastoc": [
+        "sol",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png"
+    ],
+    "bouldeneu": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/465.png"
+    ],
+    "élekable": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png"
+    ],
+    "maganon": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png"
+    ],
+    "togekiss": [
+        "fée",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png"
+    ],
+    "yanmega": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/469.png"
+    ],
+    "phyllali": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png"
+    ],
+    "givrali": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png"
+    ],
+    "scorvol": [
+        "sol",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png"
+    ],
+    "mammochon": [
+        "glace",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png"
+    ],
+    "porygon-z": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/474.png"
+    ],
+    "gallame": [
+        "psy",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png"
+    ],
+    "tarinorme": [
+        "roche",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/476.png"
+    ],
+    "noctunoir": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png"
+    ],
+    "momartik": [
+        "glace",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/478.png"
+    ],
+    "motisma": [
+        "électrik",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png"
+    ],
+    "créhelf": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/480.png"
+    ],
+    "créfollet": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/481.png"
+    ],
+    "créfadet": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/482.png"
+    ],
+    "dialga": [
+        "acier",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png"
+    ],
+    "palkia": [
+        "eau",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png"
+    ],
+    "heatran": [
+        "feu",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/485.png"
+    ],
+    "regigigas": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png"
+    ],
+    "giratina": [
+        "spectre",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png"
+    ],
+    "cresselia": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/488.png"
+    ],
+    "phione": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/489.png"
+    ],
+    "manaphy": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/490.png"
+    ],
+    "darkrai": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/491.png"
+    ],
+    "shaymin": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/492.png"
+    ],
+    "arceus": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png"
+    ],
+    "victini": [
+        "psy",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/494.png"
+    ],
+    "vipélierre": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png"
+    ],
+    "lianaja": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/496.png"
+    ],
+    "majaspic": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/497.png"
+    ],
+    "gruikui": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/498.png"
+    ],
+    "grotichon": [
+        "feu",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/499.png"
+    ],
+    "roitiflam": [
+        "feu",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png"
+    ],
+    "moustillon": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/501.png"
+    ],
+    "mateloutre": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/502.png"
+    ],
+    "clamiral": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/503.png"
+    ],
+    "ratentif": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/504.png"
+    ],
+    "miradar": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png"
+    ],
+    "ponchiot": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png"
+    ],
+    "ponchien": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/507.png"
+    ],
+    "mastouffe": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/508.png"
+    ],
+    "chacripan": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/509.png"
+    ],
+    "léopardus": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/510.png"
+    ],
+    "feuillajou": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/511.png"
+    ],
+    "feuiloutan": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png"
+    ],
+    "flamajou": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/513.png"
+    ],
+    "flamoutan": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/514.png"
+    ],
+    "flotajou": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/515.png"
+    ],
+    "flotoutan": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/516.png"
+    ],
+    "munna": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png"
+    ],
+    "mushana": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/518.png"
+    ],
+    "poichigeon": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/519.png"
+    ],
+    "colombeau": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/520.png"
+    ],
+    "déflaisan": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/521.png"
+    ],
+    "zébibron": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/522.png"
+    ],
+    "zéblitz": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/523.png"
+    ],
+    "nodulithe": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/524.png"
+    ],
+    "géolithe": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/525.png"
+    ],
+    "gigalithe": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/526.png"
+    ],
+    "chovsourir": [
+        "psy",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/527.png"
+    ],
+    "rhinolove": [
+        "psy",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png"
+    ],
+    "rototaupe": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/529.png"
+    ],
+    "minotaupe": [
+        "sol",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png"
+    ],
+    "nanméouïe": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/531.png"
+    ],
+    "charpenti": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/532.png"
+    ],
+    "ouvrifier": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/533.png"
+    ],
+    "bétochef": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/534.png"
+    ],
+    "tritonde": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/535.png"
+    ],
+    "batracné": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/536.png"
+    ],
+    "crapustule": [
+        "eau",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/537.png"
+    ],
+    "judokrak": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/538.png"
+    ],
+    "karaclée": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/539.png"
+    ],
+    "larveyette": [
+        "insecte",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/540.png"
+    ],
+    "couverdure": [
+        "insecte",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/541.png"
+    ],
+    "manternel": [
+        "insecte",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/542.png"
+    ],
+    "venipatte": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/543.png"
+    ],
+    "scobolide": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/544.png"
+    ],
+    "brutapode": [
+        "insecte",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/545.png"
+    ],
+    "doudouvet": [
+        "plante",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/546.png"
+    ],
+    "farfaduvet": [
+        "plante",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png"
+    ],
+    "chlorobule": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/548.png"
+    ],
+    "fragilady": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png"
+    ],
+    "bargantua": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png"
+    ],
+    "mascaïman": [
+        "sol",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png"
+    ],
+    "escroco": [
+        "sol",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/552.png"
+    ],
+    "crocorible": [
+        "sol",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/553.png"
+    ],
+    "darumarond": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png"
+    ],
+    "darumacho": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/555.png"
+    ],
+    "maracachi": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png"
+    ],
+    "crabicoque": [
+        "insecte",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/557.png"
+    ],
+    "crabaraque": [
+        "insecte",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/558.png"
+    ],
+    "baggiguane": [
+        "ténèbres",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/559.png"
+    ],
+    "baggaïd": [
+        "ténèbres",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/560.png"
+    ],
+    "cryptéro": [
+        "psy",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/561.png"
+    ],
+    "tutafeh": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/562.png"
+    ],
+    "tutankafer": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png"
+    ],
+    "carapagos": [
+        "eau",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/564.png"
+    ],
+    "mégapagos": [
+        "eau",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/565.png"
+    ],
+    "arkéapti": [
+        "roche",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/566.png"
+    ],
+    "aéroptéryx": [
+        "roche",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/567.png"
+    ],
+    "miamiasme": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/568.png"
+    ],
+    "miasmax": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png"
+    ],
+    "zorua": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/570.png"
+    ],
+    "zoroark": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/571.png"
+    ],
+    "chinchidou": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/572.png"
+    ],
+    "pashmilla": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png"
+    ],
+    "scrutella": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png"
+    ],
+    "mesmérella": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/575.png"
+    ],
+    "sidérella": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/576.png"
+    ],
+    "nucléos": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/577.png"
+    ],
+    "méios": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/578.png"
+    ],
+    "symbios": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/579.png"
+    ],
+    "couaneton": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/580.png"
+    ],
+    "lakmécygne": [
+        "eau",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/581.png"
+    ],
+    "sorbébé": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/582.png"
+    ],
+    "sorboul": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/583.png"
+    ],
+    "sorbouboul": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/584.png"
+    ],
+    "vivaldaim": [
+        "normal",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/585.png"
+    ],
+    "haydaim": [
+        "normal",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/586.png"
+    ],
+    "emolga": [
+        "électrik",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/587.png"
+    ],
+    "carabing": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/588.png"
+    ],
+    "lançargot": [
+        "insecte",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png"
+    ],
+    "trompignon": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/590.png"
+    ],
+    "gaulet": [
+        "plante",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/591.png"
+    ],
+    "viskuse": [
+        "eau",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/592.png"
+    ],
+    "moyade": [
+        "eau",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/593.png"
+    ],
+    "mamanbo": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/594.png"
+    ],
+    "statitik": [
+        "insecte",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/595.png"
+    ],
+    "mygavolt": [
+        "insecte",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/596.png"
+    ],
+    "grindur": [
+        "plante",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/597.png"
+    ],
+    "noacier": [
+        "plante",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/598.png"
+    ],
+    "tic": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/599.png"
+    ],
+    "clic": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/600.png"
+    ],
+    "cliticlic": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/601.png"
+    ],
+    "anchwatt": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/602.png"
+    ],
+    "lampéroie": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/603.png"
+    ],
+    "ohmassacre": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png"
+    ],
+    "lewsor": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/605.png"
+    ],
+    "neitram": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/606.png"
+    ],
+    "funécire": [
+        "spectre",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/607.png"
+    ],
+    "mélancolux": [
+        "spectre",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/608.png"
+    ],
+    "lugulabre": [
+        "spectre",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png"
+    ],
+    "coupenotte": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/610.png"
+    ],
+    "incisache": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/611.png"
+    ],
+    "tranchodon": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png"
+    ],
+    "polarhume": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/613.png"
+    ],
+    "polagriffe": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/614.png"
+    ],
+    "hexagel": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/615.png"
+    ],
+    "escargaume": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/616.png"
+    ],
+    "limaspeed": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/617.png"
+    ],
+    "limonde": [
+        "sol",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/618.png"
+    ],
+    "kungfouine": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/619.png"
+    ],
+    "shaofouine": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/620.png"
+    ],
+    "drakkarmin": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/621.png"
+    ],
+    "gringolem": [
+        "sol",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/622.png"
+    ],
+    "golemastoc": [
+        "sol",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png"
+    ],
+    "scalpion": [
+        "ténèbres",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/624.png"
+    ],
+    "scalproie": [
+        "ténèbres",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/625.png"
+    ],
+    "frison": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/626.png"
+    ],
+    "furaiglon": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/627.png"
+    ],
+    "gueriaigle": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/628.png"
+    ],
+    "vostourno": [
+        "ténèbres",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/629.png"
+    ],
+    "vaututrice": [
+        "ténèbres",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/630.png"
+    ],
+    "aflamanoir": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/631.png"
+    ],
+    "fermite": [
+        "insecte",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/632.png"
+    ],
+    "solochi": [
+        "ténèbres",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/633.png"
+    ],
+    "diamat": [
+        "ténèbres",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/634.png"
+    ],
+    "trioxhydre": [
+        "ténèbres",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png"
+    ],
+    "pyronille": [
+        "insecte",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/636.png"
+    ],
+    "pyrax": [
+        "insecte",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png"
+    ],
+    "cobaltium": [
+        "acier",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png"
+    ],
+    "terrakium": [
+        "roche",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/639.png"
+    ],
+    "viridium": [
+        "plante",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/640.png"
+    ],
+    "boréas": [
+        "vol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png"
+    ],
+    "fulguris": [
+        "électrik",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png"
+    ],
+    "reshiram": [
+        "dragon",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/643.png"
+    ],
+    "zekrom": [
+        "dragon",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png"
+    ],
+    "démétéros": [
+        "sol",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png"
+    ],
+    "kyurem": [
+        "dragon",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646.png"
+    ],
+    "keldeo": [
+        "eau",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png"
+    ],
+    "meloetta": [
+        "normal",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png"
+    ],
+    "genesect": [
+        "insecte",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/649.png"
+    ],
+    "marisson": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/650.png"
+    ],
+    "boguérisse": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/651.png"
+    ],
+    "blindépique": [
+        "plante",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/652.png"
+    ],
+    "feunnec": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/653.png"
+    ],
+    "roussil": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/654.png"
+    ],
+    "goupelin": [
+        "feu",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/655.png"
+    ],
+    "grenousse": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/656.png"
+    ],
+    "croâporal": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/657.png"
+    ],
+    "amphinobi": [
+        "eau",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/658.png"
+    ],
+    "sapereau": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/659.png"
+    ],
+    "excavarenne": [
+        "normal",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png"
+    ],
+    "passerouge": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/661.png"
+    ],
+    "braisillon": [
+        "feu",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/662.png"
+    ],
+    "flambusard": [
+        "feu",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/663.png"
+    ],
+    "lépidonille": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/664.png"
+    ],
+    "pérégrain": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/665.png"
+    ],
+    "prismillon": [
+        "insecte",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/666.png"
+    ],
+    "hélionceau": [
+        "feu",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/667.png"
+    ],
+    "némélios": [
+        "feu",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/668.png"
+    ],
+    "flabébé": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/669.png"
+    ],
+    "floette": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/670.png"
+    ],
+    "florges": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/671.png"
+    ],
+    "cabriolaine": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/672.png"
+    ],
+    "chevroum": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/673.png"
+    ],
+    "pandespiègle": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/674.png"
+    ],
+    "pandarbare": [
+        "combat",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/675.png"
+    ],
+    "couafarel": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/676.png"
+    ],
+    "psystigri": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/677.png"
+    ],
+    "mistigrix": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/678.png"
+    ],
+    "monorpale": [
+        "acier",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/679.png"
+    ],
+    "dimoclès": [
+        "acier",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/680.png"
+    ],
+    "exagide": [
+        "acier",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png"
+    ],
+    "fluvetin": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/682.png"
+    ],
+    "cocotine": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/683.png"
+    ],
+    "sucroquin": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/684.png"
+    ],
+    "cupcanaille": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/685.png"
+    ],
+    "sepiatop": [
+        "ténèbres",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/686.png"
+    ],
+    "sepiatroce": [
+        "ténèbres",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/687.png"
+    ],
+    "opermine": [
+        "roche",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/688.png"
+    ],
+    "golgopathe": [
+        "roche",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png"
+    ],
+    "venalgue": [
+        "poison",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/690.png"
+    ],
+    "kravarech": [
+        "poison",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/691.png"
+    ],
+    "flingouste": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/692.png"
+    ],
+    "gamblast": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/693.png"
+    ],
+    "galvaran": [
+        "électrik",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/694.png"
+    ],
+    "iguolta": [
+        "électrik",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/695.png"
+    ],
+    "ptyranidur": [
+        "roche",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/696.png"
+    ],
+    "rexillius": [
+        "roche",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/697.png"
+    ],
+    "amagara": [
+        "roche",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/698.png"
+    ],
+    "dragmara": [
+        "roche",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/699.png"
+    ],
+    "nymphali": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png"
+    ],
+    "brutalibré": [
+        "combat",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/701.png"
+    ],
+    "dedenne": [
+        "électrik",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/702.png"
+    ],
+    "strassie": [
+        "roche",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/703.png"
+    ],
+    "mucuscule": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/704.png"
+    ],
+    "colimucus": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/705.png"
+    ],
+    "muplodocus": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/706.png"
+    ],
+    "trousselin": [
+        "acier",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png"
+    ],
+    "brocélôme": [
+        "spectre",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/708.png"
+    ],
+    "desséliande": [
+        "spectre",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png"
+    ],
+    "pitrouille": [
+        "spectre",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/710.png"
+    ],
+    "banshitrouye": [
+        "spectre",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/711.png"
+    ],
+    "grelaçon": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/712.png"
+    ],
+    "séracrawl": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/713.png"
+    ],
+    "sonistrelle": [
+        "vol",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/714.png"
+    ],
+    "bruyverne": [
+        "vol",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/715.png"
+    ],
+    "xerneas": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/716.png"
+    ],
+    "yveltal": [
+        "ténèbres",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/717.png"
+    ],
+    "zygarde": [
+        "dragon",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/718.png"
+    ],
+    "diancie": [
+        "roche",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/719.png"
+    ],
+    "hoopa": [
+        "psy",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/720.png"
+    ],
+    "volcanion": [
+        "feu",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/721.png"
+    ],
+    "brindibou": [
+        "plante",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/722.png"
+    ],
+    "efflèche": [
+        "plante",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/723.png"
+    ],
+    "archéduc": [
+        "plante",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/724.png"
+    ],
+    "flamiaou": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/725.png"
+    ],
+    "matoufeu": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/726.png"
+    ],
+    "félinferno": [
+        "feu",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/727.png"
+    ],
+    "otaquin": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/728.png"
+    ],
+    "otarlette": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/729.png"
+    ],
+    "oratoria": [
+        "eau",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/730.png"
+    ],
+    "picassaut": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/731.png"
+    ],
+    "piclairon": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/732.png"
+    ],
+    "bazoucan": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/733.png"
+    ],
+    "manglouton": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/734.png"
+    ],
+    "argouste": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/735.png"
+    ],
+    "larvibule": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/736.png"
+    ],
+    "chrysapile": [
+        "insecte",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/737.png"
+    ],
+    "lucanon": [
+        "insecte",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/738.png"
+    ],
+    "crabagarre": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/739.png"
+    ],
+    "crabominable": [
+        "combat",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/740.png"
+    ],
+    "plumeline": [
+        "feu",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png"
+    ],
+    "bombydou": [
+        "insecte",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/742.png"
+    ],
+    "rubombelle": [
+        "insecte",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/743.png"
+    ],
+    "rocabot": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/744.png"
+    ],
+    "lougaroc": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745.png"
+    ],
+    "froussardine": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/746.png"
+    ],
+    "vorastérie": [
+        "poison",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/747.png"
+    ],
+    "prédastérie": [
+        "poison",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/748.png"
+    ],
+    "tiboudet": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/749.png"
+    ],
+    "bourrinos": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/750.png"
+    ],
+    "araqua": [
+        "eau",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/751.png"
+    ],
+    "tarenbulle": [
+        "eau",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/752.png"
+    ],
+    "mimantis": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/753.png"
+    ],
+    "floramantis": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/754.png"
+    ],
+    "spododo": [
+        "plante",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/755.png"
+    ],
+    "lampignon": [
+        "plante",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/756.png"
+    ],
+    "tritox": [
+        "poison",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/757.png"
+    ],
+    "malamandre": [
+        "poison",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/758.png"
+    ],
+    "nounourson": [
+        "normal",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/759.png"
+    ],
+    "chelours": [
+        "normal",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/760.png"
+    ],
+    "croquine": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/761.png"
+    ],
+    "candine": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/762.png"
+    ],
+    "sucreine": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/763.png"
+    ],
+    "guérilande": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/764.png"
+    ],
+    "gouroutan": [
+        "normal",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/765.png"
+    ],
+    "quartermac": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/766.png"
+    ],
+    "sovkipou": [
+        "insecte",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/767.png"
+    ],
+    "sarmuraï": [
+        "insecte",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/768.png"
+    ],
+    "bacabouh": [
+        "spectre",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/769.png"
+    ],
+    "trépassable": [
+        "spectre",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/770.png"
+    ],
+    "concombaffe": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/771.png"
+    ],
+    "type:0": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/772.png"
+    ],
+    "silvallié": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773.png"
+    ],
+    "météno": [
+        "roche",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/774.png"
+    ],
+    "dodoala": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/775.png"
+    ],
+    "boumata": [
+        "feu",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/776.png"
+    ],
+    "togedemaru": [
+        "électrik",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/777.png"
+    ],
+    "mimiqui": [
+        "spectre",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/778.png"
+    ],
+    "denticrisse": [
+        "eau",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/779.png"
+    ],
+    "draïeul": [
+        "normal",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/780.png"
+    ],
+    "sinistrail": [
+        "spectre",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/781.png"
+    ],
+    "bébécaille": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/782.png"
+    ],
+    "écaïd": [
+        "dragon",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/783.png"
+    ],
+    "ékaïser": [
+        "dragon",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/784.png"
+    ],
+    "tokorico": [
+        "électrik",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/785.png"
+    ],
+    "tokopiyon": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/786.png"
+    ],
+    "tokotoro": [
+        "plante",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/787.png"
+    ],
+    "tokopisco": [
+        "eau",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/788.png"
+    ],
+    "cosmog": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/789.png"
+    ],
+    "cosmovum": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/790.png"
+    ],
+    "solgaleo": [
+        "psy",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/791.png"
+    ],
+    "lunala": [
+        "psy",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/792.png"
+    ],
+    "zéroïd": [
+        "roche",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/793.png"
+    ],
+    "mouscoto": [
+        "insecte",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/794.png"
+    ],
+    "cancrelove": [
+        "insecte",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/795.png"
+    ],
+    "câblifère": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/796.png"
+    ],
+    "bamboiselle": [
+        "acier",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/797.png"
+    ],
+    "katagami": [
+        "plante",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/798.png"
+    ],
+    "engloutyran": [
+        "ténèbres",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/799.png"
+    ],
+    "necrozma": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/800.png"
+    ],
+    "magearna": [
+        "acier",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/801.png"
+    ],
+    "marshadow": [
+        "combat",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/802.png"
+    ],
+    "vémini": [
+        "poison",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/803.png"
+    ],
+    "mandrillon": [
+        "poison",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/804.png"
+    ],
+    "ama-ama": [
+        "roche",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/805.png"
+    ],
+    "pierroteknik": [
+        "feu",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/806.png"
+    ],
+    "zeraora": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/807.png"
+    ],
+    "meltan": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/808.png"
+    ],
+    "melmetal": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/809.png"
+    ],
+    "ouistempo": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/810.png"
+    ],
+    "badabouin": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/811.png"
+    ],
+    "gorythmic": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/812.png"
+    ],
+    "flambino": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/813.png"
+    ],
+    "lapyro": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/814.png"
+    ],
+    "pyrobut": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/815.png"
+    ],
+    "larméléon": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/816.png"
+    ],
+    "arrozard": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/817.png"
+    ],
+    "lézargus": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/818.png"
+    ],
+    "rongourmand": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/819.png"
+    ],
+    "rongrigou": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/820.png"
+    ],
+    "minisange": [
+        "vol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/821.png"
+    ],
+    "bleuseille": [
+        "vol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/822.png"
+    ],
+    "corvaillus": [
+        "vol",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png"
+    ],
+    "larvadar": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/824.png"
+    ],
+    "coléodôme": [
+        "insecte",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/825.png"
+    ],
+    "astronelle": [
+        "insecte",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/826.png"
+    ],
+    "goupilou": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/827.png"
+    ],
+    "roublenard": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/828.png"
+    ],
+    "tournicoton": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/829.png"
+    ],
+    "blancoton": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/830.png"
+    ],
+    "moumouton": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/831.png"
+    ],
+    "moumouflon": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/832.png"
+    ],
+    "khélocrok": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/833.png"
+    ],
+    "torgamord": [
+        "eau",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/834.png"
+    ],
+    "voltoutou": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/835.png"
+    ],
+    "fulgudog": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/836.png"
+    ],
+    "charbi": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/837.png"
+    ],
+    "wagomine": [
+        "roche",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/838.png"
+    ],
+    "monthracite": [
+        "roche",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/839.png"
+    ],
+    "verpom": [
+        "plante",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/840.png"
+    ],
+    "pomdrapi": [
+        "plante",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/841.png"
+    ],
+    "dratatin": [
+        "plante",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/842.png"
+    ],
+    "dunaja": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/843.png"
+    ],
+    "dunaconda": [
+        "sol",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/844.png"
+    ],
+    "nigosier": [
+        "vol",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/845.png"
+    ],
+    "embrochet": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/846.png"
+    ],
+    "hastacuda": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/847.png"
+    ],
+    "toxizap": [
+        "électrik",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/848.png"
+    ],
+    "salarsen": [
+        "électrik",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/849.png"
+    ],
+    "grillepattes": [
+        "feu",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/850.png"
+    ],
+    "scolocendre": [
+        "feu",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/851.png"
+    ],
+    "poulpaf": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/852.png"
+    ],
+    "krakos": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/853.png"
+    ],
+    "théffroi": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/854.png"
+    ],
+    "polthégeist": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/855.png"
+    ],
+    "bibichut": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/856.png"
+    ],
+    "chapotus": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/857.png"
+    ],
+    "sorcilence": [
+        "psy",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/858.png"
+    ],
+    "grimalin": [
+        "ténèbres",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/859.png"
+    ],
+    "fourbelin": [
+        "ténèbres",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/860.png"
+    ],
+    "angoliath": [
+        "ténèbres",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/861.png"
+    ],
+    "ixon": [
+        "ténèbres",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/862.png"
+    ],
+    "berserkatt": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/863.png"
+    ],
+    "corayôme": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/864.png"
+    ],
+    "palarticho": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/865.png"
+    ],
+    "m. glaquette": [
+        "glace",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/866.png"
+    ],
+    "tutétékri": [
+        "sol",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/867.png"
+    ],
+    "crèmy": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/868.png"
+    ],
+    "charmilly": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/869.png"
+    ],
+    "hexadron": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/870.png"
+    ],
+    "wattapik": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/871.png"
+    ],
+    "frissonille": [
+        "glace",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/872.png"
+    ],
+    "beldeneige": [
+        "glace",
+        "insecte",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/873.png"
+    ],
+    "dolman": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/874.png"
+    ],
+    "bekaglaçon": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/875.png"
+    ],
+    "wimessir": [
+        "psy",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png"
+    ],
+    "morpeko": [
+        "électrik",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/877.png"
+    ],
+    "charibari": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/878.png"
+    ],
+    "pachyradjah": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/879.png"
+    ],
+    "galvagon": [
+        "électrik",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/880.png"
+    ],
+    "galvagla": [
+        "électrik",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/881.png"
+    ],
+    "hydragon": [
+        "eau",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/882.png"
+    ],
+    "hydragla": [
+        "eau",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/883.png"
+    ],
+    "duralugon": [
+        "acier",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/884.png"
+    ],
+    "fantyrm": [
+        "dragon",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/885.png"
+    ],
+    "dispareptil": [
+        "dragon",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/886.png"
+    ],
+    "lanssorien": [
+        "dragon",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/887.png"
+    ],
+    "zacian": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png"
+    ],
+    "zamazenta": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/889.png"
+    ],
+    "éthernatos": [
+        "poison",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/890.png"
+    ],
+    "wushours": [
+        "combat",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/891.png"
+    ],
+    "shifours": [
+        "combat",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/892.png"
+    ],
+    "zarude": [
+        "ténèbres",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/893.png"
+    ],
+    "regieleki": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/894.png"
+    ],
+    "regidrago": [
+        "dragon",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/895.png"
+    ],
+    "blizzeval": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/896.png"
+    ],
+    "spectreval": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/897.png"
+    ],
+    "sylveroy": [
+        "psy",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/898.png"
+    ],
+    "cerbyllin": [
+        "normal",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/899.png"
+    ],
+    "hachécateur": [
+        "insecte",
+        "roche",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/900.png"
+    ],
+    "ursaking": [
+        "sol",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/901.png"
+    ],
+    "paragruel": [
+        "eau",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/902.png"
+    ],
+    "farfurex": [
+        "combat",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/903.png"
+    ],
+    "qwilpik": [
+        "ténèbres",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/904.png"
+    ],
+    "amovénus": [
+        "fée",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/905.png"
+    ],
+    "poussacha": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/906.png"
+    ],
+    "matourgeon": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/907.png"
+    ],
+    "miascarade": [
+        "plante",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/908.png"
+    ],
+    "chochodile": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/909.png"
+    ],
+    "crocogril": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/910.png"
+    ],
+    "flâmigator": [
+        "feu",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/911.png"
+    ],
+    "coiffeton": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/912.png"
+    ],
+    "canarbello": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/913.png"
+    ],
+    "palmaval": [
+        "eau",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/914.png"
+    ],
+    "gourmelet": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/915.png"
+    ],
+    "fragroin": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/916.png"
+    ],
+    "tissenboule": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/917.png"
+    ],
+    "filentrappe": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/918.png"
+    ],
+    "lilliterelle": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/919.png"
+    ],
+    "gambex": [
+        "insecte",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/920.png"
+    ],
+    "pohm": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/921.png"
+    ],
+    "pohmotte": [
+        "électrik",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/922.png"
+    ],
+    "pohmarmotte": [
+        "électrik",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/923.png"
+    ],
+    "compagnol": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/924.png"
+    ],
+    "famignol": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/925.png"
+    ],
+    "pâtachiot": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/926.png"
+    ],
+    "briochien": [
+        "fée",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/927.png"
+    ],
+    "olivini": [
+        "plante",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/928.png"
+    ],
+    "olivado": [
+        "plante",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/929.png"
+    ],
+    "arboliva": [
+        "plante",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/930.png"
+    ],
+    "tapatoès": [
+        "normal",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/931.png"
+    ],
+    "selutin": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/932.png"
+    ],
+    "amassel": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/933.png"
+    ],
+    "gigansel": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/934.png"
+    ],
+    "charbambin": [
+        "feu",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/935.png"
+    ],
+    "carmadura": [
+        "feu",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/936.png"
+    ],
+    "malvalame": [
+        "feu",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/937.png"
+    ],
+    "têtampoule": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/938.png"
+    ],
+    "ampibidou": [
+        "électrik",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/939.png"
+    ],
+    "zapétrel": [
+        "électrik",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/940.png"
+    ],
+    "fulgulairo": [
+        "électrik",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/941.png"
+    ],
+    "grondogue": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/942.png"
+    ],
+    "dogrino": [
+        "ténèbres",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/943.png"
+    ],
+    "gribouraigne": [
+        "poison",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/944.png"
+    ],
+    "tag-tag": [
+        "poison",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/945.png"
+    ],
+    "virovent": [
+        "plante",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/946.png"
+    ],
+    "virevorreur": [
+        "plante",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/947.png"
+    ],
+    "terracool": [
+        "sol",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/948.png"
+    ],
+    "terracruel": [
+        "sol",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/949.png"
+    ],
+    "craparoi": [
+        "roche",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/950.png"
+    ],
+    "pimito": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/951.png"
+    ],
+    "scovilain": [
+        "plante",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/952.png"
+    ],
+    "léboulérou": [
+        "insecte",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/953.png"
+    ],
+    "bérasca": [
+        "insecte",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/954.png"
+    ],
+    "flotillon": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/955.png"
+    ],
+    "cléopsytra": [
+        "psy",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/956.png"
+    ],
+    "forgerette": [
+        "fée",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/957.png"
+    ],
+    "forgella": [
+        "fée",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/958.png"
+    ],
+    "forgelina": [
+        "fée",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/959.png"
+    ],
+    "taupikeau": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/960.png"
+    ],
+    "triopikeau": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/961.png"
+    ],
+    "lestombaile": [
+        "vol",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/962.png"
+    ],
+    "dofin": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/963.png"
+    ],
+    "superdofin": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/964.png"
+    ],
+    "vrombi": [
+        "acier",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/965.png"
+    ],
+    "vrombotor": [
+        "acier",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/966.png"
+    ],
+    "motorizard": [
+        "dragon",
+        "normal",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/967.png"
+    ],
+    "ferdeter": [
+        "acier",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/968.png"
+    ],
+    "germéclat": [
+        "roche",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/969.png"
+    ],
+    "floréclat": [
+        "roche",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/970.png"
+    ],
+    "toutombe": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/971.png"
+    ],
+    "tomberro": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/972.png"
+    ],
+    "flamenroule": [
+        "vol",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/973.png"
+    ],
+    "piétacé": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/974.png"
+    ],
+    "balbalèze": [
+        "glace",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/975.png"
+    ],
+    "délestin": [
+        "eau",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/976.png"
+    ],
+    "oyacata": [
+        "eau",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/977.png"
+    ],
+    "nigirigon": [
+        "dragon",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/978.png"
+    ],
+    "courrousinge": [
+        "combat",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/979.png"
+    ],
+    "terraiste": [
+        "poison",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/980.png"
+    ],
+    "farigiraf": [
+        "normal",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/981.png"
+    ],
+    "deusolourdo": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/982.png"
+    ],
+    "scalpereur": [
+        "ténèbres",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/983.png"
+    ],
+    "fort-ivoire": [
+        "sol",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/984.png"
+    ],
+    "hurle-queue": [
+        "fée",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/985.png"
+    ],
+    "fongus-furie": [
+        "plante",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/986.png"
+    ],
+    "flotte-mèche": [
+        "spectre",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/987.png"
+    ],
+    "rampe-ailes": [
+        "insecte",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/988.png"
+    ],
+    "pelage-sablé": [
+        "électrik",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/989.png"
+    ],
+    "roue-de-fer": [
+        "sol",
+        "acier",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/990.png"
+    ],
+    "hotte-de-fer": [
+        "glace",
+        "eau",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/991.png"
+    ],
+    "paume-de-fer": [
+        "combat",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/992.png"
+    ],
+    "têtes-de-fer": [
+        "ténèbres",
+        "vol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/993.png"
+    ],
+    "mite-de-fer": [
+        "feu",
+        "poison",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/994.png"
+    ],
+    "épine-de-fer": [
+        "roche",
+        "électrik",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/995.png"
+    ],
+    "frigodo": [
+        "dragon",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/996.png"
+    ],
+    "cryodo": [
+        "dragon",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/997.png"
+    ],
+    "glaivodo": [
+        "dragon",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/998.png"
+    ],
+    "mordudor": [
+        "spectre",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/999.png"
+    ],
+    "gromago": [
+        "acier",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1000.png"
+    ],
+    "chongjian": [
+        "ténèbres",
+        "plante",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1001.png"
+    ],
+    "baojian": [
+        "ténèbres",
+        "glace",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1002.png"
+    ],
+    "dinglu": [
+        "ténèbres",
+        "sol",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1003.png"
+    ],
+    "yuyu": [
+        "ténèbres",
+        "feu",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1004.png"
+    ],
+    "rugit-lune": [
+        "dragon",
+        "ténèbres",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1005.png"
+    ],
+    "garde-de-fer": [
+        "fée",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1006.png"
+    ],
+    "koraidon": [
+        "combat",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1007.png"
+    ],
+    "miraidon": [
+        "électrik",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png"
+    ],
+    "serpente-eau": [
+        "eau",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1009.png"
+    ],
+    "vert-de-fer": [
+        "plante",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1010.png"
+    ],
+    "pomdramour": [
+        "plante",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1011.png"
+    ],
+    "poltchageist": [
+        "plante",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1012.png"
+    ],
+    "théffroyable": [
+        "plante",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png"
+    ],
+    "félicanis": [
+        "poison",
+        "combat",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1014.png"
+    ],
+    "fortusimia": [
+        "poison",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1015.png"
+    ],
+    "favianos": [
+        "poison",
+        "fée",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1016.png"
+    ],
+    "ogerpon": [
+        "plante",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1017.png"
+    ],
+    "pondralugon": [
+        "acier",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png"
+    ],
+    "pomdorochi": [
+        "plante",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png"
+    ],
+    "feu-perçant": [
+        "feu",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1020.png"
+    ],
+    "ire-foudre": [
+        "électrik",
+        "dragon",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1021.png"
+    ],
+    "roc-de-fer": [
+        "roche",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1022.png"
+    ],
+    "chef-de-fer": [
+        "acier",
+        "psy",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1023.png"
+    ],
+    "terapagos": [
+        "normal",
+        "aucun",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1024.png"
+    ],
+    "pêchaminus": [
+        "poison",
+        "spectre",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1025.png"
+    ]
+}
