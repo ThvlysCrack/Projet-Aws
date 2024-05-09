@@ -2,12 +2,14 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { ObjectId } = require('mongodb');
+
 require('dotenv').config();
 
 const userSchema = new mongoose.Schema({
 
     pseudo: {
         type: String,
+        unique : true,
         trim: true,
         required: [true, 'first name is required'],
         maxlength: 32,
@@ -16,6 +18,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         trim: true,
+        unique : true,
         required: [true, 'e-mail is required'],
         unique: true,
         validate: {

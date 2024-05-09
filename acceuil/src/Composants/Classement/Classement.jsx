@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Classement.css';
-import bgImage from '../assets/images/background102.jpg';
+import bgImage from '../assets/images/stadepokemon2.png';
 import trophy from '../assets/images/win.jpg';
 import badge from '../assets/images/badgegold.png'
 
@@ -67,7 +67,7 @@ function Classement() {
       </div>
       <div className='messagecontainer'>
         <img src={trophy} alt='Trophy' className='trophyImage' />
-        <p className='message'>Il montrera les 10 meilleurs joueurs du monde ainsi que leurs surnoms, leurs classements et leurs scores.</p>
+        <p className='message'>Découvrez les 10 meilleurs joueurs du monde ! Parcourez la liste ci-dessous pour connaître leurs surnoms, classements et scores.</p>
       </div>
 
       <div className='messagecontainer2'>
