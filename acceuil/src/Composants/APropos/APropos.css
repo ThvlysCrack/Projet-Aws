@@ -3,7 +3,7 @@
     src: url('../assets/fonts/PKMN-RBYGSC.woff') format('truetype');
 }
 
-.container {
+.Acontainer {
     width: 80%;
     max-width: 800px; 
     margin: 0 auto; 

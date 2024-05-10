@@ -14,7 +14,7 @@ function APropos(){
 
     return (
         <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh', overflow:'hidden', margin: '0', padding:'0'}}>
-            <div className='container'>
+            <div className='Acontainer'>
                 <div className='contenant'>
                     <div className='pres'>
                         Ce site à été réalisé dans le cadre d'un projet universitaire de sécurité informatique par 4 étudiants ayant une envie commune de faire un site 

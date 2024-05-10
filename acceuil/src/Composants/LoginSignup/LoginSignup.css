@@ -6,8 +6,9 @@
     margin: auto;
     background: transparent;
     padding-bottom: 30px;
-    margin-top: 20px;
-    
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 .header{
     display: flex;
