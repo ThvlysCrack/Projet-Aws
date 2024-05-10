@@ -9,7 +9,7 @@ import './silhouette.css';
 async function getPokemonsOfTheDay() {
     try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:4000/daily-pokemons', {
+        const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons', {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -26,6 +26,93 @@ async function getPokemonsOfTheDay() {
     }
 }
 
+async function addGame2AdvancementItem(newItem) {
+    try {
+        // Récupérer l'ID utilisateur depuis le stockage local
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem('token');
+        // Vérifier si l'ID utilisateur est présent
+        if (!userId) {
+            console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+            return;
+        }
+
+        // Envoyer une requête POST à la route '/game1Advancement/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+        const response = await axios.post(`https://pokezapserver.vercel.app/game2Advancement/add/${userId}`, { newItem }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        // Si la requête a réussi, afficher le message de réussite
+        console.log(response.data.message);
+    } catch (error) {
+        // Si la requête a échoué, afficher l'erreur
+        console.error("Erreur lors de l'ajout d'un élément à la liste game2Advancement :", error.response.data.error);
+    }
+}
+
+async function getGameAdvancement(userId) {
+    try {
+        const token = localStorage.getItem('token');
+        // Envoyer une requête GET à la route '/game1Advancement/:userId' sur le serveur local avec l'ID utilisateur
+        const response = await axios.get(`https://pokezapserver.vercel.app/gameAdvancement/${userId}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        // Si la requête a réussi, retourner la liste game1Advancement
+        return response.data;
+    } catch (error) {
+        // Si la requête a échoué, afficher l'erreur
+        console.error("Erreur lors de la récupération de la liste gameAdvancement :", error.response.data.error);
+        return null;
+    }
+}
+
+async function addGame2ScoreItem(newItem) {
+    try {
+        // Récupérer l'ID utilisateur depuis le stockage local
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem('token');
+        // Vérifier si l'ID utilisateur est présent
+        if (!userId) {
+            console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+            return;
+        }
+
+        // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+        const response = await axios.post(`https://pokezapserver.vercel.app/update-game2score/add/${userId}`, { newItem }, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        // Si la requête a réussi, afficher le message de réussite
+        console.log(response.data.message);
+    } catch (error) {
+        // Si la requête a échoué, afficher l'erreur
+        console.error("Erreur lors de l'ajout d'un élément à la liste game2Score :", error.response.data.error);
+    }
+}
+
+function calculateScore(numAttempts) {
+    // Initialiser le score à 100
+    let score = 100;
+
+    // Calculer le nombre d'erreurs
+    const numErrors = (numAttempts > 1) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
+
+    // Déduire les points en fonction du nombre d'erreurs
+    score -= numErrors;
+
+    // Assurer que le score ne devienne pas négatif
+    score = Math.max(score, 0);
+    console.log(typeof (score))
+    return score;
+}
+
 function Silhouette() {
     const [dailyPokemon, setDailyPokemon] = useState(0);
     const [inputValue, setInputValue] = useState('');
@@ -35,7 +122,48 @@ function Silhouette() {
     const [pokemonFound, setPokemonFound] = useState(false); // Nouvel état pour suivre si le Pokémon du jour a été trouvé
     const [scale, setScale] = useState(4); // État pour stocker l'échelle de l'image
     const [guessedPokemon, setGuessedPokemon] = useState([]);
+    const [fetched, setFetched] = useState(false)
 
+    const fetchData = async () => {
+        try {
+            const userId = localStorage.getItem('userId');
+            const classicAdvancement = await getGameAdvancement(userId);
+            if (classicAdvancement.game2Bool == true) {
+                setPokemonFound(true)
+            }
+            if (classicAdvancement.game2Advancement) {
+                const pokemonDataPromises = classicAdvancement.game2Advancement.map(async item => {
+                    const pokemonDetails = await getPokemonDetails(item);
+                    const pokemonSprite = await getPokemonSprite(pokemonDetails);
+                    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${item.toLowerCase()}`);
+                    const frenchName = response.data.names.find(name => name.language.name === 'fr').name;
+                    const p = {
+                        Name: item.toLowerCase(),
+                        Sprite: pokemonSprite,
+                        FrenchName: frenchName
+                    };
+                    return await p;
+                });
+                const pokemonData = await Promise.all(pokemonDataPromises);
+                // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées 
+                setGuessedPokemon(pokemonData.reverse());
+                setAttemptCounter(pokemonData.length)
+                //localStorage.setItem('classicAdvancement', JSON.stringify(pokemonData.reverse()));
+            } else {
+                //localStorage.setItem('classicAdvancement', JSON.stringify([]));
+                setGuessedPokemon([]);
+            }
+
+        } catch (error) {
+            console.error("Erreur lors de la récupération du profil du joueur :", error);
+        }
+    }
+
+    console.log(fetched)
+    if (!fetched) {
+        fetchData();
+        setFetched(true);
+    }
     // Fonction pour calculer l'échelle en fonction du nombre de tentatives
     const calculateScale = () => {
         const newScale = 4 - (0.1 * attemptCounter);
@@ -127,8 +255,13 @@ function Silhouette() {
 
                     setAttemptCounter(attemptCounter + 1);
 
+                    // Enregistrer l'avancement du joueur dans la base de données
+                    addGame2AdvancementItem(pokemonEnglishName);
+
                     if (pokemonEnglishName.toLowerCase() === dailyPokemon.Name.toLowerCase()) {
                         setPokemonFound(true);
+                        const score = calculateScore(attemptCounter + 1)
+                        addGame2ScoreItem(score)
                     }
 
                     setInputValue('');

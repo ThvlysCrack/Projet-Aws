@@ -8,28 +8,31 @@ import detailButton from '../../assets/images/pokedexButton.png'
 import redPoint from '../../assets/images/redPoint.svg';
 import greenPoint from '../../assets/images/greenPoint.svg';
 import bgImage from '../../assets/images/Allgenv2.png';
+import lower from '../../assets/images/lower.png'
+import higher from '../../assets/images/higher.png'
+
 
 async function getPokemonsOfTheDay() {
     try {
-      const token = localStorage.getItem('token');
-      const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons', {
-        headers: {
-            'Authorization': `Bearer ${token}`
+        const token = localStorage.getItem('token');
+        const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        }); // Assurez-vous que l'URL est correcte
+        if (response.status === 200) {
+            return response.data;
+        } else {
+            console.log('Erreur lors de la récupération des Pokémons du jour:', response.statusText);
+            return null;
         }
-    }); // Assurez-vous que l'URL est correcte
-      if (response.status === 200) {
-        return response.data;
-      } else {
-        console.log('Erreur lors de la récupération des Pokémons du jour:', response.statusText);
-        return null;
-      }
     } catch (error) {
-      console.error('Erreur lors de la récupération des Pokémons du jour:', error.message);
-      return null;
+        console.error('Erreur lors de la récupération des Pokémons du jour:', error.message);
+        return null;
     }
-  }
+}
 
-  async function addGame1AdvancementItem(newItem) {
+async function addGame1AdvancementItem(newItem) {
     try {
         // Récupérer l'ID utilisateur depuis le stockage local
         const userId = localStorage.getItem('userId');
@@ -46,7 +49,7 @@ async function getPokemonsOfTheDay() {
                 'Authorization': `Bearer ${token}`
             }
         });
-        
+
         // Si la requête a réussi, afficher le message de réussite
         console.log(response.data.message);
     } catch (error) {
@@ -66,12 +69,12 @@ async function addGame1ScoreItem(newItem) {
         }
 
         // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
-        const response = await axios.post(`http://localhost:4000/update-game1score/add/${userId}`, { newItem }, {
+        const response = await axios.post(`https://pokezapserver.vercel.app/update-game1score/add/${userId}`, { newItem }, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
         });
-        
+
         // Si la requête a réussi, afficher le message de réussite
         console.log(response.data.message);
     } catch (error) {
@@ -80,11 +83,11 @@ async function addGame1ScoreItem(newItem) {
     }
 }
 
-async function getGame1Advancement(userId) {
+async function getGameAdvancement(userId) {
     try {
         const token = localStorage.getItem('token');
         // Envoyer une requête GET à la route '/game1Advancement/:userId' sur le serveur local avec l'ID utilisateur
-        const response = await axios.get(`https://pokezapserver.vercel.app/game1Advancement/${userId}`, {
+        const response = await axios.get(`https://pokezapserver.vercel.app/gameAdvancement/${userId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -94,9 +97,25 @@ async function getGame1Advancement(userId) {
         return response.data;
     } catch (error) {
         // Si la requête a échoué, afficher l'erreur
-        console.error("Erreur lors de la récupération de la liste game1Advancement :", error.response.data.error);
+        console.error("Erreur lors de la récupération de la liste gameAdvancement :", error.response.data.error);
         return null;
     }
+}
+
+function calculateScore(numAttempts) {
+    // Initialiser le score à 100
+    let score = 100;
+
+    // Calculer le nombre d'erreurs
+    const numErrors = (numAttempts > 1) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
+
+    // Déduire les points en fonction du nombre d'erreurs
+    score -= numErrors;
+
+    // Assurer que le score ne devienne pas négatif
+    score = Math.max(score, 0);
+    console.log(typeof (score))
+    return score;
 }
 
 function Pokedex() {
@@ -109,39 +128,18 @@ function Pokedex() {
     const [showTalentHintPopup, setshowTalentHintPopup] = useState(false); // Etat pout gérer la visibilité du pop-up de l'indice du talent
     const [showHabitatHintPopup, setshowHabitatHintPopup] = useState(false);
     const [pokemonFound, setPokemonFound] = useState(false); // Nouvel état pour suivre si le Pokémon du jour a été trouvé
-    
+    const [fetched, setFetched] = useState(false);
     useEffect(() => {
-        
+
         // Fonction pour générer automatiquement le Pokémon quotidien à minuit
         const generateDailyPokemon = async () => {
             const pokemonQuery = await getPokemonsOfTheDay();
+            //console.log(pokemonQuery)
             const newDailyPokemon = await getPokemon(pokemonQuery.pokemon1);
             //const val = await getGame1Advancement();
-              //console.log('Les pokémons saisis sont : ',val);
+            //console.log('Les pokémons saisis sont : ',val);
             setDailyPokemon(newDailyPokemon);
         };
-        
-        
-        // IL FAUT CHANGER CA !!!!!!!!!!!Obtenez la date actuelle et définissez un délai pour déclencher la génération automatique du Pokémon quotidien à minuit
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        // IL FAUT CHANGER CA !!!!!!!!!!!
-        const now = new Date();
-        const timeUntilMidnight = new Date(now);
-        timeUntilMidnight.setHours(24, 0, 0, 0);
-        const millisecondsUntilMidnight = timeUntilMidnight - now;
-        setTimeout(generateDailyPokemon, millisecondsUntilMidnight);
 
         // Exécutez generateDailyPokemon immédiatement pour le premier chargement de la page
         generateDailyPokemon();
@@ -157,36 +155,44 @@ function Pokedex() {
         }
     }, [attemptCounter]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const userId = localStorage.getItem('userId');
-                console.log(userId)
-                let classicAdvancement = JSON.parse(localStorage.getItem('classicAdvancement'));
-                console.log(classicAdvancement)
-                if (userId != classicAdvancement.userId) {
-                    classicAdvancement = await getGame1Advancement(userId);
-                    console.log(classicAdvancement)
-                    if (classicAdvancement) {
-                        const pokemonDataPromises = classicAdvancement.map(async item => {
-                            return await getPokemon(item);
-                        });
-                        const pokemonData = await Promise.all(pokemonDataPromises);
-                        // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées 
-                        localStorage.setItem('classicAdvancement', JSON.stringify(pokemonData.reverse()));
-                    }else {
-                        localStorage.setItem('classicAdvancement', JSON.stringify([]));
-                    }   
-                }
-                setPokemonDataList(classicAdvancement);
-            } catch (error) {
-                console.error("Erreur lors de la récupération du profil du joueur :", error);
+    const fetchData = async () => {
+        try {
+            const userId = localStorage.getItem('userId');
+            const classicAdvancement = await getGameAdvancement(userId);
+            if(classicAdvancement.game1Bool == true) {
+                setPokemonFound(true)
             }
-        };
-        fetchData();
-    }, []);
-
+            if (classicAdvancement.game1Advancement) {
+                const pokemonDataPromises = classicAdvancement.game1Advancement.map(async item => {
+                    return await getPokemon(item);
+                });
+                const fetchedPokemonData = await Promise.all(pokemonDataPromises);
+                console.log(fetchedPokemonData[0])
     
+                // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées 
+                setPokemonDataList(fetchedPokemonData.reverse());
+                setAttemptCounter(fetchedPokemonData.length)
+                //localStorage.setItem('classicAdvancement', JSON.stringify(pokemonData.reverse()));
+            } else {
+                //localStorage.setItem('classicAdvancement', JSON.stringify([]));
+                setPokemonDataList([]);
+            }
+    
+        } catch (error) {
+            console.error("Erreur lors de la récupération du profil du joueur :", error);
+        }
+        return true; // Assurez-vous de retourner une valeur
+    }
+    
+    
+    useEffect(() => {
+        if (!fetched) {
+            fetchData();
+            setFetched(true);
+            console.log(pokemonDataList)
+        }
+    }, [fetched, fetchData]);
+    console.log(pokemonDataList)
     
 
     
@@ -360,24 +366,6 @@ function Pokedex() {
         }
     };
 
-    function calculateScore(numAttempts) {
-        // Initialiser le score à 100
-        let score = 100;
-        
-        // Calculer le nombre d'erreurs
-        const numErrors = (numAttempts > 0) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
-    
-        // Déduire les points en fonction du nombre d'erreurs
-        score -= numErrors;
-    
-        // Assurer que le score ne devienne pas négatif
-        score = Math.max(score, 0);
-        console.log(typeof(score))
-        return score;
-    }
-    
-    
-
     const getPokemon = async (pokemonName) => {
 
         // Récupération des informations général du pokémon (cf. doc PokeAPI)
@@ -418,7 +406,7 @@ function Pokedex() {
         if (pokemonName.trim() !== '' && !pokemonFound) {
             try {
                 setAttemptCounter(attemptCounter + 1);
-                
+
                 // Récupération du nom du pokémon en Anglais pour L'API
                 const pokemonEnglishName = getEnglishPokemonName(pokemonName);
 
@@ -447,7 +435,7 @@ function Pokedex() {
         }
     };
     return (
-        <body style={{backgroundImage: `url(${bgImage})`, backgroundPosition: 'center', backgroundSize: 'cover', display : 'flex', justifyContent : 'center', alignItems : 'center',height : '100vh'}}>
+        <body style={{ backgroundImage: `url(${bgImage})`, backgroundPosition: 'center', backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <div className='pokedexBg'>
                 <div className='pokedexTop'>
                     <div className='returnButton'>
@@ -490,7 +478,7 @@ function Pokedex() {
                             </div>
                         </div>
                         <div className='pokemonTabContainer'>
-                            {pokemonDataList.map((pokemonData, index) => (
+                            {dailyPokemon && pokemonDataList.map((pokemonData, index) => (
                                 <div key={index} className="dynamic-div">
                                     <div className='bgAnswserCard'>
                                         <div className='answerCard'>

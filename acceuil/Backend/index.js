@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
 var path = require('path');
 //const User = require('./Schema');
-const { User, DailyPokemon, PlayerAdvancement } = require('./Schema');
+const { User, DailyPokemon, PlayerAdvancement,UserProfil } = require('./Schema');
 const Router = require('./Routes');
 const cron = require('node-cron');
 const pokemonData = require('../src/Composants/assets/datas/FR_EN_PokeDict.json');
@@ -95,7 +95,77 @@ async function insertDailyPokemons() {
   }
 }
 
+const calculateAndUpdateTotalScore = async () => {
+  try {
+    // Récupérer tous les documents de la collection PlayerAdvancement
+    const playerAdvancements = await PlayerAdvancement.find();
+
+    // Parcourir chaque document de la collection PlayerAdvancement
+    for (const playerAdvancement of playerAdvancements) {
+      // Récupérer les scores de chaque jeu du document
+      const { game1score, game2score, game3score } = playerAdvancement;
+
+      // Trouver le document correspondant dans la collection UserProfil par userId
+      const userProfil = await UserProfil.findOne({ userId: playerAdvancement.userId });
+
+      // Si le document UserProfil existe
+      if (userProfil) {
+        // Ajouter le score du jeu 1 (classicScore)
+        userProfil.classicScore += game1score;
+        // Ajouter le score du jeu 2 (silouhetteScore)
+        userProfil.silouhetteScore += game2score;
+        // Ajouter le score du jeu 3 (descriptionScore)
+        userProfil.descriptionScore += game3score;
+        
+        // Calculer la somme des scores pour le score total
+        const totalScoreToAdd = game1score + game2score + game3score;
+        // Ajouter la somme des scores au score total actuel
+        userProfil.totalScore += totalScoreToAdd;
+
+        await userProfil.save();
+        console.log(`Scores mis à jour pour l'utilisateur avec ID: ${userProfil.userId}`);
+      } else {
+        console.log(`Aucun profil utilisateur trouvé pour l'utilisateur avec ID: ${playerAdvancement.userId}`);
+      }
+    }
+  } catch (error) {
+    console.error('Erreur lors du calcul et de la mise à jour des scores :', error);
+  }
+};
+
+const resetPlayerAdvancements = async () => {
+  try {
+    // Récupérer tous les documents de la collection PlayerAdvancement
+    const playerAdvancements = await PlayerAdvancement.find();
+
+    // Parcourir chaque document de la collection PlayerAdvancement
+    for (const playerAdvancement of playerAdvancements) {
+      // Réinitialiser chaque attribut à sa valeur par défaut
+      playerAdvancement.game1Advancement = [];
+      playerAdvancement.game1Bool = false;
+      playerAdvancement.game1score = 0;
+      playerAdvancement.game2Advancement = [];
+      playerAdvancement.game2Bool = false;
+      playerAdvancement.game2score = 0;
+      playerAdvancement.game3Advancement = [];
+      playerAdvancement.game3Bool = false;
+      playerAdvancement.game3score = 0;
+
+      // Enregistrer les modifications dans la base de données
+      await playerAdvancement.save();
+      console.log(`Attributs réinitialisés pour le document PlayerAdvancement avec ID: ${playerAdvancement._id}`);
+    }
+    console.log('Tous les attributs des documents PlayerAdvancement ont été réinitialisés.');
+  } catch (error) {
+    console.error('Erreur lors de la réinitialisation des attributs des documents PlayerAdvancement :', error);
+  }
+};
+
+
+
 // Planification de l'exécution quotidienne à minuit
-cron.schedule('26 23 * * *', () => {
-  insertDailyPokemons();
+cron.schedule('39 21 * * *', () => {
+  //insertDailyPokemons();
+  calculateAndUpdateTotalScore();
+  resetPlayerAdvancements();
 });

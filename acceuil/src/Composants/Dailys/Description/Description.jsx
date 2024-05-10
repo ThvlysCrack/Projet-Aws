@@ -7,11 +7,11 @@ import pokemonNames from '../../assets/datas/pokemon_names.json';
 async function getPokemonsOfTheDay() {
   try {
     const token = localStorage.getItem('token');
-    const response = await axios.get('http://localhost:4000/daily-pokemons', {
+    const response = await axios.get('https://pokezapserver.vercel.app/daily-pokemons', {
       headers: {
-          'Authorization': `Bearer ${token}`
+        'Authorization': `Bearer ${token}`
       }
-  });
+    });
     if (response.status === 200) {
       return response.data;
     } else {
@@ -24,12 +24,83 @@ async function getPokemonsOfTheDay() {
   }
 }
 
+async function addGame3AdvancementItem(newItem) {
+  try {
+    // Récupérer l'ID utilisateur depuis le stockage local
+    const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('token');
+    // Vérifier si l'ID utilisateur est présent
+    if (!userId) {
+      console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+      return;
+    }
+
+    // Envoyer une requête POST à la route '/game1Advancement/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+    const response = await axios.post(`https://pokezapserver.vercel.app/game3Advancement/add/${userId}`, { newItem }, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    // Si la requête a réussi, afficher le message de réussite
+    console.log(response.data.message);
+  } catch (error) {
+    // Si la requête a échoué, afficher l'erreur
+    console.error("Erreur lors de l'ajout d'un élément à la liste game3Advancement :", error.response.data.error);
+  }
+}
+
+async function getGameAdvancement(userId) {
+  try {
+    const token = localStorage.getItem('token');
+    // Envoyer une requête GET à la route '/game1Advancement/:userId' sur le serveur local avec l'ID utilisateur
+    const response = await axios.get(`https://pokezapserver.vercel.app/gameAdvancement/${userId}`, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+
+    // Si la requête a réussi, retourner la liste game1Advancement
+    return response.data;
+  } catch (error) {
+    // Si la requête a échoué, afficher l'erreur
+    console.error("Erreur lors de la récupération de la liste gameAdvancement :", error.response.data.error);
+    return null;
+  }
+}
+
+async function addGame3ScoreItem(newItem) {
+  try {
+    // Récupérer l'ID utilisateur depuis le stockage local
+    const userId = localStorage.getItem('userId');
+    const token = localStorage.getItem('token');
+
+    // Vérifier si l'ID utilisateur est présent
+    if (!userId) {
+      console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
+      return;
+    }
+
+    // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
+    const response = await axios.post(`https://pokezapserver.vercel.app/update-game3score/add/${userId}`, { newItem }, {
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    });
+    // Si la requête a réussi, afficher le message de réussite
+    console.log(response.data.message);
+  } catch (error) {
+    // Si la requête a échoué, afficher l'erreur
+    console.error("Erreur lors de l'ajout d'un élément à la liste game3Score :", error.response.data.error);
+  }
+}
+
 function calculateScore(numAttempts) {
   // Initialiser le score à 100
   let score = 100;
 
   // Calculer le nombre d'erreurs
-  const numErrors = (numAttempts > 0) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
+  const numErrors = (numAttempts > 1) ? (numAttempts * (numAttempts + 1)) / 2 : 0;
 
   // Déduire les points en fonction du nombre d'erreurs
   score -= numErrors;
@@ -40,29 +111,6 @@ function calculateScore(numAttempts) {
   return score;
 }
 
-async function addGame3ScoreItem(newItem) {
-  try {
-    // Récupérer l'ID utilisateur depuis le stockage local
-    const userId = localStorage.getItem('userId');
-
-    // Vérifier si l'ID utilisateur est présent
-    if (!userId) {
-      console.error("Erreur : ID utilisateur non trouvé dans le stockage local.");
-      return;
-    }
-
-    // Envoyer une requête POST à la route '/game1Score/add/:userId' sur le serveur local avec l'ID utilisateur et l'élément à ajouter
-    const response = await axios.post(`http://localhost:4000/update-game3score/add/${userId}`, { newItem });
-
-    // Si la requête a réussi, afficher le message de réussite
-    console.log(response.data.message);
-  } catch (error) {
-    // Si la requête a échoué, afficher l'erreur
-    console.error("Erreur lors de l'ajout d'un élément à la liste game1Score :", error.response.data.error);
-  }
-}
-
-
 function Description() {
   const [dailyPokemon, setDailyPokemon] = useState(0);
   const [inputValue, setInputValue] = useState('');
@@ -71,15 +119,17 @@ function Description() {
   const [suggestions, setSuggestions] = useState([]);
   const [suggestionsWithSprites, setSuggestionsWithSprites] = useState([]);
   const [guessedPokemon, setGuessedPokemon] = useState([]);
+  const [fetched, setFetched] = useState(false)
 
   useEffect(() => {
     const generateDailyPokemon = async () => {
       try {
         const pokemonQuery = await getPokemonsOfTheDay();
+        //console.log(pokemonQuery.pokemon3)
         const pokemonSpeciesResponse = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokemonQuery.pokemon3}`);
         const speciesData = pokemonSpeciesResponse.data;
         const frenchName = speciesData.names.find(name => name.language.name === 'fr').name;
-
+        console.log(frenchName)
         // Recherche de la description en français
         const descriptionEntry = speciesData.flavor_text_entries.find(entry => entry.language.name === 'fr');
         const description = descriptionEntry ? descriptionEntry.flavor_text : 'Description non disponible';
@@ -116,6 +166,50 @@ function Description() {
     fetchSuggestionsWithSprites();
   }, [suggestions]);
 
+  const fetchData = async () => {
+    try {
+      const userId = localStorage.getItem('userId');
+      const classicAdvancement = await getGameAdvancement(userId)
+      if (classicAdvancement.game2Bool == true) {
+        setPokemonFound(true)
+    }
+      if (classicAdvancement.game3Advancement) {
+        const pokemonDataPromises = classicAdvancement.game3Advancement.map(async item => {
+          const pokemonDetails = await getPokemonDetails(item);
+          const pokemonSprite = await getPokemonSprite(pokemonDetails);
+          const response = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${item.toLowerCase()}`);
+          const frenchName = response.data.names.find(name => name.language.name === 'fr').name;
+          const p = {
+            Name: item.toLowerCase(),
+            Sprite: pokemonSprite,
+            FrenchName: frenchName
+          };
+          return await p;
+        });
+        const pokemonData = await Promise.all(pokemonDataPromises);
+        // Mettre à jour l'état pokemonDataList avec toutes les données d'avancement récupérées 
+        setTimeout(() => {
+          setGuessedPokemon(pokemonData.reverse());
+          setAttemptCounter(pokemonData.length)
+        }, 200);
+
+        //localStorage.setItem('classicAdvancement', JSON.stringify(pokemonData.reverse()));
+      } else {
+        //localStorage.setItem('classicAdvancement', JSON.stringify([]));
+        setGuessedPokemon([]);
+      }
+
+    } catch (error) {
+      console.error("Erreur lors de la récupération du profil du joueur :", error);
+    }
+  }
+
+  console.log(fetched)
+  if (!fetched) {
+    fetchData();
+    setFetched(true);
+  }
+
   const handleInputChange = (event) => {
     const value = event.target.value.toLowerCase();
     setInputValue(value);
@@ -150,7 +244,7 @@ function Description() {
     if (inputValue.trim() !== '' && !pokemonFound) {
       try {
         const pokemonEnglishName = getEnglishPokemonName(inputValue);
-  
+
         if (pokemonNames.hasOwnProperty(inputValue)) {
           const pokemonDetails = await getPokemonDetails(pokemonEnglishName);
           const pokemonSprite = await getPokemonSprite(pokemonDetails);
@@ -159,22 +253,24 @@ function Description() {
             Sprite: pokemonSprite,
             FrenchName: inputValue
           };
-  
+
           // Vérifier si le Pokémon est déjà deviné
           if (guessedPokemon.some(guess => guess.Name.toLowerCase() === p.Name.toLowerCase())) {
             // Si le Pokémon est déjà deviné, ne faites rien
             setInputValue('');
             return;
           }
-  
+
           setAttemptCounter(attemptCounter + 1);
-  
+
+          addGame3AdvancementItem(pokemonEnglishName);
+
           if (pokemonEnglishName.toLowerCase() === dailyPokemon.Name.toLowerCase()) {
             setPokemonFound(true);
             const score = calculateScore(attemptCounter + 1);
             addGame3ScoreItem(score);
           }
-  
+
           setGuessedPokemon([p, ...guessedPokemon]);
           setInputValue('');
         } else {
@@ -185,7 +281,7 @@ function Description() {
       }
     }
   };
-  
+
   return (
     <body style={{ backgroundImage: `url(${backgroundImage})`, backgroundPosition: 'center', backgroundSize: 'cover', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <div className='descriptionContainer'>
@@ -205,6 +301,11 @@ function Description() {
             <button onClick={handleInputSubmit} className="submit-button">Soumettre</button>
           </div>
           <br />
+          {pokemonFound && (
+            <div className="descriptionResultBox">
+              <p>Félicitations! Vous avez trouvé le Pokémon en {attemptCounter} tentatives!</p>
+            </div>
+          )}
           <div className='pokemonSuggestionContainer'>
             {inputValue !== '' && (
               <div className="bottom-box">
@@ -221,7 +322,7 @@ function Description() {
               </div>
             )}
           </div>
-          
+
           <div className='blocD'>
             <div className='descriptionDynamicDiv'>
               {guessedPokemon.map((guess, index) => (
@@ -239,11 +340,7 @@ function Description() {
               ))}
             </div>
           </div>
-          {pokemonFound && (
-            <div className="descriptionResultBox">
-              <p>Félicitations! Vous avez trouvé le Pokémon en {attemptCounter} tentatives!</p>
-            </div>
-          )}
+          
         </div>
       </div>
     </body>

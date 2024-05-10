@@ -237,6 +237,7 @@ p {
     width: 80%;
     height: 80%;
     animation: flipIn 0.7s ; /* Applique l'animation de rotation lors de l'apparition */
+    text-align: center;
 }
 
 
@@ -246,7 +247,7 @@ p {
 }
 
 .answerCard span {
-    font-size: 0.8em;
+    font-size: 0.5em;
     font-family: 'PKMN RBYGSC';
 }
 

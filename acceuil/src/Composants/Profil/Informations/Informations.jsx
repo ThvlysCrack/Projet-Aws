@@ -6,11 +6,12 @@ import bgImage from '../../assets/images/APropos.jpg';
 async function getProfilInformation(userId) {
     try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:4000/userProfil/${userId}`, {
+        const response = await axios.get(`https://pokezapserver.vercel.app/userProfil/${userId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
         });
+        console.log(response)
         return response.data;
     } catch (error) {
         console.error("Erreur lors de la récupération des informations du profil :", error.response.data.error);
@@ -36,18 +37,19 @@ function Informations() {
                 console.log(userId)
                 let userInfo = JSON.parse(localStorage.getItem('profilInfo'));
                 console.log(userInfo)
-                //console.log(userInfo.userId)
-                if (!userInfo) {
+                if (userInfo.length!=0 || !userInfo) {
                     userInfo = await getProfilInformation(userId);
                     console.log(userInfo)
                     localStorage.setItem('profilInfo', JSON.stringify(userInfo));
                 }
+                //console.log(localStorage.getItem('profilInfo'))
                 setProfilInfo(userInfo);
             } catch (error) {
                 console.error("Erreur lors de la récupération du profil du joueur :", error);
             }
         };
         fetchData();
+        console.log(profilInfo)
     }, []);
 
     useEffect(() => {
@@ -106,8 +108,8 @@ function Informations() {
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
-                                        <div className='label'><span> Jeu Silhouette</span></div>
-                                        <div className='value'><span>{profilInfo ? profilInfo.silhouetteScore : ""} tentatives</span></div>
+                                        <div className='label'><span> Jeu Silouhette</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.silouhetteScore : ""} tentatives</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>

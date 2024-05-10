@@ -45,6 +45,8 @@ const LoginSignup = () => {
             if (response.data.status === 'Ok') {
                 // Registration was successful
                 console.log('User registered successfully');
+                setAction('CONNEXION'); // Switch to login mode after successful registration
+                setErrors({ email: '', pseudo: '', password: '' }); // Reset errors
             } else {
                 // Registration failed
                 console.log('Error:', response.data.error);

@@ -74,6 +74,10 @@ const userProfilSchema = new mongoose.Schema({
         type: Number, 
         default: 0,
     },
+    totalScore: {
+        type: Number, 
+        default: 0, 
+    }
 }, { timestamps: true})
 
 const dailyPokemonSchema = new mongoose.Schema({
