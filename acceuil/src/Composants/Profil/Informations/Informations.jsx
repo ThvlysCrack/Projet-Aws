@@ -34,23 +34,16 @@ function Informations() {
         const fetchData = async () => {
             try {
                 const userId = localStorage.getItem('userId');
-                console.log(userId)
-                let userInfo = JSON.parse(localStorage.getItem('profilInfo'));
-                console.log(userInfo)
-                if (userInfo.length!=0 || !userInfo) {
-                    userInfo = await getProfilInformation(userId);
-                    console.log(userInfo)
-                    localStorage.setItem('profilInfo', JSON.stringify(userInfo));
-                }
-                //console.log(localStorage.getItem('profilInfo'))
+                const userInfo = await getProfilInformation(userId);
                 setProfilInfo(userInfo);
             } catch (error) {
                 console.error("Erreur lors de la récupération du profil du joueur :", error);
             }
         };
+
         fetchData();
-        console.log(profilInfo)
     }, []);
+
 
     useEffect(() => {
         const adjustGridColumns = () => {
