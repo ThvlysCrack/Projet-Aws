@@ -97,17 +97,17 @@ function Informations() {
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
                                         <div className='label'><span>Jeu Classique</span></div>
-                                        <div className='value'><span>{profilInfo ? profilInfo.classicScore : ""} tentatives</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.classicScore : ""} points</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
                                         <div className='label'><span> Jeu Silouhette</span></div>
-                                        <div className='value'><span>{profilInfo ? profilInfo.silouhetteScore : ""} tentatives</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.silouhetteScore : ""} points</span></div>
                                     </div>
                                     <div className='spliter'></div>
                                     <div className='gridCell'>
                                         <div className='label'><span>Jeu Description</span></div>
-                                        <div className='value'><span>{profilInfo ? profilInfo.descriptionScore : ""} tentatives</span></div>
+                                        <div className='value'><span>{profilInfo ? profilInfo.descriptionScore : ""} points</span></div>
                                     </div>
                                 </div>
                             </div>
