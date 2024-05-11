@@ -23,6 +23,7 @@ const LoginSignup = () => {
     });
     
     const handleLogin = async () => {
+        console.log('handleLogin called');
         try {
             const response = await axios.post('https://pokezapserver.vercel.app/login', { pseudo, email, password });            
             if (response.data.status === 'ok') {
@@ -59,9 +60,11 @@ const LoginSignup = () => {
         let isValid = true;
         const newErrors = { email: '', pseudo: '', password: '' };
 
-        if (!pseudo) {
-            isValid = false;
-            newErrors.pseudo = 'Le pseudo est requis';
+        if (action !== "CONNEXION") {
+            if (!pseudo) {
+                isValid = false;
+                newErrors.pseudo = 'Le pseudo est requis';
+            }
         }
 
         if (!email) {
@@ -82,7 +85,7 @@ const LoginSignup = () => {
             isValid = false;
             newErrors.password = 'Le mot de passe doit contenir au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial';
         }
-        
+        console.log('newErrors:', newErrors);
 
         if (isValid) {
             if (action === "CONNEXION") {
