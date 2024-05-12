@@ -170,9 +170,9 @@ router.post("/forgot-password",
       });
       // Store the reset token in the database
       const resetToken = new ResetToken({
-      userId: user._id,
+      userId: oldUser._id,
       token,
-      expires,
+      expires: Date.now() + 600000, // Token expires in 10 minutes
       });
       const link = `https://pokezapserver.vercel.app/reset-password/${oldUser._id}/${token}`;
       var transporter = nodemailer.createTransport({
