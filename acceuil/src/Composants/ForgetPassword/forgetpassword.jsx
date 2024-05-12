@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 //import backgroundImage from '../assets/images/Giratina.png';
 import backgroundImage from '../assets/images/background102.jpg';
@@ -7,12 +8,14 @@ import './forgetpassword.css';
 
 const Forgetpassword = () => {
     const [email, setEmail] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
     // Send a request to your API
     try {
       const response = await axios.post('/api/forget-password', { email });
       console.log(response.data);
+      navigate('/reset-password');
     } catch (error) {
       console.error(error);
     }

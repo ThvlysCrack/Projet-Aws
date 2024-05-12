@@ -23,7 +23,17 @@ const ResetPassword = () => {
             alert("Les mots de passe ne correspondent pas");
             return;
         }
+        // Get the token from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+        const userId = urlParams.get('userId');
+        if (!token) {
+        alert("Invalid password reset link");
+        return;
+        }
         try {
+            // Send a request to your backend with the new password and the token
+            await axios.post('/reset-password', { password, token, userId});
             alert('Le mot de passe a été réinitialisé avec succès');
         } catch (error) {
             console.error('Erreur lors de la réinitialisation du mot de passe:', error);

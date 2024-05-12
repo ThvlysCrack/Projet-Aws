@@ -21,6 +21,7 @@ import Carte from './Composants/Dailys/Carte/Carte';
 import Description from './Composants/Dailys/Description/Description';
 import ForgetPassword from './Composants/ForgetPassword/forgetpassword'
 import Silhouette from './Composants/Dailys/Silhouette/silhouette';
+import Resetpassword from './Composants/ForgetPassword/Resetpassword';
 import Type from './Composants/JeuLibre/Type/Type';
 
 // This is a mock function, replace it with your actual authentication check
@@ -62,6 +63,7 @@ return (
         <Route path="/Statistiques" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/Description" element={<ProtectedRoute><Description/></ProtectedRoute>} />
         <Route path="/Carte" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
+        <Route path="/reset-password" element={<Resetpassword/>} />
         <Route path="/forgot-password" element={<ForgetPassword/>} />
         <Route path="/Silhouette" element={<ProtectedRoute><Silhouette/></ProtectedRoute>} />
         <Route path="/Type" element={<ProtectedRoute><Type/></ProtectedRoute>} />

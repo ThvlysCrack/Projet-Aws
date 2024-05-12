@@ -68,7 +68,6 @@ router.post("/register",
       }
       const salt = await bcrypt.genSalt();
       const encryptedPassword = await bcrypt.hash(password, salt);
-      console.log('comparison result:', encryptedPassword);
       const oldUser = await User.findOne({ email });
       if (oldUser) {
         console.log("User already exists");
@@ -167,9 +166,15 @@ router.post("/forgot-password",
       }
       const secret = process.env.JWT_Secret + oldUser.password;
       const token = jwt.sign({ email: oldUser.email, }, secret, {
-        expiresIn: "5m",
+        expiresIn: "10m",
       });
-      const link = `http://localhost:4000/reset-password/${oldUser._id}/${token}`;
+      // Store the reset token in the database
+      const resetToken = new ResetToken({
+      userId: user._id,
+      token,
+      expires,
+      });
+      const link = `https://pokezapserver.vercel.app/reset-password/${oldUser._id}/${token}`;
       var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -182,7 +187,10 @@ router.post("/forgot-password",
         from: "noreply@gmail.com",
         to: email,
         subject: "Password Reset",
-        text: link,
+        text:
+        `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\n` +
+        `Please click on the following link to reset your password:\n\n` +
+        `${link}`,
       };
 
       transporter.sendMail(mailOptions, function (error, info) {
@@ -212,7 +220,7 @@ router.get("/reset-password/:id/:token", async (req, res) => {
     res.send("Not Verified");
   }
 });
-router.post("/reset-password/:id/:token",
+router.post("/reset-password",
   // Express Validator middleware
   [
     body('password').trim().isLength({ min: 8 }).withMessage('Le mot de passe doit comporter au moins 8 caractères'),
@@ -224,20 +232,20 @@ router.post("/reset-password/:id/:token",
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { id, token } = req.params;
-    const { password } = req.body;
+    const { userId, token, password } = req.body;
 
-    const oldUser = await User.findOne({ _id: id });
+    const oldUser = await User.findOne({ _id: userId });
     if (!oldUser) {
       return res.json({ status: "User Not Exists!!" });
     }
     const secret = process.env.JWT_Secret + oldUser.password;
     try {
       const verify = jwt.verify(token, secret);
-      const encryptedPassword = await bcrypt.hash(password, 10);
+      const salt = await bcrypt.genSalt();
+      const encryptedPassword = await bcrypt.hash(password, salt);
       await User.updateOne(
         {
-          _id: id,
+          _id: userId,
         },
         {
           $set: {
