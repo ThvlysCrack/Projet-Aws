@@ -633,4 +633,22 @@ router.post('/update-game3score/add/:userId', async (req, res) => {
     res.status(401).json({ message: 'No token provided' });
   }
 });
+router.get('/top-users', async (req, res) => {
+  try {
+    // Récupérer les 10 premiers utilisateurs triés par totalScore en ordre décroissant
+    const topUsers = await UserProfil.find({}, 'pseudo totalScore').sort({ totalScore: -1 }).limit(10);
+
+    // Créer une liste formatée avec le rank, pseudo et score
+    const formattedList = topUsers.map((user, index) => ({
+      rank: index + 1,
+      pseudo: user.pseudo,
+      score: user.totalScore
+    }));
+
+    res.json(formattedList);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des utilisateurs:", error);
+    res.status(500).json({ error: 'Erreur serveur lors de la récupération des utilisateurs' });
+  }
+});
 module.exports = router;
