@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Classement.css';
-import bgImage from '../assets/images/stadepokemon2.png';
+import bgImage from '../assets/images/espacedracoecto.png';
 import trophy from '../assets/images/win.jpg';
 import badge from '../assets/images/badgegold.png';
 import master from '../assets/images/Master-Ball.png';
@@ -16,7 +16,7 @@ function Classement() {
   useEffect(() => {
     async function fetchTopUsers() {
       try {
-        const response = await axios.get('https://pokezapserver.vercel.app/top-users');
+        const response = await axios.get('http://localhost:4000/top-users');
         const data = response.data;
         console.log(data)
         setUsers(data);
@@ -45,7 +45,7 @@ function Classement() {
       </div>
       <div className="leaderboard-container">
         <div className="description">
-          <p>Dernière mise à jour : <br/>Aujourd'hui à 12AM</p>
+          <p>Dernière mise à jour : <br/>Aujourd'hui à 11PM</p>
           <input
             id="search"
             className="search"
@@ -80,13 +80,12 @@ function Classement() {
       </div>
       <div className='messagecontainer'>
         <img src={trophy} alt='Trophy' className='trophyImage' />
-        <p className='message'>Découvrez les 10 meilleurs joueurs du monde ! Parcourez la liste ci-dessous pour connaître
-          leurs surnoms, classements et scores.</p>
+        <p className='message'>Il montrera les 10 meilleurs joueurs du monde ainsi que leurs surnoms, leurs classements et leurs scores.</p>
       </div>
 
       <div className='messagecontainer2'>
         <img src={badge} alt='gold' className='badgeImage' />
-        <p className='message2nd'> Les classements sont basés sur la notation en jeu de la veille. <br/> Le classement sera mis à jour tous les jours à minuit</p>
+        <p className='message2nd'> Les classements sont basés sur la notation en jeu de la veille. <br/> Le classement sera mis à jour tous les jours à 23h00 UTC.</p>
       </div>
    </body> 
   );

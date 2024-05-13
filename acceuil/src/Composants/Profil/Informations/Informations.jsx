@@ -91,11 +91,6 @@ function Informations() {
                                 </div>
                                 <div className='rightSide'>
                                     <div className='gridCell'>
-                                        <div className='label'><span>Meilleur Rang</span></div>
-                                        <div className='value'><span>{profilInfo ? (profilInfo.bestRank !== 0 ? profilInfo.bestRank : "N'a jamais joué") : ""}</span></div>
-                                    </div>
-                                    <div className='spliter'></div>
-                                    <div className='gridCell'>
                                         <div className='label'><span>Jeu Classique</span></div>
                                         <div className='value'><span>{profilInfo ? profilInfo.classicScore : ""} points</span></div>
                                     </div>

@@ -170,7 +170,7 @@ function Description() {
     try {
       const userId = localStorage.getItem('userId');
       const classicAdvancement = await getGameAdvancement(userId)
-      if (classicAdvancement.game2Bool == true) {
+      if (classicAdvancement.game3Bool == true) {
         setPokemonFound(true)
     }
       if (classicAdvancement.game3Advancement) {
