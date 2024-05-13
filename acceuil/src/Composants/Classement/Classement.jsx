@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Classement.css';
 import bgImage from '../assets/images/espacedracoecto.png';
 import trophy from '../assets/images/win.jpg';
@@ -10,22 +11,29 @@ import poke from '../assets/images/PokeBall.png';
 
 function Classement() {
   const [searchText, setSearchText] = useState('');
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    async function fetchTopUsers() {
+      try {
+        const response = await axios.get('http://localhost:4000/top-users');
+        const data = response.data;
+        console.log(data)
+        setUsers(data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération des utilisateurs:', error);
+      }
+    }
+
+    fetchTopUsers();
+  }, []);
 
   const handleSearch = (event) => {
     setSearchText(event.target.value.toLowerCase());
   };
 
-  const players = [
-    { rank: 1, name: 'Ilyes', score: 239 },
-    { rank: 2, name: 'Aymen', score: 209 },
-    { rank: 3, name: 'Elias', score: 154 },
-    { rank: 4, name: 'Asma', score: 100 },
-    { rank: 5, name: 'Yann', score: 82 },
-    // Add more players here...
-  ];
-
-  const filteredPlayers = players.filter(player =>
-    player.name.toLowerCase().includes(searchText)
+  const filteredUsers = users.filter(user =>
+    user.pseudo.toLowerCase().includes(searchText)
   );
 
   return (
@@ -55,16 +63,16 @@ function Classement() {
             </tr>
           </thead>
           <tbody>
-            {filteredPlayers.map((player, index) => (
-              <tr key={index} className={index === 0 ? 'winner' : index === 1 ? 'runner-up' : index === 2 ? 'second-runner-up' : ''}>
+            {filteredUsers.map((user) => (
+              <tr key={user.rank} className={user.rank === 1 ? 'winner' : user.rank === 2 ? 'runner-up' : user.rank === 3 ? 'second-runner-up' : ''}>
                 <td className="rank">
-                  {index === 0 && <img src={master} alt="Master Ball" />}
-                  {index === 1 && <img src={hyper} alt="Hyper Ball" />}
-                  {index === 2 && <img src={superb} alt="Super Ball" />}
-                  {(index !== 0 && index !== 1 && index !== 2) && <img src={poke} alt="Poke Ball" />}
+                  {user.rank === 1 && <img src={master} alt="Master Ball" />}
+                  {user.rank === 2 && <img src={hyper} alt="Hyper Ball" />}
+                  {user.rank === 3 && <img src={superb} alt="Super Ball" />}
+                  {(user.rank !== 1 && user.rank !== 2 && user.rank !== 3) && <img src={poke} alt="Poke Ball" />}
                 </td>
-                <td>{player.name}</td>
-                <td>{player.score}</td>
+                <td>{user.pseudo}</td>
+                <td>{user.score}</td>
               </tr>
             ))}
           </tbody>
