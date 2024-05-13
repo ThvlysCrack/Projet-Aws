@@ -15,7 +15,6 @@ const Forgetpassword = () => {
     try {
       const response = await axios.post('https://pokezapserver.vercel.app/forgot-password', { email });
       console.log(response.data);
-      navigate('/reset-password');
     } catch (error) {
       console.error(error);
     }

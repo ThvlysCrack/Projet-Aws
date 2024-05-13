@@ -184,7 +184,7 @@ router.post("/forgot-password",
       });
 
       var mailOptions = {
-        from: "noreply@gmail.com",
+        from: process.env.EMAIL_USERNAME,
         to: email,
         subject: "Password Reset",
         text:
