@@ -29,10 +29,10 @@ src: url('../assets/fonts/PKMN-RBYGSC.woff') format('woff');
   transform: translate(-50%, -50%);
   width: 90%; /* Ajustez la largeur du rectangle intérieur */
   background-color: rgba(0, 0, 0, 0.5); /* Couleur noire avec transparence */
-  border-radius: 15px; /* Coins arrondis pour le rectangle intérieur */
+  border-radius: 25px; /* Coins arrondis pour le rectangle intérieur */
   color: white; /* Couleur du texte à l'intérieur */
   text-align: center; /* Alignement du contenu */
-  padding: 0;
+  padding: 5px;
   overflow-y: auto; /* Activer le défilement vertical uniquement */
   overflow-x: hidden; /* Masquer le défilement horizontal */
   max-height: 300px; /* Hauteur maximale pour activer le défilement vertical */
@@ -67,9 +67,10 @@ src: url('../assets/fonts/PKMN-RBYGSC.woff') format('woff');
 
 /* Tableau */
 .table {
-  margin-top: 2em;
+  margin-top: 1em;
   width: 100%;
   color: white;
+  font-size: 13px;
 }
 
 table th,
@@ -189,10 +190,26 @@ img.poke {
   align-items: center;
   max-height: 100%;
   overflow-y: scroll;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .textec p{
   font-family: 'Pokémon';
   color: white;
   text-align: center;
+}
+
+.textec {
+  scrollbar-width: none; /* Pour Firefox */
+}
+
+/* Masquer la barre de défilement dans Internet Explorer et Edge */
+.textec {
+  -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+}
+
+/* Masquer la barre de défilement dans Chrome, Safari et autres navigateurs basés sur WebKit */
+.textec::-webkit-scrollbar {
+  display: none; /* Pour Chrome, Safari et autres navigateurs basés sur WebKit */
 }

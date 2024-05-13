@@ -17,7 +17,7 @@ function Classement() {
     useEffect(() => {
       async function fetchTopUsers() {
         try {
-          const response = await axios.get('http://localhost:4000/top-users');
+          const response = await axios.get('https://pokezapserver.vercel.app/top-users');
           const data = response.data;
           console.log(data);
           setUsers(data);
