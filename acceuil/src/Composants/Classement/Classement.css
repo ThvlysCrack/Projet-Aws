@@ -1,5 +1,4 @@
-@font-face {
-    font-family: 'Pokémon';
+ font-family: 'Pokémon';
     src: url('../assets/fonts/PKMN-RBYGSC.woff') format('woff');
 }
   .header {
@@ -21,7 +20,7 @@
     content: '';
     background-color: white;
     width: 2px;
-    height: 11%;
+    height: 13%;
     position: absolute;
     top: 0;
   }
@@ -36,7 +35,7 @@
   
   .leaderboard-container {
     position: relative;
-    top: 70%; 
+    top: 12%; 
     left: 27%; 
     transform: translate(-50%, -50%); 
     width: calc(50% - 40px); 
@@ -139,7 +138,7 @@
 
   .messagecontainer {
     position: relative;
-    bottom: 400px;
+    bottom: 570px;
     left: 750px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 30px;
@@ -161,12 +160,10 @@
 
 .trophyImage {
     height: 75%;
-    width: 42%;
+    width: 45%;
     margin-left: -5px;
     position: absolute;
     bottom: 20px; 
-    border-radius: 30px;
-
 }
 
   .badgeImage {
@@ -180,7 +177,7 @@
 .messagecontainer2 {
     position: absolute;
     top: 70%;
-    left: calc(80% + 2px);
+    left: calc(80% + 20px);
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 30px;
@@ -202,6 +199,7 @@
     color: white;
     inset-block: 30
 }
+
 .rank img{
   height: 30px;
   width: auto;
