@@ -13,7 +13,7 @@ function APropos(){
     const one = "https://onegame.vercel.app" 
 
     return (
-        <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh', overflow:'hidden', margin: '0', padding:'0'}}>
+        <body style={{ backgroundImage: `url(${bgImage})`, backgroundSize: '100% 100%', height:'100vh', overflow:'hidden', margin: '0', padding:'0', display:'flex', justifyContent: 'center'}}>
             <div className='Acontainer'>
                 <div className='contenant'>
                     <div className='pres'>

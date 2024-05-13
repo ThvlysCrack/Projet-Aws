@@ -55,7 +55,7 @@ return (
         <Route path="/pokedex" element={<ProtectedRoute><Classic/></ProtectedRoute>} />
         <Route path="/JeuLibre" element={<ProtectedRoute><JeuLibre/></ProtectedRoute>} />
         <Route path="/Classement" element={<ProtectedRoute><Classement/></ProtectedRoute>} />
-        <Route path="/Parametres" element={<ProtectedRoute><Parametres/></ProtectedRoute>} />
+        <Route path="/Parametres" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
         <Route path="/APropos" element={<ProtectedRoute><APropos/></ProtectedRoute>} />
         <Route path="/Informations" element={<ProtectedRoute><Informations/></ProtectedRoute>} />
         <Route path="/Palmares" element={<ProtectedRoute><EnDev/></ProtectedRoute>} />
