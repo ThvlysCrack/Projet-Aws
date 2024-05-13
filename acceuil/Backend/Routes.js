@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 var nodemailer = require('nodemailer');
 const { body, validationResult } = require('express-validator')
 var path = require('path');
-const { User, DailyPokemon, PlayerAdvancement, UserProfil } = require('./Schema');
+const { User, DailyPokemon, PlayerAdvancement, UserProfil, ResetToken } = require('./Schema');
 const { appendFile } = require("fs");
 
 
@@ -168,6 +168,7 @@ router.post("/forgot-password",
       const token = jwt.sign({ email: oldUser.email, }, secret, {
         expiresIn: "10m",
       });
+      
       // Store the reset token in the database
       const resetToken = new ResetToken({
       userId: oldUser._id,
@@ -182,9 +183,8 @@ router.post("/forgot-password",
           pass: process.env.EMAIL_PASSWORD,
         },
       });
-
       var mailOptions = {
-        from: "noreply@gmail.com",
+        from: process.env.EMAIL_USERNAME,
         to: email,
         subject: "Password Reset",
         text:
@@ -192,15 +192,13 @@ router.post("/forgot-password",
         `Please click on the following link to reset your password:\n\n` +
         `${link}`,
       };
-
       transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
-          console.log(error);
+          console.log('Error sending email:', error);
         } else {
           console.log("Email sent: " + info.response);
         }
       });
-      console.log(link);
     } catch (error) { }
   });
 
