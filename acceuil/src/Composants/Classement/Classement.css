@@ -36,7 +36,7 @@
   
   .leaderboard-container {
     position: relative;
-    top: 40%; 
+    top: 70%; 
     left: 27%; 
     transform: translate(-50%, -50%); 
     width: calc(50% - 40px); 
