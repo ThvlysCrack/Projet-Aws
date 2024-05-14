@@ -164,7 +164,7 @@ const resetPlayerAdvancements = async () => {
 
 
 // Planification de l'exécution quotidienne à minuit
-cron.schedule('21 12 * * *', () => {
+cron.schedule('0 0 * * *', () => {
   insertDailyPokemons();
   calculateAndUpdateTotalScore();
   resetPlayerAdvancements();
